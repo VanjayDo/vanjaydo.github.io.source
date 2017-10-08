@@ -1,0 +1,76 @@
+---
+title: php部分版本使用oci8拓展问题
+date: 2017-09-08 13:07:53
+tags: [php, oracle]
+---
+### 前言
+最近在使用php实现从服务器Oracle数据库拉取数据表到本地mysql功能时遇到了这个问题：我使用的是xampp集成的php5.6.3版本，在它的php.ini配置文件中关于oci8拓展的配置是这样的：
+```
+extension=php_oci8_12c.dll  ; Use with Oracle Database 12c Instant Client
+```
+从Oracle官网下载instantclient-basic-nt-12.2.0.1.0.zip拓展，解压后我把得到的instantclient_12_2目录移动到C:\Program Files下并加入环境变量，但是idea运行项目时一直在报:
+```
+PHP Warning:  PHP Startup: Unable to load dynamic library 'C:\xampp\php\ext\php_oci8_12c.dll'
+```
+导致oci8接口函数，如oci_connect等无法使用。
+<!-- more -->
+### 解决过程
+在把stack overflow翻了个遍之后找到了可行的解决办法——放弃php_oci8_12c.dll，将其更换为其他的版本。
+
+#### 去pecl下载其他版本的OCI8 extension
+[下载地址](http://pecl.php.net/package/oci8)，我选择了2.0.10版本，这是支持php5的最后一个版本，注：下载dll动态链接库文件需要点击"oci8-2.0.10.tgz (186.9kB)"链接后面的"（windows田字图形）DLL"链接，[这是下载直达链接](http://pecl.php.net/package/oci8/2.0.10/windows)，根据自己的php版本下载合适的。
+
+#### 替换文件
+将解压后的下载文件移动到php拓展目录（即extension_dir）,然后在php.ini中加上
+```
+extension=php_oci8_11g.dll
+```
+去 [Oracle官网](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html)下载相应的instant client V11，解压后把目录添加进系统变量。
+
+#### 检查
+cmd输入"PHP --ri oci8"
+```
+C:\WINDOWS\system32>PHP --ri oci8
+
+结果显示：
+oci8
+
+OCI8 Support => enabled
+OCI8 DTrace Support => disabled
+OCI8 Version => 2.0.8
+Revision => $Id: f04114d4d67cffea4cdc2ed3b7f0229c2caa5016 $
+Oracle Run-time Client Library Version => 11.2.0.1.0
+Oracle Compile-time Instant Client Version => 11.2
+
+Directive => Local Value => Master Value
+oci8.max_persistent => -1 => -1
+oci8.persistent_timeout => -1 => -1
+oci8.ping_interval => 60 => 60
+oci8.privileged_connect => Off => Off
+oci8.statement_cache_size => 20 => 20
+oci8.default_prefetch => 100 => 100
+oci8.old_oci_close_semantics => Off => Off
+oci8.connection_class => no value => no value
+oci8.events => Off => Off
+
+Statistics =>
+Active Persistent Connections => 0
+Active Connections => 0
+```
+
+cmd输入"php -r "var_dump(function_exists('oci_connect'));""
+
+```
+C:\WINDOWS\system32>php -r "var_dump(function_exists('oci_connect'));"
+
+结果显示：
+bool(true)
+```
+则已成功。
+
+#### 注意
+idea需要重启电脑后方可使用oci8拓展的相关接口函数（我尝试过"synchronize"和"Invalidate Caches / Restart"功能，都无效），否则仍然会提示找不到动态链接库文件。也可能是因为我使用的是php内置的服务器问题，在此提一下。
+
+### 赘述
+这个问题的存在不知道是xampp的锅还是这个php版本的锅，总而言之问题现在是解决了，算是有所收获吧，所以总结一下。
+其他版本若出现相似问题也可以参考。

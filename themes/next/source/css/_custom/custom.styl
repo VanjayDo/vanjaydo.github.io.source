@@ -1,0 +1,51 @@
+// Custom styles.
+//j's自定义修改
+body{   
+        background:url(https://oxebeaim4.bkt.clouddn.com/image/wave-ocean.jpg);
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        //background-position:center;
+}
+
+#sidebar {
+	    background:url(https://oxebeaim4.bkt.clouddn.com/image/sidebar-bg-forest.jpg);
+        background-color:#fff;
+	    background-size: cover;
+	    background-position:center;
+	    background-repeat:no-repeat;
+	    //修改sidebar内部文字颜色
+	    p,span{color:black}
+	    //修改“文字目录”和站点概览的颜色
+	    .sidebar-inner li{color:grey}
+        .sidebar-inner li:hover{color:black}
+}
+
+.content {
+            border-radius: 10px;
+            //减小内容页面底部与header的距离
+            margin-top: -25px;
+            background:rgba(248,248,248,0.7) none repeat scroll !important;
+            padding:20px;
+         }
+//内容页面宽度
+.main-inner {width: 800px;}
+//消除内容页面底部与footer的距离
+.main {padding-bottom:0px;}
+
+//标题颠倒
+.site-title {
+filter:  unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
+ms-filter: unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
+-moz-transform: rotate(-180deg);
+-o-transform: rotate(-180deg);
+-webkit-transform: rotate(-180deg);
+position: absolute; 
+}
+
+.header {
+          background:rgba(255,255,255,0.3) none repeat scroll !important;
+        }
+.footer {
+          background:rgba(255,255,255,0.7) none repeat scroll !important;
+        }

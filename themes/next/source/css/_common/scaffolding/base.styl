@@ -1,0 +1,147 @@
+
+::selection {
+  background: $selection-bg;
+  color: $selection-color;
+}
+
+body {
+  position: relative; // Required by scrollspy
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background: $body-bg-color;
+
+  +mobile() { padding-right: 0 !important; }
+  +tablet() { padding-right: 0 !important; }
+  +desktop-large() { font-size: $font-size-large; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1.5;
+  font-family: $font-family-headings;
+}
+
+h2, h3, h4, h5, h6 { margin: 20px 0 15px; }
+
+for headline in (1..6) {
+  h{headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * headline;
+  }
+
+  +mobile() {
+    h{headline} {
+      font-size: $font-size-headings-base - $font-size-headings-step * headline - 4px;
+    }
+  }
+}
+
+p { margin: 0 0 20px 0; }
+
+
+//j's自定义修改
+//博文中链接效果和右侧边栏文章目录效果
+a {
+  color: #009357;//暗绿色
+  text-decoration: none;
+  border-bottom: 1px solid #00B068;
+  word-wrap: break-word;
+  &:hover {
+    font-size:17px;
+    color: #00FF97;//亮绿色
+    border-bottom-color: $link-decoration-hover-color;
+  }
+}
+
+//搜索中的链接效果
+ul.search-result-list li a {
+  color: $link-color;
+  &:hover { 
+    font-size:14px;
+    color: #000;
+  }
+}
+ul.search-result-list li a.search-result-title {
+  color: $link-color;
+  &:hover { 
+    font-size:16px;
+    color: #000;
+  }
+}
+
+//停留导航栏效果
+nav ul li a {
+  color: $link-color;
+  &:hover { 
+    color: #F5F5F5;
+    background-color: #555555;
+    border-bottom-color: #555555;
+  }
+}
+
+//首页post标题效果(因为继承上面的a效果导致停留字体变化,所以在此添加)
+article header h1 a {
+  &:hover {
+    font-size: 27px;//before为26px
+    +mobile() {
+      font-size: 22px;
+    }
+  }
+}
+//修改结束
+
+
+
+
+
+
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+hr {
+  margin: 40px 0;
+  height: 3px;
+  border: none;
+  background-color: $gray-lighter;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+blockquote {
+  padding: 0 15px;
+  color: $grey-dim;
+  border-left: 4px solid $gray-lighter;
+
+  cite::before {
+    content: "-";
+    padding: 0 5px;
+  }
+}
+
+dt { font-weight: $font-weight-bolder; }
+
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+
