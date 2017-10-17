@@ -8,7 +8,7 @@ tags: [windows]
 且在移动端可以正确进行密码的认证，但就是无法连接上或是连接上之后无法上网（移动端此时已通过dhcp获取到ip）。
 <!-- more -->
 
-![开启成功](https://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/开启成功.png) 
+![开启成功](http://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/开启成功.png) 
 
 
 ### 解决办法
@@ -16,11 +16,11 @@ tags: [windows]
 
 法二.
 <li>1.在网络适配器管理（控制面板\网络和 Internet\网络连接）中将你的热点连接禁用；
-![禁用](https://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/禁用.png)
+![禁用](http://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/禁用.png)
 <li>2.进设备管理器（win+x键调出选项栏后按M键选择设备管理器），菜单栏中“查看”选中“显示隐藏的设备”，
-![设备管理器](https://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/设备管理器.png)
+![设备管理器](http://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/设备管理器.png)
 在下面打开网络适配器一栏，会有一个图标带向下箭头（已被禁用）的 network virtual Adapter（虚拟网络适配器），不同的电脑因为网卡不同或者oem定制的问题可能会导致适配器名字不一样，根据具体情况自己选择。双击它，“启用设备”。
-![启用](https://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/启用.png)
+![启用](http://oxebeaim4.bkt.clouddn.com/image/windows热点不可用解决办法/启用.png)
 
 完成以上步骤后再启动自己的热点
 

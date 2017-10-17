@@ -28,12 +28,12 @@ set names "uft8";
 
 再将所有需要插入中文的字段进行结构修改：
 例如下面的message字段
-![修改结构](https://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png)
+![修改结构](http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/修改.png)
 
 
 将排序规则修改为utf8_general_ci
 
-![排序规则](https://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png)
+![排序规则](http://oxebeaim4.bkt.clouddn.com/image/web应用从网页插入中文到mysql变成乱码的解决办法/utf8.png)
 
 
 ### 赘述
