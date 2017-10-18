@@ -4,6 +4,17 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 10 月
+###### 2017-10-18
+推荐一款linux下递归搜索文件内容的软件：[ag](https://github.com/ggreer/the_silver_searcher)，安装步骤：
+```bash
+git clone https://github.com/ggreer/the_silver_searcher.git
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+./build
+sudo make install
+```
+体验还不错，在linux子系统下运行效果图
+<img src="http://oxebeaim4.bkt.clouddn.com/image/about/show-ag.png" width="500px">
+
 ###### 2017-10-13
 发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow -->[豆瓣读书](https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb) <--，感觉查书什么的挺好用的
 <img src="http://oxebeaim4.bkt.clouddn.com/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
