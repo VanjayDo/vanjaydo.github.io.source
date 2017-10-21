@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 10 月
+###### 2017-10-21
+之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下。
+<img src="http://oxebeaim4.bkt.clouddn.com/image/about/tldr.png" width="500px">
 ###### 2017-10-18
 推荐一款linux下递归搜索文件内容的软件：[ag](https://github.com/ggreer/the_silver_searcher)，安装步骤：
 ```bash
