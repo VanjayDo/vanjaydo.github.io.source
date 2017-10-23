@@ -21,7 +21,7 @@ tags: [sublime]
 
 以上插件都安装完成后，重启sublime，然后在preferences->color scheme->Monokai Extended 选择一项你顺眼的作为配色模式，再将Markdown Extended选为markdown文档的语法规则即可（view->systax->open all with current extension as 如图）：
 
-<img src="http://oxebeaim4.bkt.clouddn.com/image/sublime下markdown环境配置/markdownExtended.png"  alt="选择markdown extended">
+<img src="http://cdn.safeandsound.cn/image/sublime下markdown环境配置/markdownExtended.png"  alt="选择markdown extended">
 
 #### Tips
 * 1.具体的markdown语法可以参照wowubuntu上的 [这一篇文章](http://wowubuntu.com/markdown/)
