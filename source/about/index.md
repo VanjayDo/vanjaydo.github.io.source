@@ -8,7 +8,7 @@ date: 2017-07-27 15:04:16
 上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。
 ###### 2017-10-21
 之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下。
-<img src="http://cdn.safeandsound.cn/image/about/tldr.png" width="500px">
+<img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px">
 ###### 2017-10-18
 推荐一款linux下递归搜索文件内容的软件：[ag](https://github.com/ggreer/the_silver_searcher)，安装步骤：
 ```bash
@@ -18,11 +18,11 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 sudo make install
 ```
 体验还不错，在linux子系统下运行效果图
-<img src="http://cdn.safeandsound.cn/image/about/show-ag.png" width="500px">
+<img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px">
 
 ###### 2017-10-13
 发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow -->[豆瓣读书](https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb) <--，感觉查书什么的挺好用的
-<img src="http://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
+<img src="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
 
 ###### 2017-10-09
 当觉得生活无趣又无望时就应该读汪曾祺。
@@ -31,7 +31,7 @@ sudo make install
 
 ###### 2017-10-08
 今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。
-<img src="http://cdn.safeandsound.cn/image/SDN.jpg" width="500px">
+<img src="https://cdn.safeandsound.cn/image/SDN.jpg" width="500px">
 因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。
 但还是感觉似乎不该这样。
 可能是因为喜欢在这边学习的氛围和深夜写代码的自由。
@@ -39,7 +39,7 @@ sudo make install
 
 ###### 2017-10-05
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
-<img src="http://cdn.safeandsound.cn/image/about/mycli.png">
+<img src="https://cdn.safeandsound.cn/image/about/mycli.png">
 
 ###### 2017-08-15
 又在开源论坛上看到有人在黑php。

@@ -85,7 +85,7 @@ systemctl start vncserver@:<Nummer>.service
 ### 赘述
 
 Windows上mstsc直连session需要选择xvnc
-![注意选择](http://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png)
+![注意选择](https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png)
 
 
 如果需要以root身份登录，则需要以root身份运行vncserver,配置vncserver@:{n}.service文件后，在/home目录创建root文件夹，将其链接到/root目录即可
@@ -97,29 +97,29 @@ Windows上mstsc直连session需要选择xvnc
 1.首先查询所需要参数，cvt 加分辨率
 例如我需要1366*768的分辨率，则输入“cvt 1366 768”，查询该分辨率的有效扫描频率是多少
 将Modeline "1368x768_60.00" 后面的“85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync”参数复制
-![图1](http://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png)<br>
+![图1](https://cdn.safeandsound.cn/image/xrdp+vnc/1cvt参数.png)<br>
 2.创建所需的模式
 
 ```bash
 xrandr --newmode "模式名"  + 上一步复制的参数
 ```
-![图2](http://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png)<br>
+![图2](https://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png)<br>
 3.这时接使用刚刚创建的模式会提示找不到模式，需要手动添加一下<br>
 
 ```bash
 xrandr --addmode 显示器名 "模式名"
 ```
 创建成功：
-![图3](http://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png)<br>
+![图3](https://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png)<br>
 添加成功：
-![图3](http://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png)<br>
+![图3](https://cdn.safeandsound.cn/image/xrdp+vnc/3添加模式成功.png)<br>
 4.使用新建模式
 
 ```bash
 xrandr --output 显示器名 --mode "模式名"
 ```
 
-![使用](http://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png)
+![使用](https://cdn.safeandsound.cn/image/xrdp+vnc/修改vnc分辨率.png)
 当前设置在重启后失效，可以将其写入配置文件保证设置永久有效
 
 分辨率也可以通过vnc客户端设置，但是画质会受影响
