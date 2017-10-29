@@ -4,6 +4,16 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 10 月
+###### 2017-10-29
+powershell启动加速。参见该[官方博文](https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/),将以下命令粘贴到powershell，等待执行完毕。
+```
+Set-Alias ngen @(
+dir (join-path ${env:\windir} “Microsoft.NET\Framework”) ngen.exe -recurse |
+sort -descending lastwritetime
+)[0].fullName
+[appdomain]::currentdomain.getassemblies() | %{ngen $_.location}
+```
+
 ###### 2017-10-27
 强推一款跨平台的终端连接工具：[Termius](https://www.termius.com/)，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。
 ###### 2017-10-24
