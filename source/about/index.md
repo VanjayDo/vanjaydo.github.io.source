@@ -7,11 +7,14 @@ date: 2017-07-27 15:04:16
 
 * ###### 2017-10-27
 强推一款跨平台的终端连接工具：[Termius](https://www.termius.com/)，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。
+
 * ###### 2017-10-24
 上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。
+
 * ###### 2017-10-21
 之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下。
 <img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px">
+
 * ###### 2017-10-18
 推荐一款linux下递归搜索文件内容的软件：[ag](https://github.com/ggreer/the_silver_searcher)，安装步骤：
 ```bash
@@ -20,7 +23,7 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 ./build
 sudo make install
 ```
-体验还不错，在linux子系统下运行效果图
+	体验还不错，在linux子系统下运行效果图
 <img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px">
 
 * ###### 2017-10-13
@@ -73,6 +76,7 @@ powershell.exe -NoExit Set-Location “%V”
 #用cmd打开则改为：
 cmd.exe /s /k pushd "%V"
 ```
-确定保存即可
+	确定保存即可
+
 ~~一些想说的话放在这里~~ 
 ~~以上~~
