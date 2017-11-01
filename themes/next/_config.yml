@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /images/favicon.ico
+favicon: https://cdn.safeandsound.cn/image/icon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -118,7 +118,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/j.jpg
+avatar: https://cdn.safeandsound.cn/image/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
