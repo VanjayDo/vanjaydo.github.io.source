@@ -13,10 +13,16 @@
   {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io">Hexo</a>') }}
 </div>
 
+<!--j's自定义修改 修改footer中的主题-->
 <div class="theme-info">
+<i class="theme-link" style="font-style:normal"><-- Why not click it?</i>
+</div>
+<!--
+<div >
   {{ __('footer.theme') }} -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.{{ theme.scheme }}
   </a>
 </div>
+-->
 {% endif %}

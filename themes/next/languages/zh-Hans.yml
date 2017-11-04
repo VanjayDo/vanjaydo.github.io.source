@@ -46,7 +46,23 @@ page:
   tags: 标签
 
 footer:
-  powered: "Powered by %s"
+  #j's自定义修改 页面反转
+  powered: "Powered by <script>
+function rotate() {
+    window.i = 1;
+    while (i < 540) {
+        i++;
+        document.body.style.cssText += '-webkit-transform: rotate(-' + i + 'deg);-moz-transform: rotate(-' + i + 'deg)';
+    }
+  }
+</script><a onclick=rotate() href=javascript: window.i = 1;
+setInterval(function() {
+    while (i < 540) {
+        i++;
+        document.body.style.cssText += '-webkit-transform: rotate(-'' + i + 'deg);-moz-transform: rotate(-' + i + 'deg)';
+    }
+});
+>Innovation</a>"
   theme: Theme
 
 counter:
