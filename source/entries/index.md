@@ -4,6 +4,34 @@ date: 2017-07-27 15:04:16
 ---
 <title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
+* ### ES6的暂时性死区
+```
+//(1). ES6中的let命令不像var那样具有“变量提升”现象。
+console.log(foo);//ReferenceError
+let foo=2;
+//(2). ES6中只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域而不受外部的影响。
+var tmp=123;
+if (true)
+{
+	tmp="abc";//ReferenceError
+	let tmp;
+}
+
+//ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
+//总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
+//这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
+//再来一个例子:
+if(true)
+{
+	//TDZ开始
+	tmp="abc";//ReferenceError
+	console.log(tmp);//ReferenceError
+	let tmp;//TDZ结束
+	console.log(tmp);//undefined
+	tmp="abc";
+	console.log(tmp);//123
+}
+```
 
 * ### 图灵完备
 wiki描述：“在可计算性理论里，如果一系列操作数据的规则（如指令集、编程语言、细胞自动机）可以用来模拟单带图灵机，那么它是图灵完备的”。图灵机的基本思想是“用机器来模拟人们用纸笔进行数学运算的过程”，也就是说图灵机能执行所有可被描述的计算。
