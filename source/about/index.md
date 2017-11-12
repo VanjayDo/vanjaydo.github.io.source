@@ -4,6 +4,10 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 11 月
+* ###### 2017-11-12
+最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是Alvaro Soler失恋后写的），虽然是西班牙语的民谣，根本不知道在唱什么😂但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="https://music.163.com/outchain/player?type=1&id=34609360&auto=1&height=90"></iframe>
+
 * ###### 2017-11-09
 [Get full version of StarUML](https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a)    startUML获取证书，V2.8.0亲测可用.
 
