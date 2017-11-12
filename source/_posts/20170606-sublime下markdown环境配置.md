@@ -4,7 +4,6 @@ urlname: sublime下markdown环境配置
 date: 2017-06-06 20:04:46
 tags: [sublime]
 ---
-### 介绍
 因为用的挺顺手的，所以推荐一下。
 我在sublime上编写markdown文档的环境配置是:
 
