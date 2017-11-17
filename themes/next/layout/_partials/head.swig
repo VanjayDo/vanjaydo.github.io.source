@@ -136,3 +136,6 @@
 {% endif %}
 
 {% include 'head/custom-head.swig' %}
+  
+<!-- j's自定义 网页加载进度条 -->
+<script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
