@@ -4,6 +4,18 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 11 月
+
+* ###### 2017-11-24
+发现<code id="shortCode">curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code id="shortCode">curl ifconfig.co</code>来的快得多，好用。
+注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。
+
+* ###### 2017-11-20
+今天更新kali后发现shadowsocks无法使用，运行后报错：
+```bash
+AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup
+```
+	看错误应该是加密方面的问题，因为ss依赖openssl，那就应该是openssl的问题了，上网搜了下，[解决办法在此](https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/)
+
 * ###### 2017-11-12
 最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是Alvaro Soler失恋后写的），虽然是西班牙语的民谣，根本不知道在唱什么😂但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="https://music.163.com/outchain/player?type=1&id=34609360&auto=1&height=90"></iframe>
