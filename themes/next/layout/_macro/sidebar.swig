@@ -403,11 +403,6 @@ a.change {
           </div>
         {% endif %}
 
-        <!-- <div id="163musicPlayer">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=27845535&auto=0&height=32"></iframe>
-        </div> -->
-       
-
         {# Blogroll #}
         {% if theme.links %}
           <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">

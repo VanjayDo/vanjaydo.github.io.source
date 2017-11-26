@@ -139,3 +139,6 @@
   
 <!-- j's自定义 网页加载进度条 -->
 <script src="https://cdn.safeandsound.cn/js/pace.min.js"></script>
+
+<!-- prettify高亮代码css引入 -->
+<link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
