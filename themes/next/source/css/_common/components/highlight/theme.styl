@@ -20,9 +20,9 @@ if $highlight_theme == "normal"
   }
 
 if $highlight_theme == "night"
-  $highlight-background   = #1d1f21
+  $highlight-background   = #2e2c1f
   $highlight-current-line = #282a2e
-  $highlight-selection    = #373b41
+  $highlight-selection    = #00BFFF
   $highlight-foreground   = #c5c8c6
   $highlight-comment      = #969896
   $highlight-red          = #cc6666
@@ -33,8 +33,8 @@ if $highlight_theme == "night"
   $highlight-blue         = #81a2be
   $highlight-purple       = #b294bb
   $highlight-gutter       = {
-    color: lighten($highlight-background, 50%),
-    bg-color: darken($highlight-background, 100%)
+    color: lighten($highlight-background, 50%),  /*百分号的数值代表代码行号的清晰程度*/
+    bg-color: darken($highlight-background, 50%)  /*百分号代表代码行号的背景透明度*/
   }
 
 if $highlight_theme == "night eighties"

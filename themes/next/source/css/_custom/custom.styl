@@ -1,125 +1,145 @@
 // Custom styles.
 //j's自定义修改
 body{   
-        background:url(https://cdn.safeandsound.cn/image/wave-ocean.jpg);
-        background-size:cover;
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-        //background-position:center;
+      background:url(https://cdn.safeandsound.cn/image/wave-ocean.jpg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      //background-position:center;
 }
 
 #sidebar {
-	    background:url(https://cdn.safeandsound.cn/image/sidebar-bg-forest.jpg);
-        background-color:#fff;
-	    background-size: cover;
-	    background-position:center;
-	    background-repeat:no-repeat;
-	    //修改sidebar内部文字颜色
-	    p,span{color:black}
-	    //修改“文字目录”和站点概览的颜色
-	    .sidebar-inner li{color:grey}
-        .sidebar-inner li:hover{color:black}
+      background:url(https://cdn.safeandsound.cn/image/sidebar-bg-forest.jpg);
+      background-color:#fff;
+      background-size: cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      //修改sidebar内部文字颜色
+      p,span{color:black}
+      //修改“文字目录”和站点概览的颜色
+      .sidebar-inner li{color:grey}
+      .sidebar-inner li:hover{color:black}
 }
 
 .content {
-            border-radius: 10px;
-            //减小content顶部与header的距离
-            margin-top: -50px;
-            background:rgba(248,248,248,0.7) none repeat scroll !important;
-            padding:20px;
-         }
+      border-radius: 10px;
+      //减小content顶部与header的距离
+      margin-top: -50px;
+      background:rgba(248,248,248,0.7) none repeat scroll !important;
+      padding:20px;
+}
 //内容页面宽度
 .main-inner {width: 800px;}
 //消除内容页面底部与footer的距离
 .main {padding-bottom:0px;}
 
+//色块标注系列
+div #div-border-left-yellow {
+      border-radius: 3px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-left-width: 5px;
+      border-left-color: #f0ad4e;
+}
+
+//色块标注系列 结束
+
+//code标签样式
+code {
+      color: #c7254e;
+      background: #f9f2f4;
+      border: 1px solid #d6d6d6;
+}
+
 //标题颠倒
 .site-title {
-filter:  unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
-ms-filter: unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
--moz-transform: rotate(-180deg);
--o-transform: rotate(-180deg);
--webkit-transform: rotate(-180deg);
-position: absolute; 
+      filter:  unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
+      ms-filter: unquote("progid:DXImageTransform.Microsoft.BasicImage(rotation=2)");
+      -moz-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      -webkit-transform: rotate(-180deg);
+      position: absolute; 
 }
 
 .header {
-          background:rgba(255,255,255,0.3) none repeat scroll !important;
-        }
+      background:rgba(255,255,255,0.3) none repeat scroll !important;
+}
 .footer {
-          background:rgba(255,255,255,0.7) none repeat scroll !important;
-        }
+      background:rgba(255,255,255,0.7) none repeat scroll !important;
+}
+//标题颠倒 结束
 
 //网页加载进度条
 .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+      -webkit-pointer-events: none;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
 }
 .pace-inactive {
-  display: none;
+      display: none;
 }
 .pace .pace-progress {
-  background: #22DD99;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 3px;
+      background: #22DD99;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      right: 100%;
+      width: 100%;
+      height: 3px;
 }
 .pace .pace-progress-inner {
-  display: block;
-  position: absolute;
-  right: 0px;
-  width: 100px;
-  height: 100%;
-  box-shadow: 0 0 10px #e90f92, 0 0 5px #e90f92;
-  opacity: 1.0;
-  -webkit-transform: rotate(3deg) translate(0px, -4px);
-  -moz-transform: rotate(3deg) translate(0px, -4px);
-  -ms-transform: rotate(3deg) translate(0px, -4px);
-  -o-transform: rotate(3deg) translate(0px, -4px);
-  transform: rotate(3deg) translate(0px, -4px);
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 10px #e90f92, 0 0 5px #e90f92;
+      opacity: 1.0;
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -moz-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+      -o-transform: rotate(3deg) translate(0px, -4px);
+      transform: rotate(3deg) translate(0px, -4px);
 }
 .pace .pace-activity {
-  display: block;
-  position: fixed;
-  z-index: 2000;
-  top: 15px;
-  right: 15px;
-  width: 14px;
-  height: 14px;
-  border: solid 2px transparent;
-  border-top-color: #e90f92;
-  border-left-color: #e90f92;
-  border-radius: 10px;
-  -webkit-animation: pace-spinner 400ms linear infinite;
-  -moz-animation: pace-spinner 400ms linear infinite;
-  -ms-animation: pace-spinner 400ms linear infinite;
-  -o-animation: pace-spinner 400ms linear infinite;
-  animation: pace-spinner 400ms linear infinite;
+      display: block;
+      position: fixed;
+      z-index: 2000;
+      top: 15px;
+      right: 15px;
+      width: 14px;
+      height: 14px;
+      border: solid 2px transparent;
+      border-top-color: #e90f92;
+      border-left-color: #e90f92;
+      border-radius: 10px;
+      -webkit-animation: pace-spinner 400ms linear infinite;
+      -moz-animation: pace-spinner 400ms linear infinite;
+      -ms-animation: pace-spinner 400ms linear infinite;
+      -o-animation: pace-spinner 400ms linear infinite;
+      animation: pace-spinner 400ms linear infinite;
 }
 @-webkit-keyframes pace-spinner {
-  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+      0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @-moz-keyframes pace-spinner {
-  0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+      0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @-o-keyframes pace-spinner {
-  0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+      0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @-ms-keyframes pace-spinner {
-  0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
-  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+      0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+      100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @keyframes pace-spinner {
-  0% { transform: rotate(0deg); transform: rotate(0deg); }
-  100% { transform: rotate(360deg); transform: rotate(360deg); }
+      0% { transform: rotate(0deg); transform: rotate(0deg); }
+      100% { transform: rotate(360deg); transform: rotate(360deg); }
 }
 //网页加载进度条 结束

@@ -15,7 +15,7 @@
 
 <!--j's自定义修改 修改footer中的主题-->
 <div class="theme-info">
-<i class="theme-link" style="font-style:normal"><-- Why not click it?</i>
+<i class="theme-link" style="font-style:normal"><i class="fa fa-arrow-left" aria-hidden="true"> Why not click it?</i></i>
 </div>
 <!--
 <div >
