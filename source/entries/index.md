@@ -5,18 +5,38 @@ date: 2017-07-27 15:04:16
 <title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
 
+* ### REST架构
+根据[wiki定义](https://zh.wikipedia.org/wiki/%E5%85%B7%E8%B1%A1%E7%8A%B6%E6%80%81%E4%BC%A0%E8%BE%93)：<code class="shortCode">"具象状态传输（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博士论文[1] 中提出来的一种万维网软件架构风格，目的是便于不同软件/程序在网络（例如互联网）中互相传递信息。"</code>wiki中提到“REST是设计风格而不是标准”，这是很重要的一点，首先在理解之前你不能误解它本身的含义和存在的意义。
+<div class="div-border-left-yellow">具象状态传输架构风格最重要的架构约束有6个[2]：
+客户-服务器（Client-Server）
+通信只能由客户端单方面发起，表现为请求-响应的形式。
+无状态（Stateless）
+通信的会话状态（Session State）应该全部由客户端负责维护。
+缓存（Cache）
+响应内容可以在通信链的某处被缓存，以改善网络效率。
+统一接口（Uniform Interface）
+通信链的组件之间通过统一的接口相互通信，以提高交互的可见性。
+分层系统（Layered System）
+通过限制组件的行为（即每个组件只能“看到”与其交互的紧邻层），将架构分解为若干等级的层。
+按需代码（Code-On-Demand，可选）
+支持通过下载并执行一些代码（例如Java Applet、Flash或JavaScript），对客户端的功能进行扩展。"。
+<i class="from fa fa-arrow-circle-right"> wiki https://zh.wikipedia.org/wiki/具象状态传输
+</div>
+	我的理解是，REST就是定义如何设计出RESTful API的，它让系统对外提供的接口更加规范（也就是符合REST风格），如REST的提出者Roy Thomas Fielding在他提出REST的[博士论文](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)中所说:"My work is motivated by the desire to understand and evaluate the architectural design of network-based application software through principled use of architectural constraints, thereby obtaining the functional, performance, and social properties desired of an architecture."这些RESTful的接口将会“功能强大，性能出色且友好易用”。
+
 * ### 编程语言的自举
 首先一提，能够自举是一门编程语言成熟的标志之一（不能不代表不成熟）。简单来说就是语言自身的编译器可以编译自己的编译器。引用知乎上轮子哥的回答比较简单易懂：
-{% blockquote vczh https://www.zhihu.com/question/28513473/answer/41094452 %}
-你想创造一门V语言而且用V语言来写V编译器的话，你得按照下面的方法做：
+<div class="div-border-left-yellow">你想创造一门V语言而且用V语言来写V编译器的话，你得按照下面的方法做：
 1、用C++把那个编译器（A）写出来，顺便留下很多测试用例。
 2、用V语言把那个编译器写（B）出来，用A.exe来编译B，修改直到所有测试用例都通过为止。
 3、B.exe来编译B自己得到B2.exe，修改直到B2.exe所有测试用例都通过为止。这是为了保证，就算B本身有很多bug，至少编译自己是没有bug的，从而你就可以走到第四步。
 4、当你觉得有信心了，用A.exe把B编译一遍，就得到了B.exe。然后A的代码和A.exe都在也不需要存在了，删掉他们。以后你就不断的用B.exe来编译下一个版本的B就好了。就自举了。
-{% endblockquote %}
-那么图灵完备的语言是不是都可以自举呢？从我个人“没有哪一门图灵完备语言实现的功能是另一门图灵完备语言所不能实现的”的观点来看答案是肯定的。觉得没有必要在“能不能”和“有没有实现”这个问题上纠结，这只是编程语言的一种性质，能不能自举是一回事，有没有必要真的实现就是另一回事了。
+<i class="from fa fa-arrow-circle-right">  vczh https://www.zhihu.com/question/28513473/answer/41094452</i>
+</div>
+	那么图灵完备的语言是不是都可以自举呢？从我个人“没有哪一门图灵完备语言实现的功能是另一门图灵完备语言所不能实现的”的观点来看答案是肯定的。觉得没有必要在“能不能”和“有没有实现”这个问题上纠结，这只是编程语言的一种性质，能不能自举是一回事，有没有必要真的实现就是另一回事了。
 
 * ### ES6的暂时性死区
+
 ```js
 //(1). ES6中的let命令不像var那样具有“变量提升”现象。
 console.log(foo);//ReferenceError

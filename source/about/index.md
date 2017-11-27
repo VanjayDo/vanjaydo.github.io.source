@@ -6,7 +6,7 @@ date: 2017-07-27 15:04:16
 ##### 11 月
 
 * ###### 2017-11-24
-发现<code id="shortCode">curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code id="shortCode">curl ifconfig.co</code>来的快得多，好用。
+发现<code class="shortCode">curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code class="shortCode">curl ifconfig.co</code>来的快得多，好用。
 注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。
 
 * ###### 2017-11-20
