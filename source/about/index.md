@@ -5,7 +5,12 @@ date: 2017-07-27 15:04:16
 #### 2017 年
 ##### 11 月
 
-* ###### 2017-11-24
+* ###### 2017-11-29
+[Tiny Core](http://distro.ibiblio.org/tinycorelinux/)，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。
+进入系统后输入命令，<code class="shortCode">tce</code>可以进入Tiny Core Extension，即CLI应用浏览器，按<code class="shortCode">s</code>进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。
+关于Tiny Core Plus，是带GUI的版本，稍大，100+M，在vmware直接从IOS启动时只有选择"Boot Core with only X/GUI (TinyCore)"及以下的启动项才能正常启动，原因未知。
+
+* ###### 2017-11-27
 发现<code class="shortCode">curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code class="shortCode">curl ifconfig.co</code>来的快得多，好用。
 注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。
 
