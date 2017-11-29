@@ -6,6 +6,18 @@ date: 2017-07-27 15:04:16
 ##### 11 月
 
 * ###### 2017-11-29
+今天在使用服务器做ss代理的时候一直提示<code class="shortCode">ERROR: unable to resolve……</code>，很奇怪，配置，明明服务器配置了多个DNS，却显示无法解析域名。
+最后在配置文件里加了<code class="shortCode">"nameserver": "8.8.8.8"</code>这个字段，问题就解决了。
+
+在使用proxifier时突然报错
+```
+[11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier. 
+[11.29 16:56:25] Proxifier or some of its parts may work incorrectly. 
+[11.29 16:56:25] It is highly recommended that you run SysSettings tool to address this problem.
+```
+一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的<code class="shortCode">SysSettings</code>，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示<code class="shortCode">proxifier module is not installed</code>，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
+
+* ###### 2017-11-29
 [Tiny Core](http://distro.ibiblio.org/tinycorelinux/)，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。
 进入系统后输入命令，<code class="shortCode">tce</code>可以进入Tiny Core Extension，即CLI应用浏览器，按<code class="shortCode">s</code>进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。
 关于Tiny Core Plus，是带GUI的版本，稍大，100+M，在vmware直接从IOS启动时只有选择"Boot Core with only X/GUI (TinyCore)"及以下的启动项才能正常启动，原因未知。
