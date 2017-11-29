@@ -12,12 +12,11 @@ install:
   - npm install hexo-cli -g
   - npm install gulp -g
   - npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp
-  - npm list
-  - gulp min
 
 build_script:
   - dir
   - hexo g
+  - gulp min
 
 artifacts:
   - path: public
