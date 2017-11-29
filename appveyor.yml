@@ -10,7 +10,8 @@ install:
   - npm -g install npm@5.5.1 
   - appveyor-retry npm install
   - npm install hexo-cli -g
-  - npm install -g
+  - npm install gulp -g
+  - npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp
   - npm list
   - gulp min
 
