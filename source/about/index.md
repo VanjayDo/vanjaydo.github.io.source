@@ -44,6 +44,33 @@ AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EV
 * ###### 2017-11-09
 [Get full version of StarUML](https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a)    startUML获取证书，V2.8.0亲测可用.
 
+* ###### 2017-11-05
+之前的ssl证书都是在七牛上获取的trustasia颁发的免费证书，但是过程比较繁琐，需要先申请然后用dns或文件的方式验证，一般一天后通过验证，然后要把证书下载下来传到服务器，再配置nginx……
+发现lnmp现在自带了有ssl添加功能，试了下，报错：
+```
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/virtualenv.py", line 2363, in <module>
+    main()
+  File "/usr/lib/python3/dist-packages/virtualenv.py", line 719, in main
+    symlink=options.symlink)
+  File "/usr/lib/python3/dist-packages/virtualenv.py", line 988, in create_environment
+    download=download,
+  File "/usr/lib/python3/dist-packages/virtualenv.py", line 918, in install_wheel
+    call_subprocess(cmd, show_stdout=False, extra_env=env, stdin=SCRIPT)
+  File "/usr/lib/python3/dist-packages/virtualenv.py", line 812, in call_subprocess
+    % (cmd_desc, proc.returncode))
+OSError: Command /opt/eff.org/certbot/venv/bin/python2.7 - setuptools pkg_resources pip wheel failed with error code 2
+Let's Encrypt SSL Certificate create failed!
+```
+	[在此找到解决办法](https://github.com/certbot/certbot/issues/2883)，最终是用@knowThis小伙伴的办法解决的：
+```
+$ apt-get purge python-virtualenv python3-virtualenv virtualenv 
+$ pip install --upgrade pip
+$ pip install virtualenv
+$ vim /bin/lnmp  
+#将其中的"/bin/certbot certonly"替换成"/bin/certbot --no-bootstrap certonly"。全文共一处。
+```
+
 * ###### 2017-11-01
 最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：
 ```bash
