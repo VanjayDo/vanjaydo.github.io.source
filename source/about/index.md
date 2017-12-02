@@ -3,8 +3,11 @@ title: 有些关于
 date: 2017-07-27 15:04:16
 ---
 #### 2017 年
-##### 11 月
+##### 12月
+* ###### 2017-12-01
+从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如<code class="shortCode">https://zh.wikipedia.org/wiki/维基百科</code> 被转成了<code class="shortCode">https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.
 
+##### 11 月
 * ###### 2017-11-29
 今天在使用服务器做ss代理的时候一直提示<code class="shortCode">ERROR: unable to resolve……</code>，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。
 最后还是查相关文档后，在配置文件里加了<code class="shortCode">"nameserver": "8.8.8.8"</code>这个字段，问题就解决了。
