@@ -26,7 +26,8 @@ li.L6,
 li.L7,
 li.L8,
 li.L9 {
-  padding-left: 1em;
+  /*j's自定义修改 缩短代码块中代码左边的空白*/
+  /*padding-left: 1em;*/
   background-color: #2f3640;
   list-style-type: decimal;
 }
