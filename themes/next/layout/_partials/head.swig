@@ -142,3 +142,9 @@
 
 <!-- prettify高亮代码css引入 -->
 <link href="/plugins/prettify/tranquil-heart.css" rel="stylesheet" type="text/css">
+
+<script>
+  window.onload=function(){
+    document.getElementsByClassName("shortCode").getElementsByTagName("a").href="javascript:void(0);";
+  }
+</script>

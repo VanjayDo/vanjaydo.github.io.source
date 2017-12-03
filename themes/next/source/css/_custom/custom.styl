@@ -68,6 +68,19 @@ p{
       color: #c7254e;
       background: #f9f2f4;
       border: 1px solid #d6d6d6;
+      //取消短代码中的超链接样式
+      a{
+            color:#c7254e;
+            border-bottom:0px;
+            cursor:text;
+            &:hover { 
+                  text-decoration:none;
+                  font-size:100%;
+            }
+            &:hover {
+                  text-decoration:none;
+            }
+      }
 }
 
 //标题颠倒

@@ -6,7 +6,7 @@ date: 2017-07-27 15:04:16
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
 
 * ### REST架构
-根据[wiki定义](https://zh.wikipedia.org/wiki/%E5%85%B7%E8%B1%A1%E7%8A%B6%E6%80%81%E4%BC%A0%E8%BE%93)：<code class="shortCode">"具象状态传输（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博士论文[1] 中提出来的一种万维网软件架构风格，目的是便于不同软件/程序在网络（例如互联网）中互相传递信息。"</code>wiki中提到“REST是设计风格而不是标准”，这是很重要的一点，首先在理解之前你不能误解它本身的含义和存在的意义。
+根据[wiki定义](https://zh.wikipedia.org/wiki/%E5%85%B7%E8%B1%A1%E7%8A%B6%E6%80%81%E4%BC%A0%E8%BE%93)："具象状态传输（REST，英文：Representational State Transfer）是Roy Thomas Fielding博士于2000年在他的博士论文[1] 中提出来的一种万维网软件架构风格，目的是便于不同软件/程序在网络（例如互联网）中互相传递信息。"wiki中提到“REST是设计风格而不是标准”，这是很重要的一点，首先在理解之前你不能误解它本身的含义和存在的意义。
 <div class="div-border-left-yellow">具象状态传输架构风格最重要的架构约束有6个[2]：
 客户-服务器（Client-Server）
 通信只能由客户端单方面发起，表现为请求-响应的形式。
@@ -37,33 +37,33 @@ date: 2017-07-27 15:04:16
 
 * ### ES6的暂时性死区
 
-```js
-//(1). ES6中的let命令不像var那样具有“变量提升”现象。
-console.log(foo);//ReferenceError
-let foo=2;
-//(2). ES6中只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域而不受外部的影响。
-var tmp=123;
-if (true)
-{
-	tmp="abc";//ReferenceError
-	let tmp;
-}
+	```
+	//(1). ES6中的let命令不像var那样具有“变量提升”现象。
+	console.log(foo);//ReferenceError
+	let foo=2;
+	//(2). ES6中只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域而不受外部的影响。
+	var tmp=123;
+	if (true)
+	{
+		tmp="abc";//ReferenceError
+		let tmp;
+	}
 
-//ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
-//总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
-//这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
-//再来一个例子:
-if(true)
-{
-	//TDZ开始
-	tmp="abc";//ReferenceError
-	console.log(tmp);//ReferenceError
-	let tmp;//TDZ结束
-	console.log(tmp);//undefined
-	tmp="abc";
-	console.log(tmp);//123
-}
-```
+	//ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
+	//总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
+	//这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
+	//再来一个例子:
+	if(true)
+	{
+		//TDZ开始
+		tmp="abc";//ReferenceError
+		console.log(tmp);//ReferenceError
+		let tmp;//TDZ结束
+		console.log(tmp);//undefined
+		tmp="abc";
+		console.log(tmp);//123
+	}
+	```
 
 * ### 图灵完备
 wiki描述：“在可计算性理论里，如果一系列操作数据的规则（如指令集、编程语言、细胞自动机）可以用来模拟单带图灵机，那么它是图灵完备的”。图灵机的基本思想是“用机器来模拟人们用纸笔进行数学运算的过程”，也就是说图灵机能执行所有可被描述的计算。

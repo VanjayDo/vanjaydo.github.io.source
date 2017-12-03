@@ -4,8 +4,10 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 12月
+
+
 * ###### 2017-12-01
-从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如<code class="shortCode">https://zh.wikipedia.org/wiki/维基百科</code> 被转成了<code class="shortCode">https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.
+从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如<code class="shortCode">zh.wikipedia.org/wiki/维基百科</code>被转成了<code class="shortCode">zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.
 
 ##### 11 月
 * ###### 2017-11-29
@@ -70,9 +72,16 @@ Let's Encrypt SSL Certificate create failed!
 $ apt-get purge python-virtualenv python3-virtualenv virtualenv 
 $ pip install --upgrade pip
 $ pip install virtualenv
-$ vim /bin/lnmp  
-#将其中的"/bin/certbot certonly"替换成"/bin/certbot --no-bootstrap certonly"。全文共一处。
+$ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstrap certonly"。仅一处。
 ```
+使用lnmp自带的添加ssl功能有个好处就是它会配置默认将http流量直接转发到https;
+直接使用lnmp 生成ssl后，vhost站点的配置文件在/usr/local/nginx/conf/vhost，需要进行配置的话可以进去修改，80端口的server是http的配置，443端口的是https，以下举例：
+***1.*** 需要启用404页面，当资源访问错误时跳转到指定页面：
+取消error_page的注释，将其修改为<code class="shortCode">error_page  404 403 500 502 503 504  = /404.html;</code>
+注意：/404.html文件的路径是相对于配置中的<code class="shortCode">root</code>字段的值，所以如果<code class="shortCode">root</code>字段的值为<code class="shortCode">/home/wwwroot/default</code>,那么404.html在系统中的绝对路径为/home/wwwroot/default/404.html。其次，http和https的配置是分开的，所以如果只配置了http的404页面，那么在https协议访问发生资源错误时是不会跳转到http配置中设置的404页面的。
+***2.*** http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加<code class="shortCode">rewrite ^ https://$server_name$request_uri? permanent;</code>
+***3.*** 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用<code class="shortCode">nginx -t</code>命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用<code class="shortCode">netstat -anp|grep :80</code>查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用<code class="shortCode">journalctl -xe</code>查看启动服务时的报错日志进行调试解决。
+
 
 * ###### 2017-11-01
 最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：
