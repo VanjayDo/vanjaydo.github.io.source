@@ -18,6 +18,8 @@ build_script:
   - hexo g
   - gulp min
 
+test: off
+
 artifacts:
   - path: public
 
