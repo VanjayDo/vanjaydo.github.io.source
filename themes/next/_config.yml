@@ -49,9 +49,11 @@ menu:
   home: /
   #categories: /categories/
   about: /about/
-  archives: /archives/
+  #archives: /archives/
+  memo: /memo/
   tags: /tags/
   entries: /entries/
+  
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -72,6 +74,7 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
   entries: tasks
+  memo: sticky-note
 
 
 # ---------------------------------------------------------------
