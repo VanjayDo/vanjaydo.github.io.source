@@ -4,6 +4,11 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 12月
+* ###### 2017-12-09
+有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用<code class="shortCode">http-server</code>.
+需要使用npm全局安装http-sever: <code class="shortCode">npm install -g http-server</code>
+使用http-server在本地开一个临时的server: <code class="shortCode">http-server -a 127.0.0.1 -p [端口号]</code>根目录默认为当前目录,也可以直接在http-server后面指定目录地址(相对/绝对都可以),如果不加<code class="shortCode">-a</code>参数的话则会默认在本地的几个网卡地址上都进行设置(如:你有一个10.10.10.1的虚拟网卡,如果你有一台虚拟机使用的是这个网卡,则虚拟机也可以访问当前设置的地址)
+
 * ###### 2017-12-06
 有些同学不会下载离线完整版的chrome,方法是:google搜索关键词"chrome 帮助",会得到结果"Google Chrome帮助 - Google Support",下面的小标题有"下载和安装Google Chrome",点进去,在"在 Windows 设备上安装 Chrome"下方会有小标题"离线安装 Chrome",点击展开,会出现链接[备用 Chrome 安装程序](https://www.google.com/intl/zh-CN/chrome/browser/desktop/index.html?standalone=1),点击后可以看到打开的页面URL最后有属性<code class="shortCode">standalone=1</code>,在该页面下载的chrome即是离线版的.
 

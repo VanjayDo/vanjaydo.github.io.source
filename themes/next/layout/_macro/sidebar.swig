@@ -263,8 +263,12 @@ a.change {
     border: 2px solid #000;
     border-radius: 2px;
     transition: all .5s ease;
-    font-weight: 700
+    font-weight: 700;
 }
+a.change:hover{
+    font-size: 115%;
+}
+
 
 #high{
     color: #000;

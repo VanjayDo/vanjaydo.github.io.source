@@ -43,16 +43,52 @@ p { margin: 0 0 20px 0; }
 
 
 //j's自定义修改
-//博文中链接效果和右侧边栏文章目录效果
+
+//链接默认无下划线
 a {
-  color: #009357;//暗绿色
   text-decoration: none;
-  border-bottom: 1px solid #00B068;
+}
+
+//博文中链接效果
+a[rel="noopener"] {
+  color: #0068E5;//蓝色
+  text-decoration: none;
   word-wrap: break-word;
   &:hover {
-    font-size:17px;
-    color: #00FF97;//亮绿色
-    border-bottom-color: $link-decoration-hover-color;
+    color: #FF5E53;//橙色
+    font-size: 15px;
+  }
+}
+
+//查看全文按钮效果
+a.btn{
+  margin-top:10px;
+   &:hover {
+    font-size: 14px;
+  }
+}
+//博文右侧导航栏小标题效果
+a.nav-link:hover{
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+//页码编号
+a.page-number{
+  color: #555555;//蓝色
+  text-decoration: none;
+  word-wrap: break-word;
+  &:hover {
+    color: #222222;//橙色
+  }  
+}
+//前/后一页
+a.extend{
+  color: #555555;//蓝色
+  text-decoration: none;
+  word-wrap: break-word;
+  &:hover {
+    color: #222222;//橙色
   }
 }
 
@@ -92,10 +128,6 @@ article header h1 a {
   }
 }
 //修改结束
-
-
-
-
 
 
 
