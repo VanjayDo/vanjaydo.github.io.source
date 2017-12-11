@@ -1,5 +1,7 @@
 vanjaydo.github.io.source 
 =========================
+[![Build Status]][Appveyor]
+
 该Repo为作者基于hexo框架的博客源码，生成的网站已发布到GitHub Pages，并绑定到[个人域名](http://blog.safeandsound.cn)。
 
 * ### 个性化修改
@@ -8,3 +10,9 @@ vanjaydo.github.io.source
 
 * ### CI
 该Repo采用[AppVeyor](https://ci.appveyor.com/projects)平台进行持续集成（相比jenkins，它不需要安装，完全云端操作），生成的静态文件发布到 Repo：[vanjaydo.github.io](https://github.com/VanjayDo/vanjaydo.github.io)。
+
+
+
+
+[Appveyor]:    https://ci.appveyor.com/project/VanjayDo/vanjaydo-github-io-source
+[Build Status]:https://ci.appveyor.com/api/projects/status/tfw57q6eecippsl5/branch/master?svg=true
