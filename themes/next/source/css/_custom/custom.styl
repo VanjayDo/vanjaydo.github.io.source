@@ -63,8 +63,8 @@ p{
       color: orange;
 }
 
-//code短代码标识
-.shortCode {
+//行内代码效果
+p code {
       color: #c7254e;
       background: #f9f2f4;
       border: 1px solid #d6d6d6;
@@ -78,6 +78,44 @@ p{
                   font-size:100%;
             }
       }
+}
+ul li code{
+      color: #c7254e;
+      background: #f9f2f4;
+      border: 1px solid #d6d6d6;
+      //取消短代码中的超链接样式
+      a{
+            color:#c7254e;
+            border-bottom:0px;
+            cursor:text;
+            &:hover { 
+                  text-decoration:none;
+                  font-size:100%;
+            }
+      }
+}
+ol:not(.linenums) > li > code {
+       color: #c7254e;
+      background: #f9f2f4;
+      border: 1px solid #d6d6d6;
+      //取消短代码中的超链接样式
+      a{
+            color:#c7254e;
+            border-bottom:0px;
+            cursor:text;
+            &:hover { 
+                  text-decoration:none;
+                  font-size:100%;
+            }
+      }
+}
+
+//文中图片居中显示但不影响放大效果
+img[src]:not(.fancybox-image) {
+      width: 60%;
+      clear: both;
+      display: block;
+      margin:auto;
 }
 
 //标题颠倒

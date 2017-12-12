@@ -1,3 +1,6 @@
+init:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
 clone_depth: 1
 
 environment:
@@ -5,16 +8,16 @@ environment:
     secure: qu9+06aH4RjndcE84ckrfYLCMpT7IsXcreIidXyMKUCl7L9Xz4Dni4JsyNXuBDZk
 
 install:
+  - dir
   - node --version
+  - npm install npm@5.5.1 -g 
   - npm --version
-  - npm -g install npm@5.5.1 
-  - appveyor-retry npm install
+  - npm install
   - npm install hexo-cli -g
   - npm install gulp -g
   - npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp
 
 build_script:
-  - dir
   - hexo g
   - gulp min
 

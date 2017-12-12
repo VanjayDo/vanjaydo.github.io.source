@@ -5,35 +5,35 @@ date: 2017-07-27 15:04:16
 #### 2017 年
 ##### 12月
 * ###### 2017-12-09
-有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用<code class="shortCode">http-server</code>.
-需要使用npm全局安装http-sever: <code class="shortCode">npm install -g http-server</code>
-使用http-server在本地开一个临时的server: <code class="shortCode">http-server -a 127.0.0.1 -p [端口号]</code>根目录默认为当前目录,也可以直接在http-server后面指定目录地址(相对/绝对都可以),如果不加<code class="shortCode">-a</code>参数的话则会默认在本地的几个网卡地址上都进行设置(如:你有一个10.10.10.1的虚拟网卡,如果你有一台虚拟机使用的是这个网卡,则虚拟机也可以访问当前设置的地址)
+有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用`http-server`.
+需要使用npm全局安装http-sever: `npm install -g http-server`
+使用http-server在本地开一个临时的server: `http-server -a 127.0.0.1 -p [端口号]`根目录默认为当前目录,也可以直接在http-server后面指定目录地址(相对/绝对都可以),如果不加`-a`参数的话则会默认在本地的几个网卡地址上都进行设置(如:你有一个10.10.10.1的虚拟网卡,如果你有一台虚拟机使用的是这个网卡,则虚拟机也可以访问当前设置的地址)
 
 * ###### 2017-12-06
-有些同学不会下载离线完整版的chrome,方法是:google搜索关键词"chrome 帮助",会得到结果"Google Chrome帮助 - Google Support",下面的小标题有"下载和安装Google Chrome",点进去,在"在 Windows 设备上安装 Chrome"下方会有小标题"离线安装 Chrome",点击展开,会出现链接[备用 Chrome 安装程序](https://www.google.com/intl/zh-CN/chrome/browser/desktop/index.html?standalone=1),点击后可以看到打开的页面URL最后有属性<code class="shortCode">standalone=1</code>,在该页面下载的chrome即是离线版的.
+有些同学不会下载离线完整版的chrome,方法是:google搜索关键词"chrome 帮助",会得到结果"Google Chrome帮助 - Google Support",下面的小标题有"下载和安装Google Chrome",点进去,在"在 Windows 设备上安装 Chrome"下方会有小标题"离线安装 Chrome",点击展开,会出现链接[备用 Chrome 安装程序](https://www.google.com/intl/zh-CN/chrome/browser/desktop/index.html?standalone=1),点击后可以看到打开的页面URL最后有属性`standalone=1`,在该页面下载的chrome即是离线版的.
 
 * ###### 2017-12-01
-从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如<code class="shortCode">https://zh.wikipedia.org/wiki/维基百科</code>被转成了<code class="shortCode">https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91</code>,其实使用剪切而非复制就不会出现这种尴尬的问题.
+从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如`https://zh.wikipedia.org/wiki/维基百科`被转成了`https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91`,其实使用剪切而非复制就不会出现这种尴尬的问题.
 
 ##### 11 月
 * ###### 2017-11-29
-今天在使用服务器做ss代理的时候一直提示<code class="shortCode">ERROR: unable to resolve……</code>，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。
-最后还是查相关文档后，在配置文件里加了<code class="shortCode">"nameserver": "8.8.8.8"</code>这个字段，问题就解决了。
+今天在使用服务器做ss代理的时候一直提示`ERROR: unable to resolve……`，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。
+最后还是查相关文档后，在配置文件里加了`"nameserver": "8.8.8.8"`这个字段，问题就解决了。
 然后，在使用proxifier时突然报错
 ```
 [11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier. 
 [11.29 16:56:25] Proxifier or some of its parts may work incorrectly. 
 [11.29 16:56:25] It is highly recommended that you run SysSettings tool to address this problem.
 ```
-	一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的<code class="shortCode">SysSettings</code>，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示<code class="shortCode">proxifier module is not installed</code>，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
+	一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的`SysSettings`，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示`proxifier module is not installed`，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
 
 * ###### 2017-11-29
 [Tiny Core](http://distro.ibiblio.org/tinycorelinux/)，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。
-进入系统后输入命令，<code class="shortCode">tce</code>可以进入Tiny Core Extension，即CLI应用浏览器，按<code class="shortCode">s</code>进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。
+进入系统后输入命令，`tce`可以进入Tiny Core Extension，即CLI应用浏览器，按`s`进入搜索模式，输入需要的软件/库名即可，系统会列出相关的选择。
 关于Tiny Core Plus，是带GUI的版本，稍大，100+M，在vmware直接从IOS启动时只有选择"Boot Core with only X/GUI (TinyCore)"及以下的启动项才能正常启动，原因未知。
 
 * ###### 2017-11-27
-发现<code class="shortCode">curl v4.ifconfig.co</code>命令获取本机ip地址的速度比<code class="shortCode">curl ifconfig.co</code>来的快得多，好用。
+发现`curl v4.ifconfig.co`命令获取本机ip地址的速度比`curl ifconfig.co`来的快得多，好用。
 注：适用于虚拟机、云服务器之类使用NAT转换、使用ifconfig命令无法直接获取公网地址的主机。
 
 * ###### 2017-11-20
@@ -83,10 +83,10 @@ $ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstra
 使用lnmp自带的添加ssl功能有个好处就是它会配置默认将http流量直接转发到https;
 直接使用lnmp 生成ssl后，vhost站点的配置文件在/usr/local/nginx/conf/vhost，需要进行配置的话可以进去修改，80端口的server是http的配置，443端口的是https，以下举例：
 ***1.*** 需要启用404页面，当资源访问错误时跳转到指定页面：
-取消error_page的注释，将其修改为<code class="shortCode">error_page  404 403 500 502 503 504  = /404.html;</code>
-注意：/404.html文件的路径是相对于配置中的<code class="shortCode">root</code>字段的值，所以如果<code class="shortCode">root</code>字段的值为<code class="shortCode">/home/wwwroot/default</code>,那么404.html在系统中的绝对路径为/home/wwwroot/default/404.html。其次，http和https的配置是分开的，所以如果只配置了http的404页面，那么在https协议访问发生资源错误时是不会跳转到http配置中设置的404页面的。
-***2.*** http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加<code class="shortCode">rewrite ^ https://$server_name$request_uri? permanent;</code>
-***3.*** 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用<code class="shortCode">nginx -t</code>命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用<code class="shortCode">netstat -anp|grep :80</code>查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用<code class="shortCode">journalctl -xe</code>查看启动服务时的报错日志进行调试解决。
+取消`error_page`的注释，将其修改为`error_page  404 403 500 502 503 504  = /404.html;`
+注意：/404.html文件的路径是相对于配置中的`root`字段的值，所以如果`root`字段的值为`/home/wwwroot/default`,那么404.html在系统中的绝对路径为/home/wwwroot/default/404.html。其次，http和https的配置是分开的，所以如果只配置了http的404页面，那么在https协议访问发生资源错误时是不会跳转到http配置中设置的404页面的。
+***2.*** http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加`rewrite ^ https://$server_name$request_uri? permanent;`
+***3.*** 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用`nginx -t`命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用`netstat -anp|grep :80`查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用`journalctl -xe`查看启动服务时的报错日志进行调试解决。
 
 
 * ###### 2017-11-01
@@ -107,7 +107,7 @@ tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      
 
 * ###### 2017-10-21
 之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下。
-<img src="https://cdn.safeandsound.cn/image/about/tldr.png" width="500px">
+<img src="https://cdn.safeandsound.cn/image/memo/tldr.png" width="500px">
 
 * ###### 2017-10-18
 推荐一款linux下递归搜索文件内容的软件：[ag](https://github.com/ggreer/the_silver_searcher)，安装步骤：
@@ -118,11 +118,11 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 sudo make install
 ```
 	体验还不错，在linux子系统下运行效果图
-<img src="https://cdn.safeandsound.cn/image/about/show-ag.png" width="500px">
+<img src="https://cdn.safeandsound.cn/image/memo/show-ag.png" width="500px">
 
 * ###### 2017-10-13
 发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow -->[豆瓣读书](https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb) <--，感觉查书什么的挺好用的
-<img src="https://cdn.safeandsound.cn/image/about/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
+<img src="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
 
 * ###### 2017-10-09
 当觉得生活无趣又无望时就应该读汪曾祺。
@@ -131,7 +131,7 @@ sudo make install
 
 * ###### 2017-10-08
 今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。
-<img src="https://cdn.safeandsound.cn/image/about/SDN.jpg" width="500px">
+<img src="https://cdn.safeandsound.cn/image/memo/SDN.jpg" width="500px">
 因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。
 但还是感觉似乎不该这样。
 可能是因为喜欢在这边学习的氛围和深夜写代码的自由。
@@ -139,7 +139,7 @@ sudo make install
 
 * ###### 2017-10-05
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
-<img src="https://cdn.safeandsound.cn/image/about/mycli.png">
+<img src="https://cdn.safeandsound.cn/image/memo/mycli.png">
 
 ##### 8月
 * ###### 2017-08-15
