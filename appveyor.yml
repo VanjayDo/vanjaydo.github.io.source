@@ -19,7 +19,7 @@ install:
 
 build_script:
   - hexo g
-  - gulp min
+# - gulp min
 
 test: off
 

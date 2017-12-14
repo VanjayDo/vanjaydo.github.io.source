@@ -4,6 +4,16 @@ date: 2017-07-27 15:04:16
 ---
 <title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
+
+* ### CI/CD/CR
+[持续集成](https://zh.wikipedia.org/wiki/持续集成)(CI, Continuous integration),[持续交付](https://zh.wikipedia.org/wiki/持续交付)(CD, Continuous delivery),[持续部署](https://zh.wikipediaorg/wiki/持续部署)(CR, Continuous release)
+所谓`持续`的思想就是: 既然我们知道开发的需求很难一次性完整的定下来, 那么我们就一点一点的开发, 每一次功能完成后再加到主体上去, 这样使得开发过程更加(敏捷&灵活), 有错可以及时更改, 与最后一次性对系统进行合并/集成然后再构建 测试 发布相比(风险&损失)更小, 也就符合了极限编程的要求. 持续是指整个过程中项目功能的合并, 构建, 测试, 发布产品等, 这些环节是持续的.
+持续集成很好理解, 给出的wiki链接页面中解释得很清楚, 就是每次一点代码(在开发者通过构建&测试之后)集成到主线.
+持续交付是指将集成后的代码通过更真实的类生产环境的测试后部署到生产环境中, 但是是否部署是可选的, 部署是手动的.
+而持续部署就是在持续交付的基础上进行全自动的部署. 如wiki中所描述的`如果要实施持续部署，必须先实施持续交付`.
+
+
+
 * ### 几种流行的部署技术
 #### *蓝绿部署*
 [蓝绿部署](http://sunitspace.blogspot.jp/2013/10/blue-green-deployment.html)(Blue/Green Deployment)的特点是无停机时间且风险较小,具体的流程介绍在链接的博客里已经说的很清楚了,在此不赘述.
@@ -32,7 +42,7 @@ date: 2017-07-27 15:04:16
 支持通过下载并执行一些代码（例如Java Applet、Flash或JavaScript），对客户端的功能进行扩展。"。
 <i class="from fa fa-arrow-circle-right"> wiki https://zh.wikipedia.org/wiki/具象状态传输
 </div>
-	我的理解是，REST就是定义如何设计出RESTful API的，它让系统对外提供的接口更加规范（也就是符合REST风格），如REST的提出者Roy Thomas Fielding在他提出REST的[博士论文](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)中所说:"My work is motivated by the desire to understand and evaluate the architectural design of network-based application software through principled use of architectural constraints, thereby obtaining the functional, performance, and social properties desired of an architecture."这些RESTful的接口将会“功能强大，性能出色且友好易用”。
+	我的理解是，REST就是定义一个系统/软件的架构,以及如何设计出RESTful API的，它让系统对外提供的接口更加规范（也就是符合REST风格），如REST的提出者Roy Thomas Fielding在他提出REST的[博士论文](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)中所说:"My work is motivated by the desire to understand and evaluate the architectural design of network-based application software through principled use of architectural constraints, thereby obtaining the functional, performance, and social properties desired of an architecture."这些RESTful的接口将会“功能强大，性能出色且友好易用”。
 
 * ### 编程语言的自举
 首先一提，能够自举是一门编程语言成熟的标志之一（不能不代表不成熟）。简单来说就是语言自身的编译器可以编译自己的编译器。引用知乎上轮子哥的回答比较简单易懂：

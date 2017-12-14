@@ -27,7 +27,7 @@ gulp.task('minify-html', function() {
 		removeComments: true,
 		minifyJS: true,
 		minifyCSS: true,
-		//collapseWhitespace: true
+		collapseWhitespace: true
 	}
 	return gulp.src('public/**/*.html')
 		.pipe(htmlmin(option))
