@@ -1,5 +1,5 @@
-init:
-  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#init:
+#  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 clone_depth: 1
 
@@ -9,8 +9,11 @@ environment:
 
 install:
   - dir
-  - node --version
   - npm install npm@5.5.1 -g 
+  - npm install nvm -g
+  - nvm install 7.8
+  - nvm use 7.8
+  - node --version
   - npm --version
   - npm install
   - npm install hexo-cli -g
@@ -19,7 +22,7 @@ install:
 
 build_script:
   - hexo g
-# - gulp min
+  - gulp min
 
 test: off
 
