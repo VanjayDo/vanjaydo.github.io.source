@@ -1,3 +1,7 @@
+<!-- 阅读进度条模板 -->
+<div class="top-scroll-bar"></div>
+<!-- 阅读进度条结束 -->
+
 <div class="site-brand-wrapper">
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
