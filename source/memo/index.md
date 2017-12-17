@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2017 年
 ##### 12月
+* ###### 2017-12-17
+[USTC的ubuntu源文件自动生成器](https://mirrors.ustc.edu.cn/repogen/)
+
 * ###### 2017-12-09
 有时候需要在当前文件夹开一个临时的端口来访问一下看看效果可以使用`http-server`.
 需要使用npm全局安装http-sever: `npm install -g http-server`
