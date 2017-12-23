@@ -14,8 +14,8 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://safeandsound.cn
 root: /
-permalink: /post/:urlname.html
-permalink_defaults: 
+permalink: post/:urlname.html
+permalink_defaults:
 
 # Directory
 source_dir: source
@@ -47,12 +47,12 @@ highlight:
   tab_replace:
   
 
-#search
-# search:
-#   path: search.xml
-#   field: all
-#   format: html
-#   limit: 10000
+# search
+search:
+  path: search.xml
+  field: all
+  format: html
+  limit: 10000
 
 
 # Home page setting
