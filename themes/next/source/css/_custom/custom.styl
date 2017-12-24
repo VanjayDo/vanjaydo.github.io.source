@@ -63,7 +63,7 @@ p{
       color: orange;
 }
 
-//行内代码效果
+//段中行内代码效果
 p code {
       color: #c7254e;
       background: #f9f2f4;
@@ -79,8 +79,8 @@ p code {
             }
       }
 }
-
-ol:not(.linenums) > li > code {
+//代码块ol>li有类,entries页面中每一个词条对应一个ul>li无类
+li:not([class]) > code {
       color: #c7254e;
       background: #f9f2f4;
       border: 1px solid #d6d6d6;
@@ -95,6 +95,7 @@ ol:not(.linenums) > li > code {
             }
       }
 }
+
 
 //文中图片居中显示但不影响放大效果
 img[src]:not(.fancybox-image) {

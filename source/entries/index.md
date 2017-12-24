@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 <title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
+* ### 方言 Dialect(computing)
+此处指计算机行业中的dialect, 其意为一门编程语言或数据交换语言的拓展或者变种形式(摘自<a href="https://en.wikipedia.org/wiki/Dialect_(computing)">wiki</a>,<code>A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature</code>)
+如各个关系型数据库厂商的SQL方言; Clojure是一种Lisp方言; 等
 
 * ### CI/CD/CR
 [持续集成](https://zh.wikipedia.org/wiki/持续集成)(CI, Continuous integration),[持续交付](https://zh.wikipedia.org/wiki/持续交付)(CD, Continuous delivery),[持续部署](https://zh.wikipediaorg/wiki/持续部署)(CR, Continuous release)
