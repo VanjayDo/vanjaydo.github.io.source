@@ -4,6 +4,29 @@ date: 2017-07-27 15:04:16
 ---
 <title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
+<!--////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+* ### 微服务结构 & 单体式应用
+最近看书时总是看到拿[微服务结构](https://zh.wikipedia.org/wiki/微服務)与[单体式应用](https://zh.wikipedia.org/wiki/單體式應用程式)对比, 在此归纳总结一下.
+#### *微服务*
+微服务是以专注于单一责任与功能的小型功能模块为基础，利用模组化的方式组合出复杂的大型应用程序。
+其比较明显的特性有:1.独立性(有些地方也叫真空性),微服务模式中的每一个组成部分都是一个服务,各个服务彼此独立, 有完整的运行机制与对外接口; 2.服务是粒度最小的单位, 不可再分, 即一个微服务不能进一步划分为多个更小的服务; 3.服务能够快速重组成新的系统, 就像积木一样, 体现了模块化.
+#### *单体式应用*
+一个单体式应用里面有许多的逻辑、服务，并且都有密不可分的关系。一旦其中一个服务不可用时，就会造成另一个服务也无法使用.虽然外部结构看起来会比较简单, 但是在资源分配、测试、拓展等各方面看来都不够灵活.（所以你知道微服务的优势在哪了）
+	一个比较好理解二者之间区别的例子就是, 微服务就像是docker, 而单体式应用就像是传统的虚拟机(这只是我在理解过程中的一个比喻, 不一定准确).
+
+* ### IaaS/PaaS/SaaS/XaaS
+这里所谓的<code>\*aaS</code>即"<code>\* as a Service</code>", 本质就是把<code>\*</code>当作服务来进行出售.
+[IaaS](https://zh.wikipedia.org/wiki/基础设施即服务)(Infrastructure as a Service, 基础设施即服务),其意指如果你只是要使用硬件设备罢了, 那就没有必要花巨资购买整套设备并为设备用地以及今后的维护、设备拓展/更新买单,你可以租用硬件, IaaS方面的公司(如Amazon[AWS])会提供服务器,存储器等硬件设备,这样就可以节约成本，利用对方公司提供的服务， 你可以随时使用这些设备来运行你的服务/应用。
+[PaaS](https://zh.wikipedia.org/wiki/平台即服务)(Platform as a Service,平台即服务)，这里的平台有时也叫做中间件，即云计算环境中的应用基础设施服务，也就是支撑应用和运行时环境，如虚拟服务器、操作系统、应用服务器、数据库等
+[SaaS](https://zh.wikipedia.org/wiki/软件即服务)(Software as a Service,软件即服务),也就是软件提供服务了, 这个很好理解
+	IaaS,PaaS,SaaS其实是云计算领域的三个概念,基础设施在最下面,平台在中间,软件则在最上面, 如果你什么都有, 那么就是本地部署, 也就无所谓这些*aaS了. 
+XaaS也就是Anything as a Service，可以说IaaS，PaaS，SaaS是其子集
+以上内容部分参考了<i class="from fa fa-arrow-circle-right"> 何足道 [知乎回答](https://www.zhihu.com/question/21641778/answer/62523535)</i>
+
 * ### 方言 Dialect(computing)
 此处指计算机行业中的dialect, 其意为一门编程语言或数据交换语言的拓展或者变种形式(摘自<a href="https://en.wikipedia.org/wiki/Dialect_(computing)">wiki</a>,<code>A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature</code>)
 如各个关系型数据库厂商的SQL方言; Clojure是一种Lisp方言; 等
@@ -43,7 +66,7 @@ date: 2017-07-27 15:04:16
 通过限制组件的行为（即每个组件只能“看到”与其交互的紧邻层），将架构分解为若干等级的层。
 按需代码（Code-On-Demand，可选）
 支持通过下载并执行一些代码（例如Java Applet、Flash或JavaScript），对客户端的功能进行扩展。"。
-<i class="from fa fa-arrow-circle-right"> wiki https://zh.wikipedia.org/wiki/具象状态传输
+<i class="from fa fa-arrow-circle-right"> wiki  [具象状态传输](https://zh.wikipedia.org/wiki/具象状态传输)
 </div>
 	我的理解是，REST就是定义一个系统/软件的架构,以及如何设计出RESTful API的，它让系统对外提供的接口更加规范（也就是符合REST风格），如REST的提出者Roy Thomas Fielding在他提出REST的[博士论文](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)中所说:"My work is motivated by the desire to understand and evaluate the architectural design of network-based application software through principled use of architectural constraints, thereby obtaining the functional, performance, and social properties desired of an architecture."这些RESTful的接口将会“功能强大，性能出色且友好易用”。
 
@@ -54,7 +77,7 @@ date: 2017-07-27 15:04:16
 2、用V语言把那个编译器写（B）出来，用A.exe来编译B，修改直到所有测试用例都通过为止。
 3、B.exe来编译B自己得到B2.exe，修改直到B2.exe所有测试用例都通过为止。这是为了保证，就算B本身有很多bug，至少编译自己是没有bug的，从而你就可以走到第四步。
 4、当你觉得有信心了，用A.exe把B编译一遍，就得到了B.exe。然后A的代码和A.exe都在也不需要存在了，删掉他们。以后你就不断的用B.exe来编译下一个版本的B就好了。就自举了。
-<i class="from fa fa-arrow-circle-right">  vczh https://www.zhihu.com/question/28513473/answer/41094452</i>
+<i class="from fa fa-arrow-circle-right">  vczh [知乎回答](https://www.zhihu.com/question/28513473/answer/41094452)</i>
 </div>
 	那么图灵完备的语言是不是都可以自举呢？从我个人“没有哪一门图灵完备语言实现的功能是另一门图灵完备语言所不能实现的”的观点来看答案是肯定的。觉得没有必要在“能不能”和“有没有实现”这个问题上纠结，这只是编程语言的一种性质，能不能自举是一回事，有没有必要真的实现就是另一回事了。
 
