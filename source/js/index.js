@@ -47,67 +47,6 @@ function showKittens() {
     }else{
         window.location.href="http://blog.safeandsound.cn";
     }
-    
-
-    // 打印
-    // $('.terminal').append("<div class='kittens'>" +
-    //     "<p class='prompt'>bbbbbbbb</p>" +
-    //     "<p class='prompt'>b::::::b                                                  kkkkkkkk</p>" +
-    //     "<p class='prompt'>b::::::b                                                  k::::::k</p>" +
-    //     "<p class='prompt'>b::::::b                                                  k::::::k</p>" +
-    //     "<p class='prompt'> b:::::b                                                  k::::::k</p>" +
-    //     "<p class='prompt'> b:::::bbbbbbbbb      aaaaaaaaaaaaa       cccccccccccccccc k:::::k    kkkkkkk</p>" +
-    //     "<p class='prompt'> b::::::::::::::bb    a::::::::::::a    cc:::::::::::::::c k:::::k   k:::::k</p>" +
-    //     "<p class='prompt'> b::::::::::::::::b   aaaaaaaaa:::::a  c:::::::::::::::::c k:::::k  k:::::k</p>" +
-    //     "<p class='prompt'> b:::::b    b::::::b    aaaaaaa:::::a c::::::c     ccccccc k::::::k:::::k</p>" +
-    //     "<p class='prompt'> b:::::b     b:::::b  aa::::::::::::a c:::::c              k:::::::::::k</p>" +
-    //     "<p class='prompt'> b:::::b     b:::::b a::::aaaa::::::a c:::::c              k:::::::::::k</p>" +
-    //     "<p class='prompt'> b:::::b     b:::::ba::::a    a:::::a c::::::c     ccccccc k::::::k:::::k</p>" +
-    //     "<p class='prompt'> b:::::bbbbbb::::::ba::::a    a:::::a c:::::::cccccc:::::ck::::::k k:::::k</p>" +
-    //     "<p class='prompt'> b::::::::::::::::b a:::::aaaa::::::a  c:::::::::::::::::ck::::::k  k:::::k</p>" +
-    //     "<p class='prompt'> b:::::::::::::::b   a::::::::::aa:::a  cc:::::::::::::::ck::::::k   k:::::k</p>" +
-    //     "<p class='prompt'> bbbbbbbbbbbbbbbb     aaaaaaaaaa  aaaa    cccccccccccccccckkkkkkkk    kkkkkkk</p>" +
-    //     "<p class='prompt'>                                                                             </p>" +
-    //     "<p class='prompt'>         nnnn  nnnnnnnn        ooooooooooo   wwwwwww           wwwww           wwwwwww</p>" +
-    //     "<p class='prompt'>         n:::nn::::::::nn    oo:::::::::::oo  w:::::w         w:::::w         w:::::w</p>" +
-    //     "<p class='prompt'>         n::::::::::::::nn  o:::::::::::::::o  w:::::w       w:::::::w       w:::::w</p>" +
-    //     "<p class='prompt'>         nn:::::::::::::::n o:::::ooooo:::::o   w:::::w     w:::::::::w     w:::::w</p>" +
-    //     "<p class='prompt'>           n:::::nnnn:::::n o::::o     o::::o    w:::::w   w:::::w:::::w   w:::::w</p>" +
-    //     "<p class='prompt'>           n::::n    n::::n o::::o     o::::o     w:::::w w:::::w w:::::w w:::::w</p>" +
-    //     "<p class='prompt'>           n::::n    n::::n o::::o     o::::o       w:::::::::w     w:::::::::w</p>" +
-    //     "<p class='prompt'>           n::::n    n::::n o:::::ooooo:::::o        w:::::::w       w:::::::w</p>" +
-    //     "<p class='prompt'>           n::::n    n::::n o:::::::::::::::o         w:::::w         w:::::w</p>" +
-    //     "<p class='prompt'>           n::::n    n::::n  oo:::::::::::oo           w:::w           w:::w</p>" +
-    //     "<p class='prompt'>           nnnnnn    nnnnnn    ooooooooooo              www             www</p>" +
-    //     "<p class='prompt'>                                                                             </p>" +
-    //     "<p class='prompt'>                                                                             </p>" +
-    //     "<p class='prompt'>                                                                             </p>" +
-    //     "<p class='prompt'>                                                              </p></div>");
-
-    // var lines = $('.kittens p');
-    // $.each(lines, function (index, line) {
-    //     setTimeout(function () {
-    //         $(line).css({
-    //             "opacity": 1
-    //         });
-    //
-    //         textEffect($(line))
-    //     }, index * 100);
-    // });
-    //
-    // $('.new-output').velocity(
-    //     'scroll'
-    // ), {duration: 100}
-    //
-    // setTimeout(function () {
-    //     var gif;
-    //
-    //     $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=kittens', function (result) {
-    //         gif = result.data.image_url;
-    //         $('.terminal').append('<img class="kitten-gif" src="' + gif + '"">');
-    //         resetForm(true);
-    //     });
-    // }, (lines.length * 100) + 1000);
 }
 
 function textEffect(line) {

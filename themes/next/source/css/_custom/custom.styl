@@ -36,11 +36,38 @@ body{
 
 //色块标注系列
 div .div-border-left-yellow {
+      margin-top: 8px;
       border-radius: 3px;
       padding: 10px;
       border: 1px solid #ccc;
       border-left-width: 5px;
       border-left-color: #f0ad4e;
+      code {
+        background: #f0ad4e;
+      }
+      strong {
+        font-size:120%;
+        margin: 0px;
+        background: #FFD9A3;
+      }
+}
+
+div .div-border-left-red {
+      margin-top: 8px;
+      border-radius: 3px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-left-width: 5px;
+      border-left-color: #CC6666;
+      code {
+        background: #CC6666;
+      }
+      strong {
+        font-size:120%;
+        margin: 0px;
+        background: #FF9B9B;
+      }
+      
 }
 
 //色块标注系列 结束
@@ -209,7 +236,7 @@ img[src]:not(.fancybox-image) {
     background: #FC6423;
 }
 
-//右侧滚动条
+//滚动条样式
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -239,25 +266,4 @@ img[src]:not(.fancybox-image) {
 ::-webkit-scrollbar-track:hover {
   background-color: rgba(0,0,0,.15);
 }
-::-webkit-scrollbar-button:start {
-  width: 10px;
-  height: 10px;
-  background: url(../images/scrollbar_arrow.png) no-repeat 0 0;
-}
-::-webkit-scrollbar-button:start:hover {
-  background: url(../images/scrollbar_arrow.png) no-repeat -15px 0;
-}
-::-webkit-scrollbar-button:start:active {
-  background: url(../images/scrollbar_arrow.png) no-repeat -30px 0;
-}
-::-webkit-scrollbar-button:end {
-  width: 10px;
-  height: 10px;
-  background: url(../images/scrollbar_arrow.png) no-repeat 0 -18px;
-}
-::-webkit-scrollbar-button:end:hover {
-  background: url(../images/scrollbar_arrow.png) no-repeat -15px -18px;
-}
-::-webkit-scrollbar-button:end:active {
-  background: url(../images/scrollbar_arrow.png) no-repeat -30px -18px;
-}
+//滚动条样式结束
