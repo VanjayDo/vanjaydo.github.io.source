@@ -19,7 +19,7 @@ date: 2017-07-27 15:04:16
 	一个比较好理解二者之间区别的例子就是, 微服务就像是docker, 而单体式应用就像是传统的虚拟机(这只是我在理解过程中的一个比喻, 不一定准确).
 
 * ### IaaS/PaaS/SaaS/XaaS
-这里所谓的<code>\*aaS</code>即"<code>\* as a Service</code>", 本质就是把<code>\*</code>当作服务来进行出售.
+这里所谓的`\*aaS`即"`\* as a Service`", 本质就是把`\*`当作服务来进行出售.
 [IaaS](https://zh.wikipedia.org/wiki/基础设施即服务)(Infrastructure as a Service, 基础设施即服务),其意指如果你只是要使用硬件设备罢了, 那就没有必要花巨资购买整套设备并为设备用地以及今后的维护、设备拓展/更新买单,你可以租用硬件, IaaS方面的公司(如Amazon[AWS])会提供服务器,存储器等硬件设备,这样就可以节约成本，利用对方公司提供的服务， 你可以随时使用这些设备来运行你的服务/应用。
 [PaaS](https://zh.wikipedia.org/wiki/平台即服务)(Platform as a Service,平台即服务)，这里的平台有时也叫做中间件，即云计算环境中的应用基础设施服务，也就是支撑应用和运行时环境，如虚拟服务器、操作系统、应用服务器、数据库等
 [SaaS](https://zh.wikipedia.org/wiki/软件即服务)(Software as a Service,软件即服务),也就是软件提供服务了, 这个很好理解
@@ -28,7 +28,7 @@ XaaS也就是Anything as a Service，可以说IaaS，PaaS，SaaS是其子集
 以上内容部分参考了<i class="from fa fa-arrow-circle-right"> 何足道 [知乎回答](https://www.zhihu.com/question/21641778/answer/62523535)</i>
 
 * ### 方言 Dialect(computing)
-此处指计算机行业中的dialect, 其意为一门编程语言或数据交换语言的拓展或者变种形式(摘自<a href="https://en.wikipedia.org/wiki/Dialect_(computing)">wiki</a>,<code>A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature</code>)
+此处指计算机行业中的dialect, 其意为一门编程语言或数据交换语言的拓展或者变种形式(摘自<a href="https://en.wikipedia.org/wiki/Dialect_(computing)">wiki</a>,`A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature`)
 如各个关系型数据库厂商的SQL方言; Clojure是一种Lisp方言; 等
 
 * ### CI/CD/CR

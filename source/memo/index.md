@@ -2,8 +2,82 @@
 title: 备忘录
 date: 2017-07-27 15:04:16
 ---
+#### 2018 年
+##### 1月
+* ###### 2018-01-03
+从GitHub下载单个文件 => `https://raw.githubusercontent.com/username/repository/branch(master)/filename`
+
 #### 2017 年
 ##### 12月
+* ###### 2017-12-24
+从[阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)学习了一下git commit的写法,在这里摘抄一下:
+commit message包括三个部分:`header`,`Body`和`footer`, 形如:
+```
+<type>(<scope>): <subject>
+// 空一行
+<body>
+// 空一行
+<footer>
+```
+<div class="div-border-left-yellow">其中`header`是必须的,`body`和`footer`可以省略.
+<strong>Header</strong>
+header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+`(1)type`
+type用于说明 commit 的类别，只允许使用下面7个标识。
+feat：新功能（feature）
+fix：修补bug
+docs：文档（documentation）
+style： 格式（不影响代码运行的变动）
+refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+test：增加测试
+chore：构建过程或辅助工具的变动
+如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style、refactor、test）由你决定，要不要放入 Change log，建议是不要。
+`(2)scope`
+scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+`(3)subject`
+subject是 commit 目的的简短描述，不超过50个字符。
+以动词开头，使用第一人称现在时，比如change，而不是changed或changes
+第一个字母小写
+结尾不加句号（.）
+<strong>Body</strong>
+Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
+More detailed explanatory text, if necessary.  Wrap it to 
+about 72 characters or so. 
+Further paragraphs come after blank lines.
+-Bullet points are okay, too
+-Use a hanging indent
+有两个注意点。
+（1）使用第一人称现在时，比如使用change而不是changed或changes。
+（2）应该说明代码变动的动机，以及与以前行为的对比。
+<strong>Footer</strong>
+Footer 部分只用于两种情况。
+`(1)不兼容变动`
+如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。
+<pre>BREAKING CHANGE: isolate scope bindings definition has changed.
+    To migrate the code follow the example below:
+    Before:
+    scope: {
+      myAttr: 'attribute',
+    }
+    After:
+    scope: {
+      myAttr: '@',
+    }
+    The removed inject wasn't generaly useful for directives so there should be no code using it.</pre>
+`(2)关闭 Issue`
+如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
+<pre>Closes #234
+也可以一次关闭多个 issue 。
+Closes #123, #245, #992</pre>
+<strong>Revert</strong>
+还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。
+<pre>revert: feat(pencil): add 'graphiteWidth' option
+This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+</pre>
+Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，其中的hash是被撤销 commit 的 SHA 标识符。
+如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。
+</div>
+
 * ###### 2017-12-17
 [USTC的ubuntu源文件自动生成器](https://mirrors.ustc.edu.cn/repogen/)
 
@@ -47,8 +121,7 @@ AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EV
 	看错误应该是加密方面的问题，因为ss依赖openssl，那就应该是openssl的问题了，上网搜了下，[解决办法在此](https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/)
 
 * ###### 2017-11-12
-最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是歌手失恋后写的,感情上可以说很乐观了），虽然是西班牙语的民谣，根本不知道在唱什么😂但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="https://music.163.com/outchain/player?type=1&id=34609360&auto=1&height=90"></iframe>
+最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是歌手失恋后写的,感情上可以说很乐观了），虽然是西班牙语的民谣，根本不知道在唱什么🌚但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。
 
 * ###### 2017-11-10
 今天趁着田老师有空，请他带着我去文理楼机房调整维护了自己的两台服务器，因为没有远程控制卡（毕竟之前是废弃在仓库的老机器了），所以只要出现故障就只能现场维修，有一台还是自己七月份时候配iptables规则的时候不小心把网络全封了……很蛋疼🌚。
@@ -109,7 +182,7 @@ tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      
 上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。
 
 * ###### 2017-10-21
-之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下。
+之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下, `npm install tldr`
 <img src="https://cdn.safeandsound.cn/image/memo/tldr.png" width="500px">
 
 * ###### 2017-10-18

@@ -9,7 +9,7 @@ vanjaydo.github.io.source
 **注：** 其中的404页面作者组合了两个[codepen](https://codepen.io/)上的开源项目， [详情请见此](https://github.com/VanjayDo/front-end-repos/tree/master/404)。
 
 * ### CI
-该Repo采用[AppVeyor](https://ci.appveyor.com/projects)平台进行持续集成([教程在此](https://safeandsound.cn/post/appveyor入门.html))，生成的静态文件发布到 Repo：[vanjaydo.github.io](https://github.com/VanjayDo/vanjaydo.github.io)。
+该Repo采用[AppVeyor](https://ci.appveyor.com/projects)平台进行持续集成([教程在此](https://safeandsound.cn/post/Appveyor学习笔记.html))，生成的静态文件发布到 Repo：[vanjaydo.github.io](https://github.com/VanjayDo/vanjaydo.github.io)。
 
 
 
