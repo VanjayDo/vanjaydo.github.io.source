@@ -368,7 +368,7 @@ a.change:hover{
 
   <!--添加仓鼠-->
   <div id="cangshu">
-    <embed class="cangshu" src="https://cdn.safeandsound.cn/image/cangshu.swf" allowNetworking="all" onmouseover="$(this).velocity('stop').velocity({opacity: 1})" onmouseout="$(this).velocity('stop').velocity({opacity:0.5})"">
+    <embed class="cangshu" src="/images/cangshu.swf" allowNetworking="all" onmouseover="$(this).velocity('stop').velocity({opacity: 1})" onmouseout="$(this).velocity('stop').velocity({opacity:0.5})"">
     </embed>
   </div>
 

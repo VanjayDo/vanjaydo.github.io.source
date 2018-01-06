@@ -4,6 +4,11 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 1月
+* ###### 2018-01-06
+今天在Atom的`Sync Settings`插件中用到了github的gist服务, 该服务专门用来存放代码片段, 相当于小的git仓库. 特点是用户可以无限制创建私有gist, 也可以不登陆直接匿名创建gist, 其唯一识别是gist ID, 只要知道id就可以查看内容, 无论其是public || secret, 且与用户无关.
+在Gist URL后加上`.pibb`后缀, 可以得到一个纯HTML的版本, 如:`https://gist.github.com/anonymous/cc370d24d7f4be3363ec2f09ad1e0628.pibb`, 这样就可以直接复制粘贴到其他地方了, 如论坛之类.
+这方面的使用感觉和n`https://paste.ubuntu.com`有点像.
+
 * ###### 2018-01-03
 从GitHub下载单个文件 => `https://raw.githubusercontent.com/username/repository/branch(master)/filename`
 
@@ -41,8 +46,8 @@ subject是 commit 目的的简短描述，不超过50个字符。
 结尾不加句号（.）
 <strong>Body</strong>
 Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
-More detailed explanatory text, if necessary.  Wrap it to 
-about 72 characters or so. 
+More detailed explanatory text, if necessary.  Wrap it to
+about 72 characters or so.
 Further paragraphs come after blank lines.
 -Bullet points are okay, too
 -Use a hanging indent
@@ -98,8 +103,8 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 最后还是查相关文档后，在配置文件里加了`"nameserver": "8.8.8.8"`这个字段，问题就解决了。
 然后，在使用proxifier时突然报错
 ```
-[11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier. 
-[11.29 16:56:25] Proxifier or some of its parts may work incorrectly. 
+[11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier.
+[11.29 16:56:25] Proxifier or some of its parts may work incorrectly.
 [11.29 16:56:25] It is highly recommended that you run SysSettings tool to address this problem.
 ```
 	一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的`SysSettings`，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示`proxifier module is not installed`，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
@@ -151,7 +156,7 @@ Let's Encrypt SSL Certificate create failed!
 ```
 	[在此找到解决办法](https://github.com/certbot/certbot/issues/2883)，最终是用@knowThis小伙伴的办法解决的：
 ```
-$ apt-get purge python-virtualenv python3-virtualenv virtualenv 
+$ apt-get purge python-virtualenv python3-virtualenv virtualenv
 $ pip install --upgrade pip
 $ pip install virtualenv
 $ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstrap certonly"。仅一处。
@@ -169,7 +174,7 @@ $ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstra
 最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：
 ```bash
 # netstat -anp|grep ":80"   
-tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf 
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf
 tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      1356/java
 ```
 	端口果然被占用了，kill掉这个进程即可。
@@ -251,5 +256,5 @@ cmd.exe /s /k pushd "%V"
 ```
 	确定保存即可
 
-~~一些零碎的知识点和想说的话放在这里~~ 
+~~一些零碎的知识点和想说的话放在这里~~
 ~~以上~~
