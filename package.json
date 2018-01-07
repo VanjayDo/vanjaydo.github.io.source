@@ -6,7 +6,7 @@
     "start": "hexo clean && hexo s --debug"
   },
   "hexo": {
-    "version": "3.4.1"
+    "version": "3.4.4"
   },
   "dependencies": {
     "browser-sync": "^2.23.3",

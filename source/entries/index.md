@@ -6,8 +6,9 @@ date: 2017-07-27 15:04:16
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
 <!--////////////////////////////////////////////////////////////////////////-->
 
-
-
+* ### 阻抗失谐(impedance mismatch)
+`该词是数据库领域术语, 反用了微博电子学术语"阻抗匹配"(impedance match),用来比喻数据模型与实际编程语言不搭调的窘境。`--摘自<<NoSQL精粹(NoSQL Distilled)>>
+这种"阻抗失谐"的现象(尤其是在关系型数据库中)表现为:关系模型和内存中的数据结构之间存在差异, 如编程语言在内存中构造的数据结构中有"嵌套"的表示, 但是在关系型数据库中却无法包含嵌套记录, 它的关系元组必须是简单的, 这就导致如果要把内存中数据结构的对象持久化到关系型数据库中就必须要将其转换成"关系"形式, 这样关系型数据库才能保存并表达, 这就发生了"阻抗失谐": 需要在两种不同的表示形式之间转译.
 
 * ### 微服务结构 & 单体式应用
 最近看书时总是看到拿[微服务结构](https://zh.wikipedia.org/wiki/微服務)与[单体式应用](https://zh.wikipedia.org/wiki/單體式應用程式)对比, 在此归纳总结一下.
@@ -80,36 +81,6 @@ XaaS也就是Anything as a Service，可以说IaaS，PaaS，SaaS是其子集
 <i class="from fa fa-arrow-circle-right">  vczh [知乎回答](https://www.zhihu.com/question/28513473/answer/41094452)</i>
 </div>
 	那么图灵完备的语言是不是都可以自举呢？从我个人“没有哪一门图灵完备语言实现的功能是另一门图灵完备语言所不能实现的”的观点来看答案是肯定的。觉得没有必要在“能不能”和“有没有实现”这个问题上纠结，这只是编程语言的一种性质，能不能自举是一回事，有没有必要真的实现就是另一回事了。
-
-* ### ES6的暂时性死区
-
-	```
-	//(1). ES6中的let命令不像var那样具有“变量提升”现象。
-	console.log(foo);//ReferenceError
-	let foo=2;
-	//(2). ES6中只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域而不受外部的影响。
-	var tmp=123;
-	if (true)
-	{
-		tmp="abc";//ReferenceError
-		let tmp;
-	}
-
-	//ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
-	//总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
-	//这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
-	//再来一个例子:
-	if(true)
-	{
-		//TDZ开始
-		tmp="abc";//ReferenceError
-		console.log(tmp);//ReferenceError
-		let tmp;//TDZ结束
-		console.log(tmp);//undefined
-		tmp="abc";
-		console.log(tmp);//123
-	}
-	```
 
 * ### 图灵完备
 wiki描述：“在可计算性理论里，如果一系列操作数据的规则（如指令集、编程语言、细胞自动机）可以用来模拟单带图灵机，那么它是图灵完备的”。图灵机的基本思想是“用机器来模拟人们用纸笔进行数学运算的过程”，也就是说图灵机能执行所有可被描述的计算。

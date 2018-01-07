@@ -3,17 +3,39 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
-##### 1月
+##### 1 月
+* ###### 2018-01-07
+JUnit4中测试中几种常用的注解(主要是@AfterClass,@BeforeClass,@after,@before的区别):
+`@Before`：初始化方法,对于每一个测试方法都要执行一次
+`@After`：释放资源,对于每一个测试方法都要执行一次
+`@Test`：测试方法，在这里可以测试期望异常和超时时间, 如: @Test(expected=ArithmeticException.class)检查被测方法是否抛出ArithmeticException异常
+`@Ignore`：忽略的测试方法
+`@BeforeClass`：针对所有测试，只执行一次，且必须为static void
+`@AfterClass`：针对所有测试，只执行一次，且必须为static void
+一个JUnit4的单元测试用例执行顺序为：
+`@BeforeClass` -> `@Before` -> `@Test` -> `@After` -> `@AfterClass`
+每一个测试方法的调用顺序为：
+`@Before` -> `@Test` -> `@After`
+
 * ###### 2018-01-06
 今天在Atom的`Sync Settings`插件中用到了github的gist服务, 该服务专门用来存放代码片段, 相当于小的git仓库. 特点是用户可以无限制创建私有gist, 也可以不登陆直接匿名创建gist, 其唯一识别是gist ID, 只要知道id就可以查看内容, 无论其是public || secret, 且与用户无关.
 在Gist URL后加上`.pibb`后缀, 可以得到一个纯HTML的版本, 如:`https://gist.github.com/anonymous/cc370d24d7f4be3363ec2f09ad1e0628.pibb`, 这样就可以直接复制粘贴到其他地方了, 如论坛之类.
-这方面的使用感觉和n`https://paste.ubuntu.com`有点像.
+这方面的使用感觉和n`https://paste.ubuntu.com`有点像.<br>
+另,
+```shell
+:<<BLOCK
+这里
+全部是
+注释
+BLOCK
+```
+可以在shell脚本中进行大段注释;
 
 * ###### 2018-01-03
 从GitHub下载单个文件 => `https://raw.githubusercontent.com/username/repository/branch(master)/filename`
 
 #### 2017 年
-##### 12月
+##### 12 月
 * ###### 2017-12-24
 从[阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)学习了一下git commit的写法,在这里摘抄一下:
 commit message包括三个部分:`header`,`Body`和`footer`, 形如:
@@ -222,7 +244,38 @@ sudo make install
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
 <img src="https://cdn.safeandsound.cn/image/memo/mycli.png">
 
-##### 8月
+##### 9 月
+* ###### 2017-09-21
+ES6的暂时性死区
+```
+//(1). ES6中的let命令不像var那样具有“变量提升”现象。
+console.log(foo);//ReferenceError
+let foo=2;
+//(2). ES6中只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域而不受外部的影响。
+var tmp=123;
+if (true)
+{
+  tmp="abc";//ReferenceError
+  let tmp;
+}
+
+//ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
+//总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
+//这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
+//再来一个例子:
+if(true)
+{
+  //TDZ开始
+  tmp="abc";//ReferenceError
+  console.log(tmp);//ReferenceError
+  let tmp;//TDZ结束
+  console.log(tmp);//undefined
+  tmp="abc";
+  console.log(tmp);//123
+}
+```
+
+##### 8 月
 * ###### 2017-08-15
 又在开源论坛上看到有人在黑php。
 php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。
@@ -231,7 +284,7 @@ php因为其一开始的自身定位问题导致现在的特性有很多地方�
 * ###### 2017-08-10
 今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量, 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.
 
-##### 7月
+##### 7 月
 * ###### 2017-07-29
 感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。
 但我到底还是喜欢的。
