@@ -12,12 +12,15 @@ input.on('keyup', function (e) {
 
 $('.four-oh-four-form').on('submit', function (e) {
     e.preventDefault();
-    // var val = $(this).children($('.404-input')).val().toLowerCase();
     var val=$('.404-input').val().toLowerCase();
     var href;
     if (val === 'back') {
         showKittens();
-    } else {
+    } 
+    else if(val === 'game'){
+        window.location.href="game.html";
+    }
+    else {
         resetForm();
     }
 });
