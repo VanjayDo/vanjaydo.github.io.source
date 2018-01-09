@@ -8,15 +8,17 @@ permalink: /game.html
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <title >chrome easter egg: t-rex runner</title>
+    <title >t-rex runner</title>
     <link rel="stylesheet" href="/css/game.css">
-    <link href="https://fonts.googleapis.com/css?family=Joti+One" rel="stylesheet">
     <script src="https://cdn.safeandsound.cn/js/game.js"></script>
 </head>
 
 <body id="t" class="offline">
     <div id="main-frame-error" class="interstitial-wrapper">
-        <p style="color: #535353;font-family: 'Joti One', cursive;font-size: 200%;text-align: center;margin:0px;padding:0px;margin-top: -110px">press space to start game</p>
+        <p class="hint">
+            press Space to start game
+            <a class="home" onclick="javascript:window.location.href='/index.html';" href='#'>click here to back home</a>
+        </p>
         <div id="main-content">
             <div class="icon icon-offline" alt=""></div>
         </div>
