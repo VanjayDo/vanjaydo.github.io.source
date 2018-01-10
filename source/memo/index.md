@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 1 月
+* ###### 2018-01-10
+今天centos上在安装软件之后手动将软件命令文件所在的bin目录加入`/etc/environment`, 因为我个人喜欢在该文件中配置环境变量, 但是centos7下好像该文件默认为空, 于是我手动添加`PATH=/usr/local/freeradius/bin`, 结果source之后发现其他的环境变量里的命令都找不到了, 如使用`vi`会提示command not found, 要使用`/bin/vi`才行, 于是到现在才发现这样引入环境变量是清空重新引入的过程, 并非是简单的添加, 所以最好还是这样写`PATH=/usr/local/freeradius/bin:$PATH`, 但是有个劣势就是如果多次source的话会让PATH变量中包含多个/usr/local/freeradius/bin路径.
+
 * ###### 2018-01-07
 JUnit4中测试中几种常用的注解(主要是@AfterClass,@BeforeClass,@after,@before的区别):
 `@Before`：初始化方法,对于每一个测试方法都要执行一次
