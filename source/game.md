@@ -3,6 +3,7 @@ layout: false
 comment: false
 permalink: /game.html
 ---
+
 <html>
 
 <head>
@@ -13,12 +14,13 @@ permalink: /game.html
     <script src="https://cdn.safeandsound.cn/js/game.js"></script>
 </head>
 
+
 <body id="t" class="offline">
     <div id="main-frame-error" class="interstitial-wrapper">
-        <p class="hint">
+        <p class="hint" id="hint">
             press Space to start game
-            <a class="home" onclick="javascript:window.location.href='/index.html';" href='#'>click here to back home</a>
         </p>
+        <a class="home" id="home" onclick="javascript:window.location.href='/index.html';" href='#'>click here to back home</a>
         <div id="main-content">
             <div class="icon icon-offline" alt=""></div>
         </div>
@@ -32,7 +34,25 @@ permalink: /game.html
             </template>
         </div> 
     </div>
-    
+
+<script>
+var ua =  navigator.userAgent;
+isAndroid = /Android/i.test(ua);
+isBlackBerry = /BlackBerry/i.test(ua);
+isWindowPhone = /IEMobile/i.test(ua);
+isIOS = /iPhone|iPad|iPod/i.test(ua);
+isMobile = isAndroid || isBlackBerry || isWindowPhone || isIOS;
+if(isAndroid) isMobile = 'android';
+if(isBlackBerry) isMobile = 'BlackBerry';
+if(isWindowPhone) isMobile = 'WindowPhone';
+if(isIOS) isMobile = 'IOS';
+
+if(isMobile)
+{
+    document.getElementById("hint").innerHTML="press Screen to start game";
+    document.getElementById("home").innerHTML="press here to back home";
+}
+</script>
 </body>
 
 </html>

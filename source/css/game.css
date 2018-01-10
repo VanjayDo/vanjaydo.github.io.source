@@ -23,13 +23,17 @@ html, body {
 }
 
 .home{
-  font-size: 70%;
+  font-size: 130%;
+  display: block;
+  text-align: center;
+  margin-top: -15px;
+  font-family: 'Joti One', cursive;
   text-decoration: none;
   color: #FF5E53;
 }
 
 .home:hover{
-  font-size: 80%;
+  font-size: 150%;
   text-decoration: none;
   color: #DD635B;
 }
