@@ -3,6 +3,19 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 2 月
+* ###### 2018-02-26
+安装系统时提示硬盘格式不符, 需转换成GPT/MBR时,可在安装界面使用Shift+F10快捷键调出cmd, 使用命令进行转换
+```
+list disk：显示本机安装的硬盘，编号为0、1、2……
+select disk X：选择上面列出的硬盘
+clean：清空选中硬盘原有分区信息
+convert gpt/mbr：将分区格式转换为GPT/MBR
+list partition：显示已有分区
+```
+* ###### 2018-02-02
+cmd下输入`ipconfig /flushdns`, 回车, 即可刷新hosts文件
+
 ##### 1 月
 * ###### 2018-01-10
 今天centos上在安装软件之后手动将软件命令文件所在的bin目录加入`/etc/environment`, 因为我个人喜欢在该文件中配置环境变量, 但是centos7下好像该文件默认为空, 于是我手动添加`PATH=/usr/local/freeradius/bin`, 结果source之后发现其他的环境变量里的命令都找不到了, 如使用`vi`会提示command not found, 要使用`/bin/vi`才行, 于是到现在才发现这样引入环境变量是清空重新引入的过程, 并非是简单的添加, 所以最好还是这样写`PATH=/usr/local/freeradius/bin:$PATH`, 但是有个劣势就是如果多次source的话会让PATH变量中包含多个/usr/local/freeradius/bin路径.

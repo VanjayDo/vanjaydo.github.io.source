@@ -21,5 +21,5 @@ google上找了一下，发现了 [ 网友自己拓展的json-viewer ](http://ww
 [本人已修改样式且打包了的拓展程序在此](https://github.com/VanjayDo/JSONView-for-Chrome) 
 <br>
 **注3：**直接安装crx包可能会在之后因为安全问题被chrome永久禁用，解决办法有二,1.可以开启开发者模式，选择“加载已解压的拓展程序”，从JSONView-for-Chrome-master\WebContent文件夹直接安装源码，<br> ![源码安装](https://cdn.safeandsound.cn/image/拓展chrome插件json-viewer/源码安装.png)
-这样安装后就不会有这种问题,但是每次打开chrome都会提醒你禁用开发者模式下安装的拓展。2.按照 [该网址的方法二](http://www.9sep.org/chrome-install-third-party-extensions) 进行操作，方法一我测试过，在我电脑上（win10）是无效的，我不知道问题在哪，可能是注册表键值的有效位置在win10上改动了。但是法二有个局限就是自win8开始组策略只在专业版及以上版本才有。
+这样安装后就不会有这种问题,但是每次打开chrome都会提醒你禁用开发者模式下安装的拓展。2.按照 [该方法](https://steemit.com/chrome/@free1x/chrome) 进行操作，但有个局限就是自win8开始组策略只在专业版及以上版本才有。
 以上。
