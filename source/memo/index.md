@@ -4,8 +4,13 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 3 月
-* ###### 2018-03-02
+* ###### 2018-03-06
+关于各种开源协议的不同, 推荐阮一峰老师一篇博文中的一张图,一看就懂.
+![Alt text](https://cdn.safeandsound.cn/image/memo/%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE.png)
+
+* ###### 2018-03-05
 win下使用`power /energy`命令后,正常使用电脑一分钟可以得到电脑的能源效率分析报告.
+使用`power /batteryreport`命令后,可以得到一份本机电池的报告,包含电池损耗等信息.
 
 ##### 2 月
 * ###### 2018-02-26
@@ -17,6 +22,7 @@ clean：清空选中硬盘原有分区信息
 convert gpt/mbr：将分区格式转换为GPT/MBR
 list partition：显示已有分区
 ```
+
 * ###### 2018-02-02
 cmd下输入`ipconfig /flushdns`, 回车, 即可刷新hosts文件
 
@@ -267,6 +273,7 @@ sudo make install
 ##### 9 月
 * ###### 2017-09-21
 ES6的暂时性死区
+
 ```
 //(1). ES6中的let命令不像var那样具有“变量提升”现象。
 console.log(foo);//ReferenceError
@@ -319,6 +326,7 @@ sort -descending lastwritetime
 )[0].fullName
 [appdomain]::currentdomain.getassemblies() | %{ngen $_.location}
 ```
+
 * ###### 2017-07-20
 windows下在资源管理器右键打开powershell /cmd。进regedit，定位到HKEY_CLASSES_ROOT\Directory\Background\shell\cmd\command表项，对右侧的字符串项的值进行修改：
 ```
