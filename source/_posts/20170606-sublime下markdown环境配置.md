@@ -7,7 +7,7 @@ tags: [sublime]
 因为用的挺顺手的，所以推荐一下。
 我在sublime上编写markdown文档的环境配置是:
 
-*** Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended ***
+*Markdown Editing + OmniMarkupPreviewer + Markdown Extended + Monokai Extended*
 <!--more-->
 #### 插件介绍
 
