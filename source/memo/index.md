@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 3 月
+* ###### 2018-03-16
+很多时候我们在新建的docker镜像里面查找配置文件的时候会很麻烦, 使用`locate`命令会提示没有此命令, 这是我们可以安装mlocate软件, 这样`updatedb`和`locate`命令就都可以使用了.
+
 * ###### 2018-03-14
 win10的MS store以及在上面下载的app都是运行在沙箱中的, 其网络流量收到了系统的限制而从本地走, 所以像其他exe程序一样直接使用系统代理, 我们可以通过设置来进行修改, 具体可以参照[该知乎专栏](https://zhuanlan.zhihu.com/p/29989157).
 
@@ -66,6 +69,18 @@ BLOCK
 
 #### 2017 年
 ##### 12 月
+* ###### 2017-12-28
+之前在windows上使用docker创建mysql容器的时候使用命令`docker run -itd --name mysql --env MYSQL_ROOT_PASSWORD=123456 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci mysql`,今天用在linux环境中却报错:
+```
+docker: Error parsing reference: "--character-set-server=utf8mb4" is not a valid repository/tag: invalid reference format.
+See 'docker run --help'.
+```
+显然是命令参数错了, 但这是按照docker hub上的mysql官方文档上的用法写的啊...😥, 发现前面的`MYSQL_ROOT_PASSWORD`也是个mysql环境变量,可它前面加了`--env`参数来表明这是一个环境变量, 啊哈, 那就都这样加上吧:
+```
+docker run -itd --name mysql --env MYSQL_ROOT_PASSWORD=123456 --env character-set-server=utf8mb4 --env collation-server=utf8mb4_unicode_ci mysql
+```
+完全👌
+
 * ###### 2017-12-24
 从[阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)学习了一下git commit的写法,在这里摘抄一下:
 commit message包括三个部分:`header`,`Body`和`footer`, 形如:
