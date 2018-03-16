@@ -6,6 +6,14 @@ date: 2017-07-27 15:04:16
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
 <!--////////////////////////////////////////////////////////////////////////-->
 
+* ### 鸭子类型(duck typing)
+鸭子类型是动态语言所特有的概念。[Wiki](https://en.wikipedia.org/wiki/Duck_typing)上的解释，有趣的类比"If it walks like a duck and it quacks like a duck, then it must be a duck." 其意为，一个对象的到底是什么是由它的行为所决定的，我们并不关心它本质上是什么(继承自什么对象实现了什么接口)，我们是通过它能干什么来判断它是什么🤔很有趣嘛。
+
+* ### 猴子补丁(monkey patching)
+起源:猴子补丁的这个叫法起源于Zope框架，大家在修正Zope的Bug的时候经常在程序后面追加更新部分，这些被称作是“杂牌军补丁(guerilla patch)”，后来guerilla就渐渐的写成了gorllia(猩猩)，再后来就写了monkey(猴子)，所以猴子补丁的叫法是这么莫名其妙的得来的。
+它是动态语言所特有的概念，在动态语言中，一切皆对象，例如你可以用一个对象去替换另一个对象的属性，那么这样的话你就可以非常灵活的去进行功能的追加或删改。
+关于实际例子，StackOverflow上有相关的问题:[What is monkey patching?](https://stackoverflow.com/questions/5626193/what-is-monkey-patching)
+
 * ### 阻抗失谐(impedance mismatch)
 `该词是数据库领域术语, 反用了微波电子学术语"阻抗匹配"(impedance match),用来比喻数据模型与实际编程语言不搭调的窘境。`--摘自《NoSQL精粹(NoSQL Distilled)》
 这种"阻抗失谐"的现象(尤其是在关系型数据库中)表现为:关系模型和内存中的数据结构之间存在差异, 如编程语言在内存中构造的数据结构中有"嵌套"的表示, 但是在关系型数据库中却无法包含嵌套记录, 它的关系元组必须是简单的, 这就导致如果要把内存中数据结构的对象持久化到关系型数据库中就必须要将其转换成"关系"形式, 这样关系型数据库才能保存并表达, 这就发生了"阻抗失谐": 需要在两种不同的表示形式之间转译.
