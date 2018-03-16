@@ -69,18 +69,6 @@ BLOCK
 
 #### 2017 年
 ##### 12 月
-* ###### 2017-12-28
-之前在windows上使用docker创建mysql容器的时候使用命令`docker run -itd --name mysql --env MYSQL_ROOT_PASSWORD=123456 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci mysql`,今天用在linux环境中却报错:
-```
-docker: Error parsing reference: "--character-set-server=utf8mb4" is not a valid repository/tag: invalid reference format.
-See 'docker run --help'.
-```
-显然是命令参数错了, 但这是按照docker hub上的mysql官方文档上的用法写的啊...😥, 发现前面的`MYSQL_ROOT_PASSWORD`也是个mysql环境变量,可它前面加了`--env`参数来表明这是一个环境变量, 啊哈, 那就都这样加上吧:
-```
-docker run -itd --name mysql --env MYSQL_ROOT_PASSWORD=123456 --env character-set-server=utf8mb4 --env collation-server=utf8mb4_unicode_ci mysql
-```
-完全👌
-
 * ###### 2017-12-24
 从[阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)学习了一下git commit的写法,在这里摘抄一下:
 commit message包括三个部分:`header`,`Body`和`footer`, 形如:
@@ -149,6 +137,9 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，其中的hash是被撤销 commit 的 SHA 标识符。
 如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。
 </div>
+
+* ###### 2017-12-21
+在使用`maven package`命令打包项目的时候, 如果我们需要临时跳过测试, 可以加上`-D skipTests`参数来进行设置, 如果是在IDEA上有直接可使用的maven工具插件在项目右侧栏, 其工具栏有一个带闪电的小球, 可触发"skipTests"模式 .
 
 * ###### 2017-12-17
 [USTC的ubuntu源文件自动生成器](https://mirrors.ustc.edu.cn/repogen/)
