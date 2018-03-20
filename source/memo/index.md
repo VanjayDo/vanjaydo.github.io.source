@@ -158,7 +158,7 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 ##### 11 月
 * ###### 2017-11-29
 今天在使用服务器做ss代理的时候一直提示`ERROR: unable to resolve……`，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。
-最后还是查相关文档后，在配置文件里加了`"nameserver": "8.8.8.8"`这个字段，问题就解决了。
+在GitHub[该issue](https://github.com/shadowsocks/shadowsocks-libev/issues/804)中找到了解决办法，在配置文件里加了`"nameserver": "8.8.8.8"`(也就是google的一个DNS)这个字段，问题就解决了，开发者说并不确定问题的根源,但ss是默认从/etc/resolv.conf获取默认DNS服务器的。
 然后，在使用proxifier时突然报错
 ```
 [11.29 16:56:25] Error: Windows network (Winsock) is not properly configured to work with Proxifier.
