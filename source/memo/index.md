@@ -4,6 +4,20 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 3 月
+* ###### 2018-03-28
+推荐命令行版的图片压缩工具[nie](http://feg.netease.com/archives/605.html)
+顺便提一下关于在linux与windows下查看环境变量的不同:
+*查看所有环境变量的名称和值：*
+Linux下：`export`
+Windows下：`set`
+*根据名称查该环境变量的值：*
+Linux下：`echo $环境变量名`
+Windows下：`set 环境变量名`
+
+* ###### 2018-03-26
+CSS否定选择器`:not()`不能嵌套使用, 但是可以并列使用, 形如: `:not():not()`。
+例如我要选择所有p元素下的非(类a和类b)的元素, 则可以写作: `p:not(.a):not(.b)`。
+
 * ###### 2018-03-25
 今天发现了一个关于[算法复杂度大O表示法](https://www.jianshu.com/p/59d09b9cee58)的[cheat sheet](http://bigocheatsheet.com), 非常清晰的展示了算法时间复杂度之间的区别.
 
@@ -349,6 +363,24 @@ powershell.exe -NoExit Set-Location “%V”
 cmd.exe /s /k pushd "%V"
 ```
 	确定保存即可
+
+* ###### 2017-07-03
+第一步，安装中文包：
+`sudo apt-get install language-pack-zh-hant language-pack-zh-hans`
+
+第二步，配置相关环境变量：
+`sudo vim /etc/environment`
+在文件内容末尾另起一行增加语言和编码的设置：
+
+```
+LANG="zh_CN.UTF-8"
+LANGUAGE="zh_CN:zh:en_US:en"
+```
+第三步，重新设置本地配置：
+`sudo dpkg-reconfigure locales`
+都选择zh_CN.UTF-8
+
+保存重启即可
 
 ~~一些零碎的知识点和想说的话放在这里~~
 ~~以上~~
