@@ -96,7 +96,7 @@ commit message包括三个部分:`header`,`Body`和`footer`, 形如:
 // 空一行
 <footer>
 ```
-<div class="div-border-left-yellow">其中`header`是必须的,`body`和`footer`可以省略.
+{%note info%}其中`header`是必须的,`body`和`footer`可以省略.
 <strong>Header</strong>
 header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
 `(1)type`
@@ -153,7 +153,7 @@ This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
 </pre>
 Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，其中的hash是被撤销 commit 的 SHA 标识符。
 如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。
-</div>
+{%endnote%}
 
 * ###### 2017-12-21
 在使用`maven package`命令打包项目的时候, 如果我们需要临时跳过测试, 可以加上`-D skipTests`参数来进行设置, 如果是在IDEA上有直接可使用的maven工具插件在项目右侧栏, 其工具栏有一个带闪电的小球, 可触发"skipTests"模式 .
