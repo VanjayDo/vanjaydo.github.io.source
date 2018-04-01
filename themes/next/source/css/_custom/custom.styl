@@ -30,7 +30,25 @@ body{
       margin-top: -50px;
       background:rgba(248,248,248,0.3) none repeat scroll !important;
       padding:20px;
+      //调整移动端的左右边框距离
+      +mobile() { 
+        padding-left: 9px;
+        padding-right: 9px;
+      }
 }
+//调整移动端的左右边框距离
+#posts{
+  +mobile() { 
+    margin: 0 10px 0 10px;
+  }
+}
+//调整移动端的左右边框距离
+ul{
+  +mobile() { 
+    padding-left: 20px;
+  }
+}
+
 //内容页面宽度
 .main-inner {width: 800px;}
 //消除内容页面底部与footer的距离
