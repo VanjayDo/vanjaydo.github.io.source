@@ -3,6 +3,17 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 4 月
+* ###### 2018-04-09
+今天在PowerShell中使用`virtualenv`为django工程搭建python虚拟环境的过程中在执行activate脚本进行激活时发生错误: 
+```
+.\proVirtualEnv\Scripts\activate : 无法加载文件 C:\Users\jay\Documents\Code\dja
+ngo\proVirtualEnv\Scripts\activate.ps1，因为在此系统上禁止运行脚本。有关详细信
+息，请参阅 https:/go.microsoft.com/fwlink/?LinkID=135170 中的 about_Execution_P
+olicies。
+```
+原因是: PS的现用执行策略是 Restricted（默认设置）, 而Restricted策略为了系统安全不允许任何脚本运行, 执行命令`set-executionpolicy remotesigned `后将PS执行策略修改为系统可以运行编写的未签名脚本和来自其他用户的签名脚本即可(需使用有管理员权限的PS, 选择A后回车).
+
 ##### 3 月
 * ###### 2018-03-28
 推荐命令行版的图片压缩工具[nie](http://feg.netease.com/archives/605.html)
