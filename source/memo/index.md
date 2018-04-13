@@ -4,6 +4,15 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 4 月
+* ###### 2018-04-13
+可以利用OneDrive来同步JetBrains系列的IDE环境: (以Idea为例)
+修改相关IDEA安装目录中bin目录下的`idea.properties`文件中的`idea.config.path`值即可(默认是未设置的, 默认的配置所在目录是`${user.home}/.IntelliJIdea/config`), 例如:
+```
+idea.config.path=C:/Users/jay/OneDrive/SettingsSync/JetBrains/IDEA/config
+```
+这就是我在OneDrive中的Idea配置同步目录
+**注:** 路径分隔符必须为`/`而不能为`\`, 否则IDE会无法识别, 导致配置目录设置在安装目录中的bin目录下
+
 * ###### 2018-04-11
 powershell下使用命令`gwmi –lass win32_bios`可以查看到本机的SN(Serial Number)码.
  
