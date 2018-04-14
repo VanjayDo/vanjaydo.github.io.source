@@ -4,6 +4,13 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 4 月
+* ###### 2018-04-14
+使用webstorm编写vue项目的时候如果没预先配置好可能会导致IDE的代码格式化后与ESlint的格式相冲突从而导致项目报错, 建议进行如下配置, 进入`Settings`:
+1. `Preferences` -> `Languages & Frameworks` -> `Javascript` -> `Code Quality Tools` -> `Eslint`选中Enable后填写Node和Eslint路径,然后选中Automatic search并Apply
+2. `Editor` -> `Inspections`取消勾选Javascript下的所有子选项, 然后再勾选上Javascript -> Code quality tools -> Eslint, 也就是只应用ESlint的检查, 然后Apply
+3. `Editor` ->  `Code Style` -> `JavaScript`将`Tab size`, `Indent`和`Continuation indent`全都修改为2,  然后Apply
+4. `Editor` ->  `Code Style`取消勾选`Detect and use existing file indents for editing`和`Enable EditorConfig support`, 然后Apply并保存退出
+
 * ###### 2018-04-13
 可以利用OneDrive来同步JetBrains系列的IDE环境: (以Idea为例)
 修改相关IDEA安装目录中bin目录下的`idea.properties`文件中的`idea.config.path`值即可(默认是未设置的, 默认的配置所在目录是`${user.home}/.IntelliJIdea/config`), 例如:
@@ -14,7 +21,7 @@ idea.config.path=C:/Users/jay/OneDrive/SettingsSync/JetBrains/IDEA/config
 **注:** 路径分隔符必须为`/`而不能为`\`, 否则IDE会无法识别, 导致配置目录设置在安装目录中的bin目录下
 
 * ###### 2018-04-11
-powershell下使用命令`gwmi –lass win32_bios`可以查看到本机的SN(Serial Number)码.
+powershell下使用命令`gwmi –class win32_bios`可以查看到本机的SN(Serial Number)码.
  
 * ###### 2018-04-11
 新装的gitbash启动奇慢, 在文件夹下右击想打开powershell时总是会误触, 没找到解决办法, 直接去注册表中删除相关表项即可 👉`HKEY_CLASSES_ROOT\Directory\Background\shell` 
