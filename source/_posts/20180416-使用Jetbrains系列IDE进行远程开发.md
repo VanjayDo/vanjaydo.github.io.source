@@ -49,5 +49,16 @@ tags:
 到项目设置里应用我们刚刚配置的远程服务器的interpreter就好了, 完成配置后IDE会从远程服务器上下载环境文件, 都是自动化进行的, 无需干预, 等全部完成了就可以使用服务器上的开发环境了.
 
 ### 赘述
+#### 同步远程文件到本地
+**注:**在开发项目的过程中, 如果服务器的项目文件主动变化的话, 本地的IDE并不会主动进行同步, 需要你手动进行同步, 例如, 我的整个项目在服务器和本地之间同步完成后, 我在服务器端主动修改了一个views.py文件内容, 在最后加上了一句`print("this is just a test")`, 但是本地PyCharm并不会主动将修改的内容同步过来, 如果我想要同步的话, 需要手动进行:
+在项目根路径上右击, 到`Deployment` -> `Sync with Deployed to *`
+![选择同步](https://cdn.safeandsound.cn/image/pycharmRemoteDev/pycharm-remote-dev7.png)
+
+然后IDE会将两地的文件进行比较,
+![配置同步](https://cdn.safeandsound.cn/image/pycharmRemoteDev/pycharm-remote-dev8.png)
+
+**注:** 如果你在修改远程文件后, 在本地也进行修改的话(此时你开启了自动上传的配置), 保存本地文件后, IDE会自动将本地文件上传到远程并覆盖远程的修改内容. 所以建议远程开发的话, 操作什么的尽量都在IDE上进行, 方便保持一致.
+
+#### JetBrains其他IDE
 JetBrains系列其他的IDE(IDEA, webstorm等)也都差不多是这样配置.
 本文是以本地项目上传到远程服务器为例讲解的, 当然也可以配置后再从远程服务器上拉项目到本地的, 只不过一开始不是upload而是download罢了, 不再赘述.

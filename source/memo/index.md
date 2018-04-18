@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 4 月
+* ###### 2018-04-18
+使用`python -m py_compile file.py`命令可以将py源文件编译成pyc文件, 可以起到简单保护源码的作用(可以反编译, 但是成本不低);
+
 * ###### 2018-04-14
 使用webstorm编写vue项目的时候如果没预先配置好可能会导致IDE的代码格式化后与ESlint的格式相冲突从而导致项目报错, 建议进行如下配置, 进入`Settings`:
 1. `Preferences` -> `Languages & Frameworks` -> `Javascript` -> `Code Quality Tools` -> `Eslint`选中Enable后填写Node和Eslint路径,然后选中Automatic search并Apply
