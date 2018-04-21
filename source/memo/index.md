@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 4 月
+* ###### 2018-04-21
+powershell后台运行程序可以使用命令`Start-Process 程序路径 -WindowStyle hidden`, 如果是需要后台执行命令的话那就是`Start-Process powershell "command" -WindowStyle hidden`了, 如果是写入ps1脚本的话就是`powershell -windowstyle hidden -command "command" `
+
 * ###### 2018-04-18
 使用`python -m py_compile file.py`命令可以将py源文件编译成pyc文件, 可以起到简单保护源码的作用(可以反编译, 但是成本不低);
 
