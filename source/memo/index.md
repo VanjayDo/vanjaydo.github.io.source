@@ -12,10 +12,12 @@ powershell后台运行程序可以使用命令`Start-Process 程序路径 -Windo
 
 * ###### 2018-04-14
 使用webstorm编写vue项目的时候如果没预先配置好可能会导致IDE的代码格式化后与ESlint的格式相冲突从而导致项目报错, 建议进行如下配置, 进入`Settings`:
-1. `Preferences` -> `Languages & Frameworks` -> `Javascript` -> `Code Quality Tools` -> `Eslint`选中Enable后填写Node和Eslint路径,然后选中Automatic search并Apply
-2. `Editor` -> `Inspections`取消勾选Javascript下的所有子选项, 然后再勾选上Javascript -> Code quality tools -> Eslint, 也就是只应用ESlint的检查, 然后Apply
-3. `Editor` ->  `Code Style` -> `JavaScript`将`Tab size`, `Indent`和`Continuation indent`全都修改为2,  然后Apply
-4. `Editor` ->  `Code Style`取消勾选`Detect and use existing file indents for editing`和`Enable EditorConfig support`, 然后Apply并保存退出
+{%note default%}
+* *1.*`Preferences` -> `Languages & Frameworks` -> `Javascript` -> `Code Quality Tools` -> `Eslint`选中Enable后填写Node和Eslint路径,然后选中Automatic search并Apply
+* *2.*`Editor` -> `Inspections`取消勾选Javascript下的所有子选项, 然后再勾选上Javascript -> Code quality tools -> Eslint, 也就是只应用ESlint的检查, 然后Apply
+* *3.*`Editor` ->  `Code Style` -> `JavaScript`将`Tab size`, `Indent`和`Continuation indent`全都修改为2,  然后Apply
+* *4.*`Editor` ->  `Code Style`取消勾选`Detect and use existing file indents for editing`和`Enable EditorConfig support`, 然后Apply并保存退出
+{%endnote%}
 
 * ###### 2018-04-13
 可以利用OneDrive来同步JetBrains系列的IDE环境: (以Idea为例)
@@ -45,11 +47,11 @@ powershell下使用命令`gwmi –class win32_bios`可以查看到本机的SN(Se
 4月10日更新: 发现在最新的node版本下并不支持. windows下推荐一款gui版的压缩工具[antelope](http://www.voralent.com/zh/products/antelope/), 免费无广告体积还小, 挺好用的.
 
 * ###### 2018-03-27
-顺便提一下关于在linux与windows下查看环境变量的不同:
-*查看所有环境变量的名称和值：*
+关于在linux与windows下查看环境变量的不同:
+查看所有环境变量的名称和值：👇
 Linux下：`export`
 Windows下：`set`
-*根据名称查该环境变量的值：*
+根据名称查该环境变量的值：👇
 Linux下：`echo $环境变量名`
 Windows下：`set 环境变量名`
 
@@ -65,7 +67,6 @@ CSS否定选择器`:not()`不能嵌套使用, 但是可以并列使用, 形如: 
 
 * ###### 2018-03-14
 win10的MS store以及在上面下载的app都是运行在沙箱中的, 其网络流量收到了系统的限制而从本地走, 所以像其他exe程序一样直接使用系统代理, 我们可以通过设置来进行修改, 具体可以参照[该知乎专栏](https://zhuanlan.zhihu.com/p/29989157).
-
 
 * ###### 2018-03-06
 关于各种开源协议的不同, 推荐阮一峰老师一篇博文中的一张图,一看就懂.
@@ -109,8 +110,10 @@ JUnit4中测试中几种常用的注解(主要是@AfterClass,@BeforeClass,@after
 * ###### 2018-01-06
 今天在Atom的`Sync Settings`插件中用到了github的gist服务, 该服务专门用来存放代码片段, 相当于小的git仓库. 特点是用户可以无限制创建私有gist, 也可以不登陆直接匿名创建gist, 其唯一识别是gist ID, 只要知道id就可以查看内容, 无论其是public || secret, 且与用户无关.
 在Gist URL后加上`.pibb`后缀, 可以得到一个纯HTML的版本, 如:`https://gist.github.com/anonymous/cc370d24d7f4be3363ec2f09ad1e0628.pibb`, 这样就可以直接复制粘贴到其他地方了, 如论坛之类.
-这方面的使用感觉和n`https://paste.ubuntu.com`有点像.<br>
-另,
+这方面的使用感觉和n`https://paste.ubuntu.com`有点像.
+
+* ###### 2018-01-05
+可以使用如下语句在shell脚本中进行大段注释;
 ```shell
 :<<BLOCK
 这里
@@ -118,10 +121,9 @@ JUnit4中测试中几种常用的注解(主要是@AfterClass,@BeforeClass,@after
 注释
 BLOCK
 ```
-可以在shell脚本中进行大段注释;
 
 * ###### 2018-01-03
-从GitHub下载单个文件 => `https://raw.githubusercontent.com/username/repository/branch(master)/filename`
+从GitHub下载单个文件 👉 `https://raw.githubusercontent.com/username/repository/branch(一般就是master)/filename`
 
 #### 2017 年
 ##### 12 月
@@ -135,7 +137,8 @@ commit message包括三个部分:`header`,`Body`和`footer`, 形如:
 // 空一行
 <footer>
 ```
-{%note info%}其中`header`是必须的,`body`和`footer`可以省略.
+{%note info%}
+其中`header`是必须的,`body`和`footer`可以省略.
 <strong>Header</strong>
 header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
 `(1)type`
@@ -180,6 +183,7 @@ Footer 部分只用于两种情况。
       myAttr: '@',
     }
     The removed inject wasn't generaly useful for directives so there should be no code using it.</pre>
+
 `(2)关闭 Issue`
 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
 <pre>Closes #234
@@ -221,7 +225,7 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 [11.29 16:56:25] Proxifier or some of its parts may work incorrectly.
 [11.29 16:56:25] It is highly recommended that you run SysSettings tool to address this problem.
 ```
-	一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的`SysSettings`，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示`proxifier module is not installed`，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
+一脸懵逼，之前用还好好的，估计可能是前几天一次win10版本大更新导致的，根据提示中的`SysSettings`，用everything查找了一下系统，发现是proxifier自带的一个设置程序，就在proxifier的安装目录下，进去之后先运行了64位的“SysSettings64.exe”，显示`proxifier module is not installed`，当然是点击install了，安装后重启proxifier，并没什么用（挠头），索性运行了32位的“SysSettings32.exe”，也安装了下，重启，成了。应该是更新时系统把proxifier的部分模块给删了导致的问题。
 
 * ###### 2017-11-29
 [Tiny Core](http://distro.ibiblio.org/tinycorelinux/)，仅10+M的linux，因为轻量而被追捧，网上的教程也不少。
@@ -238,14 +242,6 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 AttributeError: /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1: undefined symbol: EVP_CIPHER_CTX_cleanup
 ```
 	看错误应该是加密方面的问题，因为ss依赖openssl，那就应该是openssl的问题了，上网搜了下，[解决办法在此](https://blog.lyz810.com/article/2016/09/shadowsocks-with-openssl-greater-than-110/)
-
-* ###### 2017-11-12
-最近比较迷Alvaro Soler的Sofía（一开始以为是情歌，结果查资料才知道是歌手失恋后写的,感情上可以说很乐观了），虽然是西班牙语的民谣，根本不知道在唱什么🌚但是曲子很有活力，节奏感很强，口哨可以轻松带起来。很棒的歌。
-
-* ###### 2017-11-10
-今天趁着田老师有空，请他带着我去文理楼机房调整维护了自己的两台服务器，因为没有远程控制卡（毕竟之前是废弃在仓库的老机器了），所以只要出现故障就只能现场维修，有一台还是自己七月份时候配iptables规则的时候不小心把网络全封了……很蛋疼🌚。
-不得不说田老师的为人真的超赞，不仅网络方面的技术好，作为指导老师也很平易，非常照顾学生。
-感觉自己虽然会用linux，但是在系统的管理和维护上的能力还有欠缺。打算明年考RHCE的认证，不得不准备就业的事了。
 
 * ###### 2017-11-09
 [Get full version of StarUML](https://gist.github.com/trandaison/40b1d83618ae8e3d2da59df8c395093a)    startUML获取证书，V2.8.0亲测可用.
@@ -283,7 +279,6 @@ $ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstra
 ***2.*** http访问配置好的404页面发现不会自动跳转到https。需要我们手动把http流量强制转发到https，在http配置中添加`rewrite ^ https://$server_name$request_uri? permanent;`
 ***3.*** 修改配置文件后需要重启nginx服务才能生效。如果无法重启，首先使用`nginx -t`命令检测配置文件，如果报错说明是配置文件的错；如果没有报错，使用`netstat -anp|grep :80`查看80端口是否被占，如果被占则需要kill掉使用80端口的进程；如果没有被占，使用`journalctl -xe`查看启动服务时的报错日志进行调试解决。
 
-
 * ###### 2017-11-01
 最近配置nginx时总是遇到nginx -t测试配置文件时没问题，但是restart服务却一直失败，重启一下吧又好了，突然想起来会不会是端口被占了，查一下：
 ```bash
@@ -291,14 +286,11 @@ $ vim /bin/lnmp  #将"/bin/certbot certonly"替换成"/bin/certbot --no-bootstra
 tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      8205/nginx.conf
 tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      1356/java
 ```
-	端口果然被占用了，kill掉这个进程即可。
+端口果然被占用了，kill掉这个进程即可。
 
 ##### 10 月
 * ###### 2017-10-27
 强推一款跨平台的终端连接工具：[Termius](https://www.termius.com/)，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。
-
-* ###### 2017-10-24
-上校图书馆网站查书发现一个很有趣的现象，阿加莎、松本清张的书没人借，退一步，岛田庄司的也没人借，然而东野圭吾的书都基本被借光，不好做什么评论，只觉得挺有意思。
 
 * ###### 2017-10-21
 之前linux下查命令参数总是用man配合字符匹配，突然发现有[tldr](https://github.com/tldr-pages/tldr)这种利器，赶紧推一下, `npm install tldr`
@@ -312,7 +304,7 @@ sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
 ./build
 sudo make install
 ```
-	体验还不错，在linux子系统下运行效果图
+体验还不错，在linux子系统下运行效果图
 <img src="https://cdn.safeandsound.cn/image/memo/show-ag.png" width="500px">
 
 * ###### 2017-10-13
@@ -324,14 +316,6 @@ sudo make install
 虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。
 可这么说肯定是有人不同意第二句的。
 
-* ###### 2017-10-08
-今天是在行政楼实验室的最后一天。从我的位置看出去的风景还是挺让人放松的。
-<img src="https://cdn.safeandsound.cn/image/memo/SDN.jpg" width="500px">
-因为领导换届和单位转型为管理单位，所以废除掉SDN实验室，再加上“新增了领导办公室不够用”、“一个领导一个作风，这个实验室是老领导设办的”、“这是和华三一起做的SDN实验室，但你们在这里的学生有几个是做SDN的”等理由，看上去总是很合理的。
-但还是感觉似乎不该这样。
-可能是因为喜欢在这边学习的氛围和深夜写代码的自由。
-我们都知道归属感来之不易。不过这么说起来就很像是心情不好想埋怨些什么的借口了。
-
 * ###### 2017-10-05
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
 <img src="https://cdn.safeandsound.cn/image/memo/mycli.png">
@@ -339,7 +323,6 @@ sudo make install
 ##### 9 月
 * ###### 2017-09-21
 ES6的暂时性死区
-
 ```
 //(1). ES6中的let命令不像var那样具有“变量提升”现象。
 console.log(foo);//ReferenceError
@@ -351,7 +334,6 @@ if (true)
   tmp="abc";//ReferenceError
   let tmp;
 }
-
 //ES6明确规定，如果区块中存在let和const命令，则这个区块对这些命令声明的变量从一开始就形成封闭作用域。
 //总之在代码块内，在let命令声明变量之前，该变量都是不可用的，
 //这在语法上成为“暂时性死区”(TDZ,temporal dead zone)。
@@ -369,20 +351,10 @@ if(true)
 ```
 
 ##### 8 月
-* ###### 2017-08-15
-又在开源论坛上看到有人在黑php。
-php因为其一开始的自身定位问题导致现在的特性有很多地方好像不是那么讨（有些）人喜欢，但是这么些年来的不断改进已经让其无愧于其自身定位了，在小规模的站点开发中，缺点基本可以忽略，况且易上手又适合快速开发让它的门槛变得很低。当然了，有人也因为以上的优点而称PHP为屌丝语言，我个人觉得没必要这样，每一门语言都有其自身的特性，优点和缺点都算是，语言只是一个工具，实在不喜欢换一门就行，没必要一边用一边黑。
-开发本来应该是一件很愉快的事，这样可就搞糟了。
-
 * ###### 2017-08-10
 今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量, 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.
 
 ##### 7 月
-* ###### 2017-07-29
-感觉自己的大学生活好像今天坐公交遇到的小男孩，正经时很可爱，冲我笑时却很丑。
-但我到底还是喜欢的。
-这么说好像不负责任的旁观者。
-
 * ###### 2017-07-21
 powershell启动加速。参见该[官方博文](https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/),将以下命令粘贴到powershell，等待执行完毕。
 ```
@@ -401,25 +373,17 @@ powershell.exe -NoExit Set-Location “%V”
 #用cmd打开则改为：
 cmd.exe /s /k pushd "%V"
 ```
-	确定保存即可
+确定保存即可
 
 * ###### 2017-07-03
-第一步，安装中文包：
-`sudo apt-get install language-pack-zh-hant language-pack-zh-hans`
-
-第二步，配置相关环境变量：
-`sudo vim /etc/environment`
-在文件内容末尾另起一行增加语言和编码的设置：
-
+Ubuntu安装中文并将系统语言设置为中文 👇
+{%note default%}
+* *1.* 第一步，安装中文包：`sudo apt-get install language-pack-zh-hant language-pack-zh-hans`
+* *2.* 第二步，配置相关环境变量：`sudo vim /etc/environment`, 并在文件内容末尾另起一行增加语言和编码的设置：
 ```
 LANG="zh_CN.UTF-8"
 LANGUAGE="zh_CN:zh:en_US:en"
 ```
-第三步，重新设置本地配置：
-`sudo dpkg-reconfigure locales`
-都选择zh_CN.UTF-8
-
-保存重启即可
-
-~~一些零碎的知识点和想说的话放在这里~~
-~~以上~~
+* *3.*第三步，重新设置本地配置：`sudo dpkg-reconfigure locales`,  选项都选择zh_CN.UTF-8
+* *4.*保存重启即可
+{%endnote%}

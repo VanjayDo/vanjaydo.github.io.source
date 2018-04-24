@@ -2,7 +2,7 @@
 title: 使用Jetbrains系列IDE进行远程开发
 urlname: 使用Jetbrains系列IDE进行远程开发
 date: 2018-04-16 21:36:33
-tags:
+tags: [IDE, Tips+Tricks]
 ---
 
 有时候, 我们的开发环境会受到所使用平台的限制而导致无法进行某些开发, 例如有些库在linux平台上被支持的很好, 而要移植到windows的话就要话不少的精力(还得冒着不小的搞砸的风险), 而现在已经有不少的IDE提供了远程开发的功能, 我们可以很好的利用起来, 在此以JetBrains系列的IDE为例进行演示.

@@ -64,12 +64,56 @@ strong{
 pre.prettyprint.linenums.prettyprinted{
       margin:0px;
 }
-//正文段
+
+//正文段------------------------------------------------->>
 p:not(.site-author-name):not(.site-description){
-      text-indent: 2em;
+      text-indent: 2em; //段首缩进
       margin-bottom:0px;
 }
+//Bootstrap Callout部分
+.note{
+      margin:5px;
+}
+div.note > ul{
+      padding:0;
+}
 
+//whitegray
+.note > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//gray
+.note.default > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//blue(deep)
+.note.primary > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//green
+.note.success > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//skyblue
+.note.info > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//orange
+.note.warning > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//red
+.note.danger > p{
+      text-indent: 0em; 
+      margin-bottom:0px;
+}
+//-----------------------------------------------------<<
 
 //标注引用出处
 .from {

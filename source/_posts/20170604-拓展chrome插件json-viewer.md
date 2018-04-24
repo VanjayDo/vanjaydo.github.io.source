@@ -2,7 +2,7 @@
 title: 拓展chrome插件json-viewer
 urlname: 拓展chrome插件json-viewer
 date: 2017-06-04
-tags: [chrome,json,工具]
+tags: [Tips+Tricks]
 ---
 最近在学习维护学校iptv服务器时获得了电视墙缓存图片的json数据，chrome打开页面后jsonViewer无法格式化代码，
 
