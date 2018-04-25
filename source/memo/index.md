@@ -5,8 +5,7 @@ date: 2017-07-27 15:04:16
 #### 2018 年
 ##### 4 月
 * ###### 2018-04-24
-推荐一款GitHub上开源的Windows下的任务栏流量监控软件 👉 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor), 非常好用, 如下图(我的任务栏是靠左的):
-![TrafficMonitor](https://cdn.safeandsound.cn/image/memo/TrafficMonitor.png)
+推荐一款GitHub上开源的Windows下的任务栏流量监控软件 👉 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor), 非常好用.
 
 * ###### 2018-04-21
 powershell后台运行程序可以使用命令`Start-Process 程序路径 -WindowStyle hidden`, 如果是需要后台执行命令的话那就是`Start-Process powershell "command" -WindowStyle hidden`了, 如果是写入ps1脚本的话就是`powershell -windowstyle hidden -command "command" `
@@ -312,13 +311,8 @@ sudo make install
 <img src="https://cdn.safeandsound.cn/image/memo/show-ag.png" width="500px">
 
 * ###### 2017-10-13
-发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow -->[豆瓣读书](https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb) <--，感觉查书什么的挺好用的
-<img src="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" width="300px">
-
-* ###### 2017-10-09
-当觉得生活无趣又无望时就应该读汪曾祺。
-虽说小波的文字也是颇有趣的，但哪个百无聊赖的人喜欢听那么理性的话。
-可这么说肯定是有人不同意第二句的。
+发现IOS下的Workflow可以提取网页的json数据，这样就能访问有些网站提供的API直接拿数据了，简直就是一只小爬虫，自己做了一个根据书名从豆瓣拉取图书相关信息的workflow  👉 [豆瓣读书](https://workflow.is/workflows/cae2c0ec4dd540dab6a773eb0de982bb) 👈，感觉查书什么的挺好用的
+<img src="https://cdn.safeandsound.cn/image/memo/%E8%B1%86%E7%93%A3%E8%AF%BB%E4%B9%A6workflow.png" style="width: 220px">
 
 * ###### 2017-10-05
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
@@ -356,7 +350,7 @@ if(true)
 
 ##### 8 月
 * ###### 2017-08-10
-今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量, 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.
+今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量. 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.
 
 ##### 7 月
 * ###### 2017-07-21
