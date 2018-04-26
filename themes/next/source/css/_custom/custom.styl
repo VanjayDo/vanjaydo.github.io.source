@@ -1,11 +1,16 @@
 // Custom styles.
 //j's自定义修改
 
-#background-image {   
-      background:url("https://cdn.safeandsound.cn/image/wave-ocean.jpg");
-      background-size:100%;
-      background-repeat:no-repeat;
-      background-attachment:fixed;
+body:before{ 
+      content: ' ';
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: url(https://cdn.safeandsound.cn/image/wave-ocean.jpg) center 0 no-repeat;
+      background-size: cover;
 }
 
 #sidebar {
