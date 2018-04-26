@@ -29,7 +29,7 @@ powershell后台运行程序可以使用命令`Start-Process 程序路径 -Windo
 idea.config.path=C:/Users/jay/OneDrive/SettingsSync/JetBrains/IDEA/config
 ```
 这就是我在OneDrive中的Idea配置同步目录
-**注:** 路径分隔符必须为`/`而不能为`\`, 否则IDE会无法识别, 导致配置目录设置在安装目录中的bin目录下
+**注:** 路径分隔符必须为`/`而不能为`\`, 否则IDE会无法识别, 导致配置目录设置在安装目录中的bin目录下. 软件更新后可能会导致idea.properties文件复原, 这时需要重新进入编写配置文件夹路径并重启软件即可.
 
 * ###### 2018-04-11
 powershell下使用命令`gwmi –class win32_bios`可以查看到本机的SN(Serial Number)码.

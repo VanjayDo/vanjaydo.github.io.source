@@ -13,6 +13,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
+<div id="background-image">
 
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
@@ -81,7 +82,7 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
 
-
+</div>
 
 <!-- j's自定义修改 -->
 <script type="text/javascript" src="/plugins/prettify/prettify.js"></script>
