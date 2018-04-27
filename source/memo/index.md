@@ -21,6 +21,7 @@ powershell后台运行程序可以使用命令`Start-Process 程序路径 -Windo
 * *3.*`Editor` ->  `Code Style` -> `JavaScript`将`Tab size`, `Indent`和`Continuation indent`全都修改为2,  然后Apply
 * *4.*`Editor` ->  `Code Style`取消勾选`Detect and use existing file indents for editing`和`Enable EditorConfig support`, 然后Apply并保存退出
 {%endnote%}
+当然了, 更简单的解决办法就是在生成webpack模板的时候不要选择ESlint.
 
 * ###### 2018-04-13
 可以利用OneDrive来同步JetBrains系列的IDE环境: (以Idea为例)

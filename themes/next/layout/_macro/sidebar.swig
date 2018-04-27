@@ -205,7 +205,7 @@
     var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
     var a = "mw-strobe_light";
 
-    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    /* harlem-shake-style.css，替换成你的css文件位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
     var f = "//cdn.safeandsound.cn/css/harlem-shake-style.css";
     
     var l = "mw_added_css";

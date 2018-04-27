@@ -17,7 +17,7 @@ rss:
 #since: 2015
 
 # icon between year and author @Footer
-authoricon: mars
+authoricon: bolt
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
