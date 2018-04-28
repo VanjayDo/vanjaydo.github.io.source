@@ -1,6 +1,6 @@
 ---
 title: 使用Jetbrains系列IDE进行远程开发
-urlname: 使用Jetbrains系列IDE进行远程开发
+urlname: How2DevelopRemotelyWithJetbarinsIDE
 date: 2018-04-16 21:36:33
 tags: [IDE, Tips+Tricks]
 ---

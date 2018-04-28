@@ -1,6 +1,6 @@
 ---
 title: (xrdp+vnc)远程linux桌面
-urlname: (xrdp+vnc)远程linux桌面
+urlname: ImplementRemoteDesktopOnLinuxWith(Xrdp+VNC)
 date: 2017-06-15 13:37:36
 tags: [Linux, Tips+Tricks] 
 ---
@@ -83,13 +83,11 @@ systemctl start vncserver@:<Nummer>.service
 ```
 
 ### 赘述
-
+#### 一些问题与注意点
 Windows上mstsc直连session需要选择xvnc
 ![注意选择](https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png)
 
-
 如果需要以root身份登录，则需要以root身份运行vncserver,配置vncserver@:{n}.service文件后，在/home目录创建root文件夹，将其链接到/root目录即可
-
 
 若使用vnc客户端连接的话，分辨率可能会导致无法满屏显示，这时可以直接修改vnc的分辨率([ 参考链接 ](https://wiki.ubuntu.com/X/Config/Resolution))：<br>
 
@@ -123,4 +121,8 @@ xrandr --output 显示器名 --mode "模式名"
 当前设置在重启后失效，可以将其写入配置文件保证设置永久有效
 
 分辨率也可以通过vnc客户端设置，但是画质会受影响
+
 本文部分参考[ 该博文 ](http://misliang.blog.51cto.com/6973084/1533172)
+
+#### 🙃
+当然了, 折腾了这么久, 本人其实是更加推荐使用teamviewer的(逃......
