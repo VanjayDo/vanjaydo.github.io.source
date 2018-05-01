@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 5 月
+* ###### 2018-05-01
+WSL的根目录在windows系统下的路径为`C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\`
+
 ##### 4 月
 * ###### 2018-04-29
 用HTML写了个样式简洁的简历模板, 请见 👉 [传送门](https://github.com/VanjayDo/store/tree/master/template-resume).
