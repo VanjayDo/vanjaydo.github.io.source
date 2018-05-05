@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 5 月
+* ###### 2018-05-05
+推荐[更纱黑体](https://github.com/be5invis/Sarasa-Gothic), 一般用在终端(如xshell)和命令行(如powershell和IDE中的terminal)中, IDE中可以作为备选字体, 用来显示中文等非英语字体, 个人觉得很好看, 而且英文字符(如O和0, l和1等)区分明显, 对人眼识别友好. 
+
 * ###### 2018-05-01
 WSL的根目录在windows系统下的路径为`C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\`
 
