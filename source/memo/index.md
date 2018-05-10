@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 5 月
+* ###### 2018-05-10
+vmware下虚拟机中使用摄像头, 需要在菜单栏中`VM` -> `Removable Devices`连接摄像头设备到虚拟机, 如果在虚拟机中能检测到摄像头设备, 但是打开摄像头后无法显示图像, 则应该尝试在`Vm` -> `Settings` -> `USB Controller`将USB兼容性调整一下(原来是2.0的话则换到3.0, 原来是3.0的话则尝试换到2.0), 然后再断开摄像头与虚拟机的连接, 再重新连接, 再开启摄像头试试.
+ 
 * ###### 2018-05-05
 推荐[更纱黑体](https://github.com/be5invis/Sarasa-Gothic)(原[Inziu Iosevka](https://be5invis.github.io/Iosevka/inziu.html)字体), 一般用在终端(如xshell)和命令行(如powershell和IDE中的terminal)中, IDE中可以作为备选字体, 用来显示中文等非英语字体, 个人觉得很好看, 而且英文字符(如O和0, l和1等)区分明显, 对人眼识别友好. 
 直接下载github仓库中的release最新版, 解压后的文件夹中有很多字体安装包`Sarasa`是字体的名字,  后面的`Gothic`,`,mono`,`monoT`等是字体风格,  `j`,`cl`,`sc`,`tc`分别是日文, classical(好像是?), 简体中文和繁体中文的缩写, 最后的`regular`,`italic`,`bold`等是字体样式, 常规, 斜体和加粗等. 

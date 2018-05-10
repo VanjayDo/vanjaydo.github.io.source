@@ -48,6 +48,9 @@ tags: [IDE, Tips+Tricks]
 #### 选用interpreter
 到项目设置里应用我们刚刚配置的远程服务器的interpreter就好了, 完成配置后IDE会从远程服务器上下载环境文件, 都是自动化进行的, 无需干预, 等全部完成了就可以使用服务器上的开发环境了.
 
+### 关于库的安装
+在库的安装方面（由于jetbrains的IDE自身特性），如果你不通过IDE而使用其他终端软件连上服务器然后安装库的话，IDE是不会主动感知到库文件的增加或减少的，所以不会自动同步，只有在你重启IDE或手动刷新该Interpreter的库文件路径之后才会自动同步到本地，在Jetbrains社区中对于该问题有提及， 请参考👉 [见此](https://intellij-support.jetbrains.com/hc/en-us/community/posts/205813579-Any-way-to-force-a-refresh-of-external-libraries-on-a-remote-interpreter-)
+
 ### 赘述
 #### 同步远程文件到本地
 **注:**在开发项目的过程中, 如果服务器的项目文件主动变化的话, 本地的IDE并不会主动进行同步, 需要你手动进行同步, 例如, 我的整个项目在服务器和本地之间同步完成后, 我在服务器端主动修改了一个views.py文件内容, 在最后加上了一句`print("this is just a test")`, 但是本地PyCharm并不会主动将修改的内容同步过来, 如果我想要同步的话, 需要手动进行:
