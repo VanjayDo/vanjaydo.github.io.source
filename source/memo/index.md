@@ -4,11 +4,15 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 5 月
-* ###### 2018-05-19
+
+* ###### 2018-05-21
 ubunut下mysql开发相关的两个`no such file`解决办法:
 `fatal error: my_global.h: No such file or directory` 👉 `apt install libmysqlclient-dev`
 `fatal error: violite.h: No such file or directory` 👉 `apt install libmariadbclient-dev-compat`
 Centos下可以参考, 肯定也是相关的dev库依赖的问题
+
+* ###### 2018-05-20
+注册表`HKEY_CURRENT_USER/Console`下各终端里, DWORD类型的`CodePage`键值可控制打开终端的编码方式, 十进制`936`为GBK编码, `65001`为UTF-8
 
 * ###### 2018-05-19
 git项目中有时想要需要忽略`.gitignore`文件, 但`.gitignore`文件无法排除自身, 我们可以通过修改`.git/info/exclude`文件来忽略`.gitignore`, 相比之下, `.git/info/exclude`是在本地进行排除文件(因为`.git`文件夹是不会上传的嘛).
