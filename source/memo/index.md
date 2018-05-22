@@ -4,6 +4,8 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 5 月
+* ###### 2018-05-22
+对于apt有些使用情况下会报`WARNING: apt does not have a stable CLI interface.`的错, Ask Ubuntu社区上有[很好的回答](https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
 * ###### 2018-05-21
 ubunut下mysql开发相关的两个`no such file`解决办法:
@@ -30,7 +32,7 @@ WSL的根目录在windows系统下的路径为`C:\Users\<username>\AppData\Local
 
 ##### 4 月
 * ###### 2018-04-29
-用HTML写了个样式简洁的简历模板, 请见 👉 [传送门](https://github.com/VanjayDo/store/tree/master/template-resume).
+用HTML写了个样式简洁的简历模板, 请见 👉 [传送门](https://github.com/VanjayDo/store/tree/master/template-CV).
 
 * ###### 2018-04-24
 推荐一款GitHub上开源的Windows下的任务栏流量监控软件 👉 [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor), 非常好用.
