@@ -44,7 +44,7 @@ function showKittens() {
     parent.removeChild(part1);
     document.styleSheets[0].insertRule('body:before{content:""}',21);
     document.styleSheets[0].insertRule('body:after{content:""}',22);
-    if(history.length>1)
+    if(history.length>2)
     {
         history.back();
     }else{
