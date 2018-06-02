@@ -11,7 +11,15 @@ vanjaydo.github.io.source
 * ### CI
 该Repo采用[AppVeyor](https://ci.appveyor.com/projects)平台进行持续集成([教程在此](https://blog.safeandsound.cn/post/Introduction2Appveyor.html))，生成的静态文件发布到 Repo：[vanjaydo.github.io](https://github.com/VanjayDo/vanjaydo.github.io)。
 
+* ### 彩蛋
+* #### 404与t-rex-runner游戏页面
+访问404页面, 输入back后回车即可返回前一页(若没有前一页则跳转到博客首页), 输入game后回车则可跳转到`t-rex-runner`小恐龙快跑游戏页面.
 
+* #### 控制台中console的输出
+在博客的任意非404页面下打开浏览器的控制台, 进入console栏目, 即可看到彩蛋.
+
+* #### 页脚的Innovation
+在博客拥有页脚的页面下(如首页), 点击页脚中的Innovation链接, 即可看到彩蛋
 
 
 [Appveyor]:    https://ci.appveyor.com/project/VanjayDo/vanjaydo-github-io-source
