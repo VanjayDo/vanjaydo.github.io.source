@@ -48,7 +48,7 @@ function showKittens() {
     {
         history.back();
     }else{
-        window.location.href="http://blog.safeandsound.cn";
+        window.location.href="https://blog.safeandsound.cn";
     }
 }
 

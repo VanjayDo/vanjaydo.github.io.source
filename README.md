@@ -21,6 +21,8 @@ vanjaydo.github.io.source
 * #### 页脚的Innovation
 在博客拥有页脚的页面下(如首页), 点击页脚中的Innovation链接, 即可看到彩蛋
 
+* #### 侧边栏的"好听的"按钮
+电脑打开侧边栏(移动端则点击顶部的收放按钮), 点击`好听的`按钮即可看到彩蛋
 
 [Appveyor]:    https://ci.appveyor.com/project/VanjayDo/vanjaydo-github-io-source
 [Build Status]:https://ci.appveyor.com/api/projects/status/tfw57q6eecippsl5/branch/master?svg=true
