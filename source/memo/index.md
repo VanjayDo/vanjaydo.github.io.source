@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 6 月
+* ###### 2018-06-02
+node.js中约定回调函数的第一个参数必须为错误对象err(如果没有错误则第一参数为null), 这是因为整个执行分为两段(回调函数作为第二段), 两段之间抛出的错误程序是无法捕捉的, 所以只能将其作为参数传入第二段回调函数里. 
+
 ##### 5 月
 * ###### 2018-05-22
 对于apt有些使用情况下会报`WARNING: apt does not have a stable CLI interface.`的错, Ask Ubuntu社区上有[很好的回答](https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)

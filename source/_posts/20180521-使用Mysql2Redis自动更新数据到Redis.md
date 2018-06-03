@@ -5,7 +5,7 @@ date: 2018-05-21 23:33:49
 tags: [Mysql, Redis, Docker]
 ---
 
-最近在写的项目想用上Redis作为缓存层, 但是对于后端的mysql数据在数据写入后如何更新到缓存却感到很棘手, 后了解到mysql的udf+trigger可以实现, GitHub开源项目[mysql2redis](https://github.com/dawnbreaks/mysql2redis)刚好解决了udf的问题.
+最近在写的项目想用上Redis作为缓存层, 但是对于后端的mysql数据在数据写入后如何更新到缓存却感到很棘手, 后了解到mysql的udf+trigger可以实现, GitHub开源项目[mysql2redis](https://github.com/dawnbreaks/mysql2redis)刚好解决了更新数据所需的udf的问题.
 
 在使用过程中踩了一些坑, 在此总结一下.
 
