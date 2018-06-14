@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 6 月
+* ###### 2018-06-15
+关于git, 需要强调的一点是: 关于`.gitignore`和`.git/info/exclude`文件, 它们生效的对象, 也就是添加进这两个后可以使git忽略追踪的对象, 仅限于从未被git记录过的文件, 也就是自该文件被创建以来, 从未被add和commit过, 否则就算你将该文件添加进`.gitignore`或`.git/info/exclude`, git还是会追踪该文件, 如果想要让git不追踪被记录过的文件, 使用命令`git update-index --assume-unchanged FilePath`即可, 以后想让git重新追踪该文件, 可以使用命令`git update-index --no-assume-unchanged FilePath`即可.
+
 * ###### 2018-06-02
 node.js中约定回调函数的第一个参数必须为错误对象err(如果没有错误则第一参数为null), 这是因为整个执行分为两段(回调函数作为第二段), 两段之间抛出的错误程序是无法捕捉的, 所以只能将其作为参数传入第二段回调函数里. 
 
