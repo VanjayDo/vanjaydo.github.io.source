@@ -68,7 +68,7 @@ CREATE TRIGGER Your_Trigger_Name AFTER INSERT ON Your_Table
 FOR EACH ROW 
 BEGIN
 select redis_servers_set_v2("redis_server_ip", 6379);
-selectredis_command_v2("set", concat("id:", NEW.id), NEW.value);
+select redis_command_v2("set", concat("id:", NEW.id), NEW.value);
 END$$
 DELIMITER ;
 ```
