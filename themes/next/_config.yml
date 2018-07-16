@@ -53,6 +53,7 @@ menu:
   memo: /memo/
   tags: /tags/
   entries: /entries/
+  reward: /reward/
   
   #sitemap: /sitemap.xml
   #commonweal: /404.html
@@ -75,7 +76,7 @@ menu_icons:
   commonweal: heartbeat
   entries: tasks
   memo: sticky-note
-
+  reward: desktop
 
 # ---------------------------------------------------------------
 # Scheme Settings
