@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 7 月
+* ###### 2018-07-18
+IDEA的maven项目中, 如果使用maven导入的依赖包未能被项目识别或使用(表现为在`project structure`的`Libraries`中不存在maven导入的依赖), 则在项目下运行命令`mvn clean install`, 结束后再reimport整个项目的依赖即可.
+
 ##### 6 月
 * ###### 2018-06-16
 `git mv -f oldfilename newfilename`命令可用于重命名文件.
