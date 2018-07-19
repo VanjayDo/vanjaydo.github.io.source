@@ -290,6 +290,11 @@
 
       if(isMobile)
       {
+        //去除"reword"标签
+        var parent=document.getElementById("menu");
+        var reword=parent.children[5];
+        parent.removeChild(reword);
+        //添加"好听的"标签
         document.write('<li class="menu-item"><a onclick=go()><i class="menu-item-icon fa fa-music fa-fw"></i> 好听的   <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%" id="upside-down"></i></a></li>');
       }
       </script>
