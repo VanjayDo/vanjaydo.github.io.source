@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 7 月
+* ###### 2018-07-27
+IDEA中使用热部署可以不用添加devtools的maven依赖, 而直接使用`JRebel for Intellij`插件.
+ 
 * ###### 2018-07-21
 关于IDEA的项目中空包会被折叠连在一起(如`security.config.controller`, config与controller是两个包, 但是连续创建后由于都是空包, 所以会被自动折叠到一起, 这样再创建类时就会很麻烦)的问题, 可以在项目的`Options`里取消`Hide Empty Middle Packages`选项即可, 参见 👉 [StackOverflow上的回答](https://stackoverflow.com/questions/22001171/how-to-expand-folded-package-chain-in-intellij-idea)
 

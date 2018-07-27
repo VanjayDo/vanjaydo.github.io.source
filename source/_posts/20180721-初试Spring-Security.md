@@ -400,7 +400,7 @@ public class JwtTokenUtil implements Serializable {
     public String generateToken(JwtUser userDetails) {
         Map<String, Object> claims = new HashMap<>();
         claims.put(CLAIM_KEY_CREATED, new Date());
-        claims.put(CLAIM_KEY_USERID, userDetails.getId());
+        claims.put(CLAIM_KEY_USERID, userDetails.getUsername());
         return doGenerateToken(claims);
     }
 

@@ -2,9 +2,7 @@
 title: <p class="entriesTitle"><i class="upside-down" style="font-size:120%;"><i class="fa fa-smile-o" aria-hidden="true" ></i></i><i class="upside-down-right">一些我平时遇到的不理解的词条整理后放在这</i> <i class="fa fa-smile-o" aria-hidden="true" style="font-size:120%;text-indent:0"></i></p>
 date: 2017-07-27 15:04:16
 ---
-<title>一些我平时遇到的不理解的词条整理后放在这</title>
 <link href="/css/myCSS.css" rel="stylesheet" type="text/css">
-<!--////////////////////////////////////////////////////////////////////////-->
 
 * ### 鸭子类型(duck typing)
 鸭子类型是动态语言所特有的概念。[Wiki](https://en.wikipedia.org/wiki/Duck_typing)上的解释，有趣的类比"If it walks like a duck and it quacks like a duck, then it must be a duck." 其意为，一个对象的到底是什么是由它的行为所决定的，我们并不关心它本质上是什么(继承自什么对象实现了什么接口)，我们是通过它能干什么来判断它是什么🤔很有趣嘛。
