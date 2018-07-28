@@ -707,7 +707,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ### 最后登录效果
-启动项目, postman使用post方法以`x-www-form-urlencoded`方式提交用户名与密码到后端的`/user/login`接口, 可以看到类似如下的效果
+启动项目, postman使用post方法提交用户名与密码到后端的`/user/login`接口, 可以看到类似如下的效果:
 
 ```
 {
@@ -720,3 +720,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     "token": "eyJhbGciOiJIUzUxMiJ9.eyIxMjMiOjIsImNyZWF0ZWQiOjE1MzI0MDkyMjAzMTUsImV4cCI6MTUzMzAxNDAyMH0.0CQYfpG9X4PeVX23DoFVjR3iHNe_DswI85ejaoWYqSgHgGf6tIfcBU11ChkSwpMXRQRjjuZzSRMLXxtxq-4m0w"
 }
 ```
+
+### 赘述
+关于token的使用, 跨域的问题要提一下, 虽然是基本操作, 但是如果不是很清楚的初学者(比如我🙈)就会不懂其中的套路. SpringBoot项目跨域的配置与跨域的相关知识请见我的另一篇文章 👉 [跨域相关知识整理](https://blog.safeandsound.cn/post/KnowledgeAboutCORS.html)
