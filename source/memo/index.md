@@ -4,6 +4,13 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 7 月
+* ###### 2018-07-31
+对于jdbc的`java.sql.SQLException: Unknown system variable 'query_cache_size'`报错(本人的msyql版本是8.0,  使用的是springboot1.5.4相应的jdbc)是由于jdbc版本的问题, 版本改为`5.1.44`即可. 可参见[StackOverflow相关回答](https://stackoverflow.com/questions/49984267/java-sql-sqlexception-unknown-system-variable-query-cache-size)
+
+* ###### 2018-07-29
+mysql8.0中由于默认使用新的密码插件验证方式 👉 `caching_sha2_password`, 但是以前的版本(如5.7)使用的是`mysql_native_password`, 这使得很多连接MySQL的工具或编程接口都失效了,会导致类似`Unable to load authentication plugin 'caching_sha2_password'`的报错, 所以可以使用`alter user 'username'@'host' identified with mysql_native_password by 'password';`修改密码验证方式.
+此外, msyql8中的授权给用户的方式也有所改变, 原来是`grant all on database.table to 'username'@'host' identified by "password";`, 但在8.0中, 不需要在后面添加密码, 即应该写成`grant all on database.table to 'username'@'host';`, 否则会报错.
+
 * ###### 2018-07-27
 IDEA中使用热部署可以不用添加devtools的maven依赖, 而直接使用`JRebel for Intellij`插件.
  
