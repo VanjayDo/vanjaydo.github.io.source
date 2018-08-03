@@ -635,7 +635,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     //无需权限即可访问的白名单
@@ -706,6 +705,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
+到这里Spring Security+JWT的基本配置就算完成了.
+
 ### 最后登录效果
 启动项目, postman使用post方法提交用户名与密码到后端的`/user/login`接口, 可以看到类似如下的效果:
 
@@ -721,5 +722,43 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
+### 对于暴露的API进行权限控制
+比如有个可以将普通用户添加到黑名单的API, 那么我只能让管理员来调用这个接口, 那么要怎么实现?
+这里有了Security, 我们可以很容易的实现全局方法的安全认证.
+
+在SecurityConfig配置类(本项目中是`SecurityConfig`)中添加`@EnableGlobalMethodSecurity`注解, 将`prePostEnabled`设为`true`, 如下
+
+```
+@SuppressWarnings("SpringJavaAutowiringInspection")
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true) 
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    ......
+}
+```
+
+然后我们可以在暴露的API方法上设置注解`@PreAuthorize`(也可以直接设在类上, 比如一个controller中的接口全都需要控制访问, 则直接加到该controller类上即可), 例如我有个方法叫`addUserToBlacklist`, 它将指定的用户添加进系统黑名单, 那么我在方法前使用该注解进行配置即可只允许管理员调用该方法, 如👇
+
+```
+@PreAuthorize("hasRole('ADMIN')")
+public Object addUserToBlacklist(String userId, String objectId){
+    ......
+}
+```
+
+这样就可以了, 当用户调用该接口时, 后端会根据用户的token进行鉴权, 如果是`ADMIN`的身份则允许调用, 否则返回403的权限错误.
+
+当然了, 这里我们还要添加一个依赖, 那就是`spring-aop`, 因为这个功能实现依赖与切片编程, maven配置文件中加入如下依赖即可
+
+```
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+</dependency>
+```
+
 ### 赘述
+有代码上的问题可以访问本项目的GitHub仓库 👉 [eduroamControlSystem-Backend](https://github.com/UPC-eduroam/eduroamControlSystem-Backend)进行查看. 
+
 关于token的使用, 跨域的问题要提一下, 虽然是基本操作, 但是如果不是很清楚的初学者(比如我🙈)就会不懂其中的套路. SpringBoot项目跨域的配置与跨域的相关知识请见我的另一篇文章 👉 [跨域相关知识整理](https://blog.safeandsound.cn/post/KnowledgeAboutCORS.html)
