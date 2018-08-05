@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 8 月
+* ###### 2018-08-05
+最近了解了jwt, 本想写一篇相关的文章, 但发现阮一峰老师七月份的一篇博客中写的已经比较详细, 相关部分自己搜索拓展一下即可 👉 [文章见此](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html).
+
 ##### 7 月
 * ###### 2018-07-31
 对于jdbc的`java.sql.SQLException: Unknown system variable 'query_cache_size'`报错(本人的msyql版本是8.0,  使用的是springboot1.5.4相应的jdbc)是由于jdbc版本的问题, 版本改为`5.1.44`即可. 可参见[StackOverflow相关回答](https://stackoverflow.com/questions/49984267/java-sql-sqlexception-unknown-system-variable-query-cache-size)
