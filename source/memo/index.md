@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 8 月
+* ###### 2018-08-07
+`tmux`中需要查看历史输出, 可以使用`Ctrl+b`然后再按`[`键, 即可进入`copy mode`, 此时再按上下键即可按行翻阅历史输出; 亦或是`Ctrl+b`后直接使用`PgUp/PgDn`键进行按页的翻阅. 可参见[StackExchange上的高票回答](https://superuser.com/questions/209437/how-do-i-scroll-in-tmux/209608#209608)
+
 * ###### 2018-08-05
 最近了解了jwt, 本想写一篇相关的文章, 但发现阮一峰老师七月份的一篇博客中写的已经比较详细, 相关部分自己搜索拓展一下即可 👉 [文章见此](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html).
 
