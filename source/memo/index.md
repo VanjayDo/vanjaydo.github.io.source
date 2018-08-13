@@ -4,6 +4,10 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 8 月
+* ###### 2018-08-13
+Spring Jpa中, 如果hibernate的命名规则使用的是`update`,在运行的时候报没有表的错, 你可以将规则改为`create`, 再试试, 应该会报sql的格式错误, 这时候应该首先怀疑该表的实体类是否有问题, `尤其要注意是否有字段与关键字冲突`
+这里贴一下mysql8保留关键字的列表 👉 [MySQL 8.0 :: Keywords and Reserved Words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
+
 * ###### 2018-08-08
 偶然发现了GitHub上关于时区的一个问题, 即显示的`git commit的时间`与`contributions绿色小格子的时间`的参照标准是不一致的. 以我的博客为例, 我推更新到源码库后, appveyor自动拉取并生成静态页面文件自动提交到git pages库中, 如果我在凌晨一点更新, 那么我使用自己的电脑推送更新, 本地的git会使用我电脑的时区(即东八, 北京时间), 而appveyor平台上的虚拟机则使用的UTC时间, 所以它上面的git在推送到github的时候实际上是比我当前时间要晚8个小时的(也就是说我本地今天凌晨一点推送, 则appveyor的时间是昨天的下午五点), 所以对于appveyor的这次推送, `contributions`会把它算在昨天, 而非今天, 但是在本地电脑查看github的这次commit时间则会显示出正确的时间, 也就是凌晨一点的样子, 这大概是因为显示的commit的时间会自动根据你电脑的当前时区来动态变化, 而`contributions`的计算则是完全按照git提交时候Date字段的日期来计算的.
 
