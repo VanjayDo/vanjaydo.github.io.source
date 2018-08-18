@@ -4,6 +4,15 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 8 月
+* ###### 2018-08-18
+关于mysql八小时主动关闭连接的问题, 在springboot中可以加上这样配置 👇
+```
+spring:
+      datasource:
+            test-while-idle: true                 # 当连接空闲的时候进行测试
+            validation-query: SELECT 1    # 用来验证连接有效性的sql语句
+```
+
 * ###### 2018-08-13
 Spring Jpa中, 如果hibernate的命名规则使用的是`update`,在运行的时候报没有表的错, 你可以将规则改为`create`, 再试试, 应该会报sql的格式错误, 这时候应该首先怀疑该表的实体类是否有问题, `尤其要注意是否有字段与关键字冲突`
 这里贴一下mysql8保留关键字的列表 👉 [MySQL 8.0 :: Keywords and Reserved Words](https://dev.mysql.com/doc/refman/8.0/en/keywords.html)
