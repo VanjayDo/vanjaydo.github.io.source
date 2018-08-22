@@ -8,7 +8,15 @@ date: 2017-07-27 15:04:16
 关于旧版本的jdbc驱动在连接mysql时候报错`Public Key Retrieval is not allowed`, 链接加上`allowPublicKeyRetrieval=true`参数选项即可. 包括之前的`caching_sha2_password`问题和`Unknown system variable 'query_cache_size'`问题, 都是因为驱动版本不匹配导致的, 我这里是因为使用的mysql8,而驱动版本用的是5, 所以导致出各种异常, 改为使用8的驱动就可以了.
 
 * ###### 2018-08-20
-关于在spring项目中使用`@Value`注解从项目配置文件中获取数据结果为`null`的问题: 首先, 你要确定相应的配置没有出错; 然后你要保证该类已经使用`@Component/@Service/@Controller`等容器注解, 这样框架才能自动帮你管理相关Bean; 三者, 你要保证该类在使用的时候是使用`@Autowired`注解进行自动注入, 而不能使用new操作来新建对象; 如果你是在测试的话, 请保证是在spring的框架下进行, 而不是直接使用junit单写一个测试类就开始run, 这样是没有项目环境的, 也就获取不到值;
+关于在spring项目中使用`@Value`注解从项目配置文件中获取数据结果为`null`的问题: 首先, 你要确定相应的配置没有出错; 然后你要保证该类已经使用`@Component/@Service/@Controller`等容器注解, 这样框架才能自动帮你管理相关Bean; 三者, 你要保证该类在使用的时候是使用`@Autowired`注解进行自动注入, 而不能使用new操作来新建对象; 四者, 变量不能是`static`或`final`类型; 如果你是在测试的话, 请保证是在spring的框架下进行, 而不是直接使用junit单写一个测试类就开始run, 这样是没有项目环境的, 也就获取不到值;
+对于静态变量使用`@Value`注解进行赋值的时候, 只需要在其`set`方法上使用`@Value`进行注解即可, 应注意此时静态变量的`set`方法应为非静态函数, 即前面不应加`static`关键字, 例如名为`test`的类中设置静态变量NAME的值👇
+```
+private static String NAME;
+@Value("${email.username}")
+public void setNAME(String NAME) {
+    test.NAME = NAME;
+}
+```
 
 * ###### 2018-08-18
 关于mysql八小时主动关闭连接的问题, 在springboot中可以加上这样配置 👇
