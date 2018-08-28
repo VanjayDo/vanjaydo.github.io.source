@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 8 月
+* ###### 2018-08-26
+Dijkstra关于goto语句有害的论文见此 👉 [Go To Statement Considered Harmful](http://ce.sharif.edu/courses/90-91/1/ce364-1/resources/root/GoTo/Dijkstra.pdf)
+
 * ###### 2018-08-21
 关于旧版本的jdbc驱动在连接mysql时候报错`Public Key Retrieval is not allowed`, 链接加上`allowPublicKeyRetrieval=true`参数选项即可. 包括之前的`caching_sha2_password`问题和`Unknown system variable 'query_cache_size'`问题, 都是因为驱动版本不匹配导致的, 我这里是因为使用的mysql8,而驱动版本用的是5, 所以导致出各种异常, 改为使用8的驱动就可以了.
 
