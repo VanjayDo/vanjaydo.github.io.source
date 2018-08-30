@@ -471,6 +471,9 @@ cmd.exe /s /k pushd "%V"
 ```
 确定保存即可
 
+* ###### 2017-07-05
+如果删除一个很多层文件夹嵌套的文件夹(也就是文件与子文件夹众多, 且深度很深), 可能会导致读取文件夹信息错误(显示的大小与实际大小不一致)甚至删除的时候无法删除的情况, linux与windows均有这种情况, 当使用`rm`命令进行删除时, 会报`fts_read failed: No such file ordirectory`的错, 我在Redhat的bug报告论坛上见到了类似的情况, 见链接[Red Hat Bugzilla – Bug 1395161](https://bugzilla.redhat.com/show_bug.cgi?id=1395161) 
+
 * ###### 2017-07-03
 Ubuntu安装中文并将系统语言设置为中文 👇
 {%note default%}
