@@ -2,7 +2,7 @@
 title: 初试Spring Security
 urlname: Introduction2SpringSecurity
 date: 2018-07-21 18:59:19
-tags: [Java, Spring]
+tags: [Java, SpringBoot]
 ---
 
 最近在写的一个项目要使用到对于用户身份的认证以及授权(这应该都很常见吧), 所以在此使用了Spring Security, 由于之前自己并没有动手配置过, 在此记录一下.
@@ -22,6 +22,7 @@ token可以限定有效时长, 如果在这个有效时长内该token一直未�
 
 ### 环境
 这里使用的是spring boot版本是`1.5.4`, 
+
 #### 项目依赖
 如下是项目所有maven依赖 👇
 
@@ -40,14 +41,19 @@ token可以限定有效时长, 如果在这个有效时长内该token一直未�
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <scope>runtime</scope>
     </dependency>
     <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.7.0</version>
     </dependency>
 
     <!--swagger 依赖-->
@@ -60,12 +66,6 @@ token可以限定有效时长, 如果在这个有效时长内该token一直未�
         <groupId>io.springfox</groupId>
         <artifactId>springfox-swagger-ui</artifactId>
         <version>2.8.0</version>
-    </dependency>
-
-    <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt</artifactId>
-        <version>0.7.0</version>
     </dependency>
 </dependencies>
 ```
@@ -80,7 +80,7 @@ jwt:
     expiration: 604800
 ```
 
-这是定义token的一些配置(请求头中token字段的名称, 加密用的密钥, 有效时长), 本应该在用到的时候再添加, 但怕后面添加会乱, 所以提前声明一下.
+这是定义token的一些配置(`header`是请求头中token字段的名称, `secret`是加密用的密钥, `expiration`定义token的有效时长), 本应该在用到的时候再添加, 但怕后面添加会乱, 所以提前声明一下.
 
 ### 代码实现
 #### 定义用户与权限
@@ -210,7 +210,7 @@ public class JwtUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return authorities;
     }
 
     @Override
@@ -653,21 +653,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/webjars/**"
 
     };
-
     @Autowired
     private JwtAuthenticationEntryPoint unauthorizedHandler;
 
     // Spring会自动寻找实现接口的类注入,会找到我们自己实现的UserDetailsService类
     @Autowired
-    private UserDetailsService userDetailsService;
+    private JwtUserDetailsService jwtUserDetailsService;
 
     @Autowired
     public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder
                 // 设置UserDetailsService
-                .userDetailsService(this.userDetailsService)
+                .userDetailsService(this.jwtUserDetailsService)
                 // 使用BCrypt对密码进行加密
                 .passwordEncoder(passwordEncoder());
+    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
     }
 
     @Bean
@@ -680,6 +685,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new JwtAuthenticationTokenFilter();
     }
 
+    @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 //禁用csrf防护功能,因为使用token进行身份验证,所以较为安全,而且禁用后也方便开发
@@ -689,6 +695,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //禁用session,因为使用token,所以不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
+                //放开options请求
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                //放开白名单
                 .antMatchers(HttpMethod.GET, AUTH_WHITELIST).permitAll()
                 //允许匿名访问获取token的api
                 .antMatchers("/user/login").permitAll()
@@ -700,7 +709,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
 
         // 禁用缓存
-        httpSecurity.headers().cacheControl();
+        httpSecurity
+                .headers()
+                .frameOptions().sameOrigin()
+                .cacheControl();
     }
 }
 ```
@@ -748,15 +760,6 @@ public Object addUserToBlacklist(String userId, String objectId){
 ```
 
 这样就可以了, 当用户调用该接口时, 后端会根据用户的token进行鉴权, 如果是`ADMIN`的身份则允许调用, 否则返回403的权限错误.
-
-当然了, 这里我们还要添加一个依赖, 那就是`spring-aop`, 因为这个功能实现依赖与切片编程, maven配置文件中加入如下依赖即可
-
-```
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-aop</artifactId>
-</dependency>
-```
 
 ### 赘述
 有代码上的问题可以访问本项目的GitHub仓库 👉 [eduroamControlSystem-Backend](https://github.com/UPC-eduroam/eduroamControlSystem-Backend)进行查看. 
