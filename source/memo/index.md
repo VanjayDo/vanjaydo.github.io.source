@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 9 月
+* ###### 2018-09-01
+今天推博客源码的时候, appveyor构建失败, 显示npm报错`npm ERR! request to https://registry.npmjs.org/npm failed, reason: Hostname/IP doesn't match certificate's altnames: "Host: registry.npmjs.org. is not in the cert's altnames: DNS:a.sni.fastly.net, DNS:a.sni.global-ssl.fastly.net"`, 乍一看是因为证书的问题, SSL? 查了一下, 配置npm禁用掉https即可 👉 `npm config set strict-ssl false`
+
 ##### 8 月
 * ###### 2018-08-26
 Dijkstra关于goto语句有害的论文见此 👉 [Go To Statement Considered Harmful](http://ce.sharif.edu/courses/90-91/1/ce364-1/resources/root/GoTo/Dijkstra.pdf)
