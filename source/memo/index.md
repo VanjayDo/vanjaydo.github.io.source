@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 9 月
+* ###### 2018-09-07
+想要在启动spring项目的时候再指定项目的配置文件, 可以采用指定`Program`参数的方法, 如: `java -jar test.jar --spring.config.location=filepath`; 另一种方法就是对启动类使用`@PropertySource`注解进行配置, 可以参考[该文](https://www.jianshu.com/p/3f3a4c452d86)
+
 * ###### 2018-09-01
 今天推博客源码的时候, appveyor构建失败, 显示npm报错`npm ERR! request to https://registry.npmjs.org/npm failed, reason: Hostname/IP doesn't match certificate's altnames: "Host: registry.npmjs.org. is not in the cert's altnames: DNS:a.sni.fastly.net, DNS:a.sni.global-ssl.fastly.net"`, 乍一看是因为证书的问题, SSL? 查了一下, 配置npm禁用掉https即可 👉 `npm config set strict-ssl false`
 
