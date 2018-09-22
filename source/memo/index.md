@@ -307,7 +307,7 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 {%endnote%}
 
 * ###### 2017-12-21
-在使用`maven package`命令打包项目的时候, 如果我们需要临时跳过测试, 可以加上`-D skipTests`参数来进行设置, 如果是在IDEA上有直接可使用的maven工具插件在项目右侧栏, 其工具栏有一个带闪电的小球, 可触发"skipTests"模式 .
+在使用`maven`命令操作项目的时候, 很多命令在运行时都会进行自动测试（如`install`、`package`），如果我们需要临时跳过测试, 可以加上`-DskipTests=true`参数来跳过单元测试的运行, 或者`-Dmaven.test.skip=true`参数来同时跳过单元测试的运行和测试代码的编译。如果是在IDEA上有直接可使用的maven工具插件在项目右侧栏, 其工具栏有一个带闪电的小球, 可触发"skipTests"模式 .
 
 * ###### 2017-12-17
 [USTC的ubuntu源文件自动生成器](https://mirrors.ustc.edu.cn/repogen/)
