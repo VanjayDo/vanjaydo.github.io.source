@@ -9,20 +9,20 @@ tags: [Java, SpringBoot]
 
 <!-- more -->
 
-### 前述
+# 前述
 有些时候一个后端程序中会有配置多个数据源的需求, 由于之前并没有相关的实践, 最近在项目实现的时候遇到了, 在此记录一下. 
 
 关于配置多个DataSource的实现参考的是廖雪峰老师的博客文章[Spring Boot配置多个DataSource](https://www.liaoxuefeng.com/article/001484212576147b1f07dc0ab9147a1a97662a0bd270c20000)以及[CSDN](https://blog.csdn.net/anxpp/article/details/52274120)上的一篇文章.
 
-#### 完整的项目
+## 完整的项目
 完整的项目地址 👉 [eduroamControlSystem-Backend](https://github.com/UPC-eduroam/eduroamControlSystem-Backend)
 
-### 配置步骤与实现
+# 配置步骤与实现
 此处的两个数据源都是mysql的数据库. 
 
 值得一提的是, 下面的`primary`是项目自己的数据库, 而`radius`则是外部的数据库, 只是读取数据用来进行分析的.
 
-#### 配置文件
+## 配置文件
 项目配置文件`application.yml`中关于数据源的配置 👇
 
 ```
@@ -54,7 +54,7 @@ spring:
               physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
 ```
 
-#### 配置数据源
+## 配置数据源
 配置两个数据源 👇
 
 ```
@@ -82,7 +82,7 @@ public class DataSourceConfig {
 }
 ```
 
-#### 分别配置详细信息
+## 分别配置详细信息
 `primary`的配置 👇
 
 ```
@@ -205,7 +205,7 @@ public class RadiusDBConfig {
 }
 ```
 
-### 多个数据源中数据库服务器版本不一致
+# 多个数据源中数据库服务器版本不一致
 如果出现了配置的多个数据源中使用的同一种数据库服务器, 但是数据库服务器的版本不一致, 比如有5和8两种, 官网对于`MySQL Connector/J 8.0`给出的说法是`MySQL Connector/J 8.0 is compatible with all MySQL versions starting with MySQL 5.5. `, 即8的驱动可以兼容mysql5.5及以上的版本. 如果有mysql服务器的版本更低的话, 那么在不可升级(升级代价比兼容代价更高)的情况下只能使用5的版本去兼容8的服务器, 我在本项目中的数据库服务器就是这种情况, 一个是学校的生产环境服务器上的`5.1.73`版本, 一个是分配给我的服务器中跑的`8.0`的docker容器. 效果并没有那么差.
 
 关于常见的几个因为mysql8使用版本5驱动 的错误, 在之前的备忘录中也有提及, 链接如下 👇
@@ -216,12 +216,12 @@ public class RadiusDBConfig {
 
 * [Unable to load authentication plugin 'caching_sha2_password'](https://blog.safeandsound.cn/memo/#2018-07-29)
 
-### 关于mysql自动断开连接
+# 关于mysql自动断开连接
 mysql默认维持一个连接8小时, 如果一个连接在8小时内没有操作的话, 服务器会主动将连接关闭, 其后果就是你的后端在此之后无法访问数据库.
 
 解决办法有三👇
 
-#### 修改mysql配置
+## 修改mysql配置
 其一修改mysql的配置文件, 将该时间延长, windows下为`my.ini`文件, linux下为`my.cnf`文件, 增加如下内容(如果是linux下则需要加到`[mysqld]`该行下)👇
 
 ```
@@ -232,7 +232,7 @@ wait_timeout= n
 以上n为整数, 单位为秒, 不配置的话则默认为28800, 即八小时
 但该值无法被设置为无限大, 而且修改配置文件比较繁琐, 所以不建议使用该方法
 
-#### 添加jdbc链接参数
+## 添加jdbc链接参数
 设置jdbc链接中的参数`autoReconnect`值为true, 如下 👇
 
 ```
@@ -251,7 +251,7 @@ Default: false
 Since version: 1.1
 {%endnote%}
 
-#### 开发配置文件
+## 开发配置文件
 第三个方法就是让后端主动去维护这个链接, 让它在数据库连接空闲的时候去产生动作进行测试, 以保证连接的有效性
 
 这里以Springboot为例, datasource配置如下 👇

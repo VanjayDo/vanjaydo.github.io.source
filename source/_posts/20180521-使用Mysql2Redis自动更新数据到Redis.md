@@ -11,25 +11,25 @@ tags: [Mysql, Redis, Docker]
 
 <!-- more -->
 
-### 前述
+# 前述
 首先需要说明的是, 对于mysql2redis作者在项目readme中提及的[项目依赖](https://github.com/dawnbreaks/mysql2redis#dependencies), 其中的[lib_mysqludf_json](https://github.com/mysqludf/lib_mysqludf_json)库主要是添加的mysql对于json数据的支持, 但需要说明的是自mysql5.7.8, mysql已经支持原生json数据类型, 而mysql 中也有了原生的json_array和json_object函数, 故`lib_mysqludf_json`库在mysql5.7.8版本以后是不需要的. 如果你想要使用`lib_mysqludf_json`, 那么你需要注意: 
 
 1. `lib_mysqludf_json`项目中编译好的`lib_mysqludf_json.so`文件是32位的, 如果你的mysql是64位的, 那么你需要自己编译该文件; 
 2. 由于mysql5.7.8及以后的版本中有了原生的json_array和json_object函数, 所以, `lib_mysqludf_json`库中的`json_array`和`json_object`函数是不能直接注册到mysql中的, 因为不能有重名函数, 所以你需要在`lib_mysqludf_json.c`文件中将`json_array`和`json_object`函数重命名; 
 这里有我将整个项目中的函数名修改好了的库 👉 [VanjayDo/lib_mysqludf_json](https://github.com/VanjayDo/lib_mysqludf_json)
 
-### Docker
+# Docker
 由于类似的应用场景也不少, 所以我构建了一个包含mysql2redis库中所有udf的mysql镜像 👇 可以直接使用
 
-#### Dockerfile
+## Dockerfile
 [Mysql2Redis Dockerfile](https://github.com/VanjayDo/store/blob/master/docker-MysqlWithMysql2Redis/Dockerfile)
 
-#### DockerImage
+## DockerImage
 [DockerHub 👉 vanjaydo/mysql2redis](https://hub.docker.com/r/vanjaydo/mysql2redis/)
 
 使用命令`docker run -d --name mysql2redis --env MYSQL_ROOT_PASSWORD=123456 vanjaydo/mysql2redis --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci`即可启动使用
 
-### 使用教程
+# 使用教程
 进入mysql后, 使用`use mysql;`命令切到mysql库, 然后使用`select * from func;`即可查看到之前设置的mysql2redis相关的udf, 如下👇
 
 ```
@@ -44,7 +44,7 @@ mysql> select * from func;
 3 rows in set (0.00 sec)
 ```
 
-#### 设置Trigger
+## 设置Trigger
 推数据到redis的功能已经在mysql2redis库的函数中实现了, 现在的关键是什么时候推, 总不能每次都手动调用函数. 这里我们可以在相关的数据库中设置触发器, 根据一定的条件自动调用执行函数推送数据到redis
 
 切到你要使用的数据库后, 设置能实现你想要效果的触发器, 例如👇

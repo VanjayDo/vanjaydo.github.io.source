@@ -7,10 +7,9 @@ tags: [Linux, Tips+Tricks]
 相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个[ rdp ](https://zh.wikipedia.org/wiki/%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E5%8D%94%E5%AE%9A) 服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四个优势的话……开源算么？（逃...
 <!-- more -->
 
-### 操作步骤
+# 操作步骤
 
-#### 安装xrdp+vncserver：
-
+## 安装xrdp+vncserver：
 ```bash
 #CentOS
 yum install epel-release
@@ -33,7 +32,7 @@ systemctl set-default graphical.target #使系统默认从GUI启动
 systemctl set-default multi-user.target #使系统默认从CLI启动
 ```
 
-#### 设置xrdp开机自启：
+## 设置xrdp开机自启：
 ```bash
 systemctl enable xrdp.service
 #启动xrdp服务
@@ -49,13 +48,13 @@ chcon --type=bin_t /usr/sbin/xrdp-sesman
 systemctl start xrdp
 ```
 
-#### 运行"vncserver"命令在当前用户家目录实例化vnc配置
+## 运行"vncserver"命令在当前用户家目录实例化vnc配置
 ```bash
 #如果想以其他用户的身份连接远程连接，需要先使用su命令来切换用户
 vncserver
 ```
 
-#### 配置vncserver服务：
+## 配置vncserver服务：
 ```bash
 cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:<NUMBER>.service
 #<NUMBER>为数字
@@ -63,27 +62,28 @@ cp /lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@:<NUMBER
 #如果是root用户的话，其中的家目录需要改为/root，而非/home/<USER>
 ```
 
-#### systemctl重新加载配置文件
+## systemctl重新加载配置文件
  ```bash
 systemctl daemon-reload
 ```
 
-#### 防火墙允许服务
+## 防火墙允许服务
 注意iptables规则是否有拦截xrdp和vnc服务访问网络。
-#####  Centos7及以上上需要配置firewall允许xrdp和vnc:
+
+###  Centos7及以上上需要配置firewall允许xrdp和vnc:
 ```bash
 firewall-cmd --permanent --zone=public --add-port=3389/tcp #允许xrdp（默认端口为3389）
 firewall-cmd --permanent --zone=public --add-service=vnc-server
 firewall-cmd --reload
 ```
 
-#### 启动vnc
+## 启动vnc
 ```bash
 systemctl start vncserver@:<Nummer>.service
 ```
 
-### 赘述
-#### 一些问题与注意点
+# 赘述
+## 一些问题与注意点
 Windows上mstsc直连session需要选择xvnc
 ![注意选择](https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png)
 
@@ -101,12 +101,14 @@ Windows上mstsc直连session需要选择xvnc
 ```bash
 xrandr --newmode "模式名"  + 上一步复制的参数
 ```
+
 ![图2](https://cdn.safeandsound.cn/image/xrdp+vnc/2创建新模式.png)<br>
 3.这时接使用刚刚创建的模式会提示找不到模式，需要手动添加一下<br>
 
 ```bash
 xrandr --addmode 显示器名 "模式名"
 ```
+
 创建成功：
 ![图3](https://cdn.safeandsound.cn/image/xrdp+vnc/3创建新模式成功.png)<br>
 添加成功：
@@ -124,5 +126,5 @@ xrandr --output 显示器名 --mode "模式名"
 
 本文部分参考[ 该博文 ](http://misliang.blog.51cto.com/6973084/1533172)
 
-#### 🙃
+## 🙃
 当然了, 折腾了这么久, 本人其实是更加推荐使用teamviewer的(逃......
