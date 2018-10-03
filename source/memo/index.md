@@ -4,6 +4,18 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 9 月
+* ###### 2018-10-02
+使用Git提交指定时间的commit: 例👇
+```
+$ export GIT_COMMITTER_DATE="2018-10-02T10:40:00+08:00"
+$ export GIT_AUTHOR_DATE="2018-10-02T10:40:00+08:00"
+$ git add .
+$ git commit -m "test"
+$ git push
+```
+如果已经提交了的话就使用类似如下的命令修改指定commit hash的提交即可: 
+`GIT_COMMITTER_DATE="2018-10-02T10:40:00+08:00" git commit --amend -C 6d9d3120fdcb9e9a685853cfb42c4431a42e623a`
+
 * ###### 2018-09-07
 想要在启动spring项目的时候再指定项目的配置文件, 可以采用指定`Program`参数的方法, 如: `java -jar test.jar --spring.config.location=filepath`; 另一种方法就是对启动类使用`@PropertySource`注解进行配置, 可以参考[该文](https://www.jianshu.com/p/3f3a4c452d86)
 
