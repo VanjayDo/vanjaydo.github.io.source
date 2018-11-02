@@ -1,4 +1,4 @@
-vanjaydo.github.io.source 
+VanjayDu.github.io.source 
 =========================
 [![Build Status]][Appveyor]
 
