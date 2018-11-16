@@ -19,7 +19,7 @@ tags: [Tips+Tricks]
 觉得样式丑的可以去github拉取代码自己改下样式（样式表在WebContent\viewer\index.html文件中），然后chrome打包拓展程序安装。
 
 # 二. 打包与安装拓展程序
-首先下载插件源码, 以这里的[JSONView](https://github.com/VanjayDo/JSONView-for-Chrome)为例, 解压后会得到一个`WebContent`文件夹, 然后进入chrome的插件管理界面, 打开地址`chrome://extensions`, 会看到有如下`打包拓展程序`的按钮: 
+首先下载插件源码, 以这里的[JSONView](https://github.com/WenjayDu/JSONView-for-Chrome)为例, 解压后会得到一个`WebContent`文件夹, 然后进入chrome的插件管理界面, 打开地址`chrome://extensions`, 会看到有如下`打包拓展程序`的按钮: 
 
 ![Alt text](https://cdn.safeandsound.cn/image/How2PackChromePlugin&UsePluginsNotFromChromeStore\packButton.png)
 
@@ -29,7 +29,7 @@ tags: [Tips+Tricks]
 
 点击`打包拓展程序` ( 如果报错“指定扩展程序的私有密钥已存在。请重复使用该密钥，或者先删除它” 则删除pem密钥文件即可 ), 会在WebContent文件夹的同级目录下得到`WebContent.crx`和`WebContent.pem`两个文件, pem密钥文件对我们来说并没有什么用, 我们直接将得到的`WebContent.crx`文件拖放到`chrome://extensions`页面上即可安装.
 
-本人已修改样式且打包了的JsonViewer拓展程序[下载地址在此](https://github.com/VanjayDo/JSONView-for-Chrome/raw/master/Json-viewer.crx) , 是github的地址, 可能会报"危害计算机"警报, 信任即可, 有疑虑也可以自己打包.
+本人已修改样式且打包了的JsonViewer拓展程序[下载地址在此](https://github.com/WenjayDu/JSONView-for-Chrome/raw/master/Json-viewer.crx) , 是github的地址, 可能会报"危害计算机"警报, 信任即可, 有疑虑也可以自己打包.
 
 # 三. 授权
 安装后你会发现程序是被禁用的状态, 因为这并不是Chrome Store上的插件, 所以chrome为了安全会直接禁用这种插件, 如下图:

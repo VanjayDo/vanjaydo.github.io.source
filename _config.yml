@@ -90,7 +90,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/vanjaydo/vanjaydo.github.io.git
+  repo: https://github.com/wenjaydu/wenjaydu.github.io.git
   branch: master
 
 # - type: rsync

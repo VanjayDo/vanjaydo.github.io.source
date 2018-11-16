@@ -355,12 +355,12 @@ a.change:hover{
 
   <div class="social">
     <!--github-->
-    <a class="change" id="social-links" href="https://github.com/VanjayDo">
+    <a class="change" id="social-links" href="https://github.com/WenjayDu">
       <i class="fa fa-github-alt" aria-hidden="true"></i>
       GitHub
     </a>
     <!--mailto-->
-    <a class="change" id="social-links" href="mailto:vanjaydo@gmail.com">
+    <a class="change" id="social-links" href="mailto:wenjay.du@gmail.com">
       <i class="fa fa-envelope-o" aria-hidden="true"></i>
       Gmail
     </a>
