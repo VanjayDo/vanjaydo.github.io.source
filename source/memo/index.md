@@ -3,6 +3,10 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 2018 年
+##### 12月
+* ###### 2018-12-05
+遇到了一个比较有趣的shell启动动画，可以参考一下➡️ [zsh Loading的命令行动画](https://github.com/echohn/echohn.github.io/issues/1)
+
 ##### 10 月
 * ###### 2018-10-30
 Linux安装sqlplus: 去[Oracle官网](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)下载合适版本的基础包和sqlplus安装包, 如`oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm`和`oracle-instantclient12.2-sqlplus-12.2.0.1.0-1.x86_64.rpm`, 然后使用命令进行安装，如centos：`rpm -ivh oracle-instantclient*.rpm`，最后将`/usr/lib/oracle/12.2/client64/lib`和`/usr/lib/oracle/12.2/client64/bin`路径加入到环境变量即可。
