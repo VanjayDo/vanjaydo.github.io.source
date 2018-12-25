@@ -4,6 +4,9 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 12月
+* ###### 2018-12-25
+通过命令`defaults write com.apple.dock autohide-delay -int 秒数`可以调整macOS中dock打开的速度。
+
 * ###### 2018-12-05
 遇到了一个比较有趣的shell启动动画，可以参考一下➡️ [zsh Loading的命令行动画](https://github.com/echohn/echohn.github.io/issues/1)
 
