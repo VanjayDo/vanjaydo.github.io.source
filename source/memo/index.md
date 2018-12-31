@@ -4,6 +4,10 @@ date: 2017-07-27 15:04:16
 ---
 #### 2018 年
 ##### 12月
+* ###### 2018-12-31
+对于MNIST(Mixed National Institute of Standards and Technology database)的[官方定义](http://yann.lecun.com/exdb/mnist/)。
+还有数据集CIFAR-10(Canadian Institute For Advanced Research), 发音同"see far"。
+
 * ###### 2018-12-25
 通过命令`defaults write com.apple.dock autohide-delay -int 秒数`可以调整macOS中dock打开的速度。
 
