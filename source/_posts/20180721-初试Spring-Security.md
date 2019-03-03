@@ -9,7 +9,7 @@ tags: [Java, SpringBoot]
 
 <!-- more -->
 
-# 一. 前述
+# 前述
 首先, 当前的这个项目需要一个典型的认证和授权的机制, 这里使用security与jwt来实现的话过程大致如下, 即, 用户输入用户名密码进行登录, 后端接收到后验证用户是否存在,  如果用户存在则我们验证其密码是否正确, 如果错误则拒绝登录; 如果正确, 我们生成一个token, 将用户的信息和token放在一起返回给前端.
 
 后面用户在操作的时候如果与后端进行交互, 则前端需要携带该token进行请求, 后端接收到请求后首先检测token的有效性(即验证该token仍在有效期内且在该token生成后, 密码并未修改过), 有效则允许操作进一步进行, 无效则返回401权限错误. 
@@ -20,7 +20,7 @@ token可以限定有效时长, 如果在这个有效时长内该token一直未�
 
 本项目的GitHub地址 👉 [eduroamControlSystem-Backend](https://github.com/UPC-eduroam/eduroamControlSystem-Backend) 
 
-# 二. 环境
+# 环境
 这里使用的是spring boot版本是`1.5.4`, 
 
 ## 项目依赖
@@ -82,7 +82,7 @@ jwt:
 
 这是定义token的一些配置(`header`是请求头中token字段的名称, `secret`是加密用的密钥, `expiration`定义token的有效时长), 本应该在用到的时候再添加, 但怕后面添加会乱, 所以提前声明一下.
 
-# 三. 代码实现
+# 代码实现
 ## 定义用户与权限
 首先我们要定义用户与权限这些基本表.
 
@@ -719,7 +719,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 到这里Spring Security+JWT的基本配置就算完成了.
 
-# 四. 最后登录效果
+# 最后登录效果
 启动项目, postman使用post方法提交用户名与密码到后端的`/user/login`接口, 可以看到类似如下的效果:
 
 ```
@@ -734,7 +734,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-# 五. 对于暴露的API进行权限控制
+# 对于暴露的API进行权限控制
 比如有个可以将普通用户添加到黑名单的API, 那么我只能让管理员来调用这个接口, 那么要怎么实现?
 这里有了Security, 我们可以很容易的实现全局方法的安全认证.
 
@@ -761,7 +761,7 @@ public Object addUserToBlacklist(String userId, String objectId){
 
 这样就可以了, 当用户调用该接口时, 后端会根据用户的token进行鉴权, 如果是`ADMIN`的身份则允许调用, 否则返回403的权限错误.
 
-# 六. 赘述
+# 赘述
 有代码上的问题可以访问本项目的GitHub仓库 👉 [eduroamControlSystem-Backend](https://github.com/UPC-eduroam/eduroamControlSystem-Backend)进行查看. 
 
 关于token的使用, 跨域的问题要提一下, 虽然是基本操作, 但是如果不是很清楚的初学者(比如我🙈)就会不懂其中的套路. SpringBoot项目跨域的配置与跨域的相关知识请见我的另一篇文章 👉 [跨域相关知识整理](https://blog.safeandsound.cn/post/KnowledgeAboutCORS.html)

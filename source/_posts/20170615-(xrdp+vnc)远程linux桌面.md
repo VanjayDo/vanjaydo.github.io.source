@@ -7,7 +7,7 @@ tags: [Linux, Tips+Tricks]
 相信大家桌面远程linux服务器大多用的都是vnc（虽然对于linux系统桌面远程用的确实很少），这里提一下xrdp的优势，1.加密，vcn本身的传输是不加密的（可以借助于SSL实现）；2.因为xrdp实质上就是一个[ rdp ](https://zh.wikipedia.org/wiki/%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E5%8D%94%E5%AE%9A) 服务器，所以我们在windows上只需要借助自带的mstsc就可以直连linxu桌面系统，因为都使用了rdp协议，很方便；3. 支持多用户登录；4.第四个优势…要说第四个优势的话……开源算么？（逃...
 <!-- more -->
 
-# 一. 操作步骤
+# 操作步骤
 ## 安装xrdp+vncserver：
 ```bash
 #CentOS
@@ -81,7 +81,7 @@ firewall-cmd --reload
 systemctl start vncserver@:<Nummer>.service
 ```
 
-# 二. 赘述
+# 赘述
 ## 一些问题与注意点
 Windows上mstsc直连session需要选择xvnc
 ![注意选择](https://cdn.safeandsound.cn/image/xrdp+vnc/vnc-login.png)
