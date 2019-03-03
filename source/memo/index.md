@@ -2,12 +2,15 @@
 title: 备忘录
 date: 2017-07-27 15:04:16
 ---
-#### 2019 年
-##### 3 月
+#### 🚩2019 年
+##### 🏳️‍🌈3 月
+* ###### 2019-03-02
+推荐Sublime下的一款英文单词自动补全插件👉[DictionaryAutoComplete](https://github.com/Zinggi/DictionaryAutoComplete)
+
 * ###### 2019-03-01
 [iTerm和Terminal可使用的主题配色](https://github.com/mbadolato/iTerm2-Color-Schemes)，其中terminal文件夹中的配置文件是Terminal可用的，直接双击即可导入。
 
-##### 2 月
+##### 🏳️‍🌈2 月
 * ###### 2019-02-27
 GCP上对外网开放服务的时候需要在`NETWORKING`➡`VPC network`➡`防火墙规则`中开放相应端口, 切记❗
 
@@ -20,7 +23,7 @@ mac上想取消spotlight搜索结果中的`开发者`一类，如果未安装Xco
 * ###### 2019-02-09
 TX2安装tensorflow可以如此👉[tensorflow for jetson tx2](https://devtalk.nvidia.com/default/topic/1038957/jetson-tx2/tensorflow-for-jetson-tx2-/)，安装keras之前可能需要依赖libblas-dev，liblapack-dev，gfortran
 
-##### 1 月
+##### 🏳️‍🌈1 月
 * ###### 2019-01-06
 `git commit`的时候信息写错，可以在SourceTree中在前一次commit上使用`Rebase children of...`，然后进行修改，完成后不要进行merge操作，直接`push -f`即可。
 
@@ -30,8 +33,8 @@ TX2安装tensorflow可以如此👉[tensorflow for jetson tx2](https://devtalk.n
 * ###### 2019-01-01
 markdown文档中的链接，如果出现`()`可能会导致出错，分别使用`%28`代替`(`和`%29`代替`)`即可。
 
-#### 2018 年
-##### 12月
+#### 🚩2018 年
+##### 🏳️‍🌈12 月
 * ###### 2018-12-31
 对于MNIST(Mixed National Institute of Standards and Technology database)的[官方定义](http://yann.lecun.com/exdb/mnist/)。
 还有数据集CIFAR-10(Canadian Institute For Advanced Research), 发音同"see far"。
@@ -42,7 +45,7 @@ markdown文档中的链接，如果出现`()`可能会导致出错，分别使�
 * ###### 2018-12-05
 遇到了一个比较有趣的shell启动动画，可以参考一下➡️ [zsh Loading的命令行动画](https://github.com/echohn/echohn.github.io/issues/1)
 
-##### 10 月
+##### 🏳️‍🌈10 月
 * ###### 2018-10-30
 Linux安装sqlplus: 去[Oracle官网](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html)下载合适版本的基础包和sqlplus安装包, 如`oracle-instantclient12.2-basic-12.2.0.1.0-1.x86_64.rpm`和`oracle-instantclient12.2-sqlplus-12.2.0.1.0-1.x86_64.rpm`, 然后使用命令进行安装，如centos：`rpm -ivh oracle-instantclient*.rpm`，最后将`/usr/lib/oracle/12.2/client64/lib`和`/usr/lib/oracle/12.2/client64/bin`路径加入到环境变量即可。
 
@@ -70,14 +73,14 @@ $ git push
 如果已经提交了的话就使用类似如下的命令修改指定commit hash的提交即可: 
 `GIT_COMMITTER_DATE="2018-10-02T10:40:00+08:00" git commit --amend -C 6d9d3120fdcb9e9a685853cfb42c4431a42e623a`
 
-##### 9 月
+##### 🏳️‍🌈9 月
 * ###### 2018-09-07
 想要在启动spring项目的时候再指定项目的配置文件, 可以采用指定`Program`参数的方法, 如: `java -jar test.jar --spring.config.location=filepath`; 另一种方法就是对启动类使用`@PropertySource`注解进行配置, 可以参考[该文](https://www.jianshu.com/p/3f3a4c452d86)
 
 * ###### 2018-09-01
 今天推博客源码的时候, appveyor构建失败, 显示npm报错`npm ERR! request to https://registry.npmjs.org/npm failed, reason: Hostname/IP doesn't match certificate's altnames: "Host: registry.npmjs.org. is not in the cert's altnames: DNS:a.sni.fastly.net, DNS:a.sni.global-ssl.fastly.net"`, 乍一看是因为证书的问题, SSL? 查了一下, 配置npm禁用掉https即可 👉 `npm config set strict-ssl false`
 
-##### 8 月
+##### 🏳️‍🌈8 月
 * ###### 2018-08-26
 Dijkstra关于goto语句有害的论文见此 👉 [Go To Statement Considered Harmful](http://ce.sharif.edu/courses/90-91/1/ce364-1/resources/root/GoTo/Dijkstra.pdf)
 
@@ -117,7 +120,7 @@ Spring Jpa中, 如果hibernate的命名规则使用的是`update`,在运行的�
 * ###### 2018-08-05
 最近了解了jwt, 本想写一篇相关的文章, 但发现阮一峰老师七月份的一篇博客中写的已经比较详细, 相关部分自己搜索拓展一下即可 👉 [文章见此](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html).
 
-##### 7 月
+##### 🏳️‍🌈7 月
 * ###### 2018-07-31
 对于jdbc的`java.sql.SQLException: Unknown system variable 'query_cache_size'`报错(本人的msyql版本是8.0,  使用的是springboot1.5.4相应的jdbc)是由于jdbc版本的问题, 版本改为`5.1.44`即可. 可参见[StackOverflow相关回答](https://stackoverflow.com/questions/49984267/java-sql-sqlexception-unknown-system-variable-query-cache-size)
 
@@ -134,7 +137,7 @@ IDEA中使用热部署可以不用添加devtools的maven依赖, 而直接使用`
 * ###### 2018-07-18
 IDEA的maven项目中, 如果使用maven导入的依赖包未能被项目识别或使用(表现为在`project structure`的`Libraries`中不存在maven导入的依赖), 则在项目下运行命令`mvn clean install`, 结束后再reimport整个项目的依赖即可.
 
-##### 6 月
+##### 🏳️‍🌈6 月
 * ###### 2018-06-16
 `git mv -f oldfilename newfilename`命令可用于重命名文件.
 
@@ -144,7 +147,7 @@ IDEA的maven项目中, 如果使用maven导入的依赖包未能被项目识别�
 * ###### 2018-06-02
 node.js中约定回调函数的第一个参数必须为错误对象err(如果没有错误则第一参数为null), 这是因为整个执行分为两段(回调函数作为第二段), 两段之间抛出的错误程序是无法捕捉的, 所以只能将其作为参数传入第二段回调函数里. 
 
-##### 5 月
+##### 🏳️‍🌈5 月
 * ###### 2018-05-22
 对于apt有些使用情况下会报`WARNING: apt does not have a stable CLI interface.`的错, Ask Ubuntu社区上有[很好的回答](https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
 
@@ -171,7 +174,7 @@ vmware下虚拟机中使用摄像头, 需要在菜单栏中`VM` -> `Removable De
 * ###### 2018-05-01
 WSL的根目录在windows系统下的路径为`C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs\`
 
-##### 4 月
+##### 🏳️‍🌈4 月
 * ###### 2018-04-29
 用HTML写了个样式简洁的简历模板, 请见 👉 [传送门](https://github.com/VanjayDo/store/tree/master/template-CV).
 
@@ -216,7 +219,7 @@ powershell下使用命令`gwmi –class win32_bios`可以查看到本机的SN(Se
 ```
 原因是: PS的现用执行策略是 Restricted（默认设置）, 而Restricted策略为了系统安全不允许任何脚本运行, 执行命令`set-executionpolicy remotesigned `将PS执行策略修改为系统可以运行编写的未签名脚本和来自其他用户的签名脚本即可(需使用有管理员权限的PS, 选择A后回车).
 
-##### 3 月
+##### 🏳️‍🌈3 月
 * ###### 2018-03-28
 推荐cli版的图片压缩工具[nie](http://feg.netease.com/archives/605.html)
 4月10日更新: 发现在最新的node版本下并不支持. windows下推荐一款gui版的压缩工具[antelope](http://www.voralent.com/zh/products/antelope/), 免费无广告体积还小, 挺好用的.
@@ -251,7 +254,7 @@ win10的MS store以及在上面下载的app都是运行在沙箱中的, 其网�
 win下使用`power /energy`命令后,正常使用电脑一分钟可以得到电脑的能源效率分析报告.
 使用`power /batteryreport`命令后,可以得到一份本机电池的报告,包含电池损耗等信息.
 
-##### 2 月
+##### 🏳️‍🌈2 月
 * ###### 2018-02-26
 安装系统时提示硬盘格式不符, 需转换成GPT/MBR时,可在安装界面使用Shift+F10快捷键调出cmd, 使用命令进行转换
 ```
@@ -265,7 +268,7 @@ list partition：显示已有分区
 * ###### 2018-02-02
 cmd下输入`ipconfig /flushdns`, 回车, 即可刷新hosts文件
 
-##### 1 月
+##### 🏳️‍🌈1 月
 * ###### 2018-01-10
 今天centos上在安装软件之后手动将软件命令文件所在的bin目录加入`/etc/environment`, 因为我个人喜欢在该文件中配置环境变量, 但是centos7下好像该文件默认为空, 于是我手动添加`PATH=/usr/local/freeradius/bin`, 结果source之后发现其他的环境变量里的命令都找不到了, 如使用`vi`会提示command not found, 要使用`/bin/vi`才行, 于是到现在才发现这样引入环境变量是清空重新引入的过程, 并非是简单的添加, 所以最好还是这样写`PATH=/usr/local/freeradius/bin:$PATH`, 但是有个劣势就是如果多次source的话会让PATH变量中包含多个/usr/local/freeradius/bin路径.
 
@@ -300,8 +303,8 @@ BLOCK
 * ###### 2018-01-03
 从GitHub下载单个文件 👉 `https://raw.githubusercontent.com/username/repository/branch(一般就是master)/filename`
 
-#### 2017 年
-##### 12 月
+#### 🚩2017 年
+##### 🏳️‍🌈12 月
 * ###### 2017-12-24
 从[阮一峰老师的博客](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)学习了一下git commit的写法,在这里摘抄一下:
 commit message包括三个部分:`header`,`Body`和`footer`, 形如:
@@ -390,7 +393,7 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 * ###### 2017-12-01
 从浏览器复制网站地址后粘贴到别处,如果地址中有中文,往往发现地址里的中文被转码成了[URL编码](https://zh.wikipedia.org/wiki/百分号编码),如`https://zh.wikipedia.org/wiki/维基百科`被转成了`https://zh.wikipedia.org/wiki/%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91`,其实使用剪切而非复制就不会出现这种尴尬的问题.
 
-##### 11 月
+##### 🏳️‍🌈11 月
 * ###### 2017-11-29
 今天在使用服务器做ss代理的时候一直提示`ERROR: unable to resolve……`，很奇怪，这个配置已经用过很多遍都没出问题，而且明明服务器配置了多个DNS，却显示无法解析域名。
 在GitHub[该issue](https://github.com/shadowsocks/shadowsocks-libev/issues/804)中找到了解决办法，在配置文件里加了`"nameserver": "8.8.8.8"`(也就是google的一个DNS)这个字段，问题就解决了，开发者说并不确定问题的根源,但ss是默认从/etc/resolv.conf获取默认DNS服务器的。
@@ -463,7 +466,7 @@ tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      
 ```
 端口果然被占用了，kill掉这个进程即可。
 
-##### 10 月
+##### 🏳️‍🌈10 月
 * ###### 2017-10-27
 强推一款跨平台的终端连接工具：[Termius](https://www.termius.com/)，尤其是在IOS上，好用又良心。在此之前我在手机上使用的SSH连接工具是Shelly，它仅支持SSH，而且不购买专业版的话就无法保存密码，每次都要重新输入，简直是要逼死使用长密码的人，在我准备购买专业版时发现当前下载的shelly是使用之前的一个Apple ID获取的，购买的话就需要使用现在的账号重新获取，于是删除了shelly后我到App store中搜索了ssh，出现的第一个结果就是Termius，五星的好评让我尝试了一下它，结果就没再安装shelly。
 
@@ -490,7 +493,7 @@ sudo make install
 推荐一款cli下的mysql客户端，[mycli](https://github.com/dbcli/mycli)，支持语法高亮和命令补全，linux下直接install就有，效果相当棒。
 <img src="https://cdn.safeandsound.cn/image/memo/mycli.png">
 
-##### 9 月
+##### 🏳️‍🌈9 月
 * ###### 2017-09-21
 ES6的暂时性死区
 ```
@@ -520,11 +523,11 @@ if(true)
 }
 ```
 
-##### 8 月
+##### 🏳️‍🌈8 月
 * ###### 2017-08-10
 今天发现在文件夹下按住shift+鼠标右击打开的cmd/powershell窗口无法获取到在该次登录系统后添加的环境变量. 也就是说你刚添加了环境变量, 但是使用这种方法, 或者在IDE中,如idea里面打开cmd/powershell窗口后却无法使用该环境变量, 需要注销后重新登录系统才会加载, 但是使用传统办法(如run)打开的是可以直接使用的.
 
-##### 7 月
+##### 🏳️‍🌈7 月
 * ###### 2017-07-21
 powershell启动加速。参见该[官方博文](https://blogs.msdn.microsoft.com/powershell/2007/11/08/update-gac-ps1/),将以下命令粘贴到powershell，等待执行完毕。
 ```
