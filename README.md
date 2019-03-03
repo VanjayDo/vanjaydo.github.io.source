@@ -24,6 +24,3 @@ WenjayDu.github.io.source
 
 * #### 侧边栏的"好听的"按钮
 电脑打开侧边栏(移动端则点击顶部的收放按钮), 点击`好听的`按钮即可看到彩蛋;
-
-[Appveyor]:    https://ci.appveyor.com/project/WenjayDu/WenjayDu-github-io-source
-[Build Status]:https://ci.appveyor.com/api/projects/status/tfw57q6eecippsl5/branch/master?svg=true
