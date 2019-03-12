@@ -2,8 +2,12 @@
  * Use of this source code is governed by a BSD-style license that can be
  * found in the LICENSE file. */
 
-  
-@import url(https://fonts.googleapis.com/css?family=Joti+One);
+@font-face {
+  font-family: 'Joti One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Joti One'), local('JotiOne-Regular'), url(https://cdn.safeandsound.cn/fonts/JotiOne-Regular.ttf) format('truetype');
+}
 
 html, body {
   padding: 0;
