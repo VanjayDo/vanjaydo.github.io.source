@@ -11,16 +11,18 @@ permalink: /game.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <title >t-rex runner</title>
     <link rel="stylesheet" href="/css/game.css">
-    <script src="https://cdn.safeandsound.cn/js/game.js"></script>
+    <script src="https://cdn.safeandsound.cn/js/game.js">window.onload = function(){var isMobile = /Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent);if(isMobile){document.getElementById("hint").innerHTML="press Screen to start game";document.getElementById("home").innerHTML="press here to back home";}};</script>
 </head>
 
 
 <body id="t" class="offline">
     <div id="main-frame-error" class="interstitial-wrapper">
         <p class="hint" id="hint">
-            press Space to start game
+            press Space to start
         </p>
-        <a class="home" id="home" type="button" onclick="javascript:window.location.href='/index.html';" href='#'>click here to back home</a>
+        <br>
+        <center>
+        <button class="home" id="home" onclick="javascript:window.location.href='/index.html';" href='#' style="outline:none;margin: 0;padding: 0;border: 1px solid transparent;backgroud">click here to back home</button></center>
         <div id="main-content">
             <div class="icon icon-offline" alt=""></div>
         </div>
@@ -34,27 +36,6 @@ permalink: /game.html
             </template>
         </div> 
     </div>
-
-<script>
-window.onload=function(){
-    var ua =  navigator.userAgent;
-    isAndroid = /Android/i.test(ua);
-    isBlackBerry = /BlackBerry/i.test(ua);
-    isWindowPhone = /IEMobile/i.test(ua);
-    isIOS = /iPhone|iPad|iPod/i.test(ua);
-    isMobile = isAndroid || isBlackBerry || isWindowPhone || isIOS;
-    if(isAndroid) isMobile = 'android';
-    if(isBlackBerry) isMobile = 'BlackBerry';
-    if(isWindowPhone) isMobile = 'WindowPhone';
-    if(isIOS) isMobile = 'IOS';
-    if(isMobile)
-    {
-        document.getElementById("hint").innerHTML="press Screen to start game";
-        document.getElementById("home").innerHTML="press here to back home";
-    }
-}
-
-</script>
 </body>
 
 </html>
