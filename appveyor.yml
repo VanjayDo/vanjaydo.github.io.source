@@ -15,7 +15,7 @@ install:
   - npm --version
   - npm install
   - npm install hexo-cli -g
-  - npm install gulp -g
+  - npm install gulp -g --no-optional
   - npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp
 
 build_script:
