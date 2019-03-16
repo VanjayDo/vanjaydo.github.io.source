@@ -4,6 +4,16 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-16
+在MacOS中`AirDrop.app`的位置在目录`/System/Library/CoreServices/Finder.app/Contents/Applications/`下，可以将其拖到Dock的话便于使用。
+
+* ###### 2019-03-13
+设置MacOS长按`Command+Q`才退出应用，可安装[SlowQuitApps](https://sspai.com/post/44687)👇
+```
+brew tap dteoh/sqa
+brew cask install slowquitapps
+```
+
 * ###### 2019-03-02
 推荐Sublime下的一款英文单词自动补全插件👉[DictionaryAutoComplete](https://github.com/Zinggi/DictionaryAutoComplete)
 
