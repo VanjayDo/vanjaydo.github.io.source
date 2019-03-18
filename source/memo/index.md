@@ -4,6 +4,12 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-18
+在sublime中想使用快捷键快速在finder中显示当前说编辑文件可以在`Key Bindings`中如此配置：
+```
+[ { "keys": ["ctrl+shift+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} } ]
+```
+
 * ###### 2019-03-16
 在MacOS中`AirDrop.app`的位置在目录`/System/Library/CoreServices/Finder.app/Contents/Applications/`下，可以将其拖到Dock的话便于使用。
 
