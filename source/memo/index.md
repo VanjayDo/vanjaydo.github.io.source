@@ -4,10 +4,13 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-21
+关于MacOS中使用`defaults`命令修改的app属性，一般存储在类似`~/Library/Preferences/`,`~/Library/Containers/com.apple.mail/Data/Library/Preferences/`或`~/Library/Preferences/ByHost/`的文件夹中。想要修改的话可以使用`plutil -convert xml1 filename`命令将其转换成XML文件后再编辑。参考[stackexchange上回答](https://apple.stackexchange.com/questions/102452/can-i-undo-changes-made-via-defaults-write)。
+
 * ###### 2019-03-18
-在sublime中想使用快捷键快速在finder中显示当前说编辑文件可以在`Key Bindings`中如此配置：
+在sublime中想使用快捷键快速在finder中显示当前编辑文件可以在`Key Bindings`中如此配置：
 ```
-[ { "keys": ["ctrl+shift+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} } ]
+[ { "keys": ["command+shift+r"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} } ]
 ```
 
 * ###### 2019-03-16
