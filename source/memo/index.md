@@ -4,6 +4,12 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-23
+推荐在线查词定义和同义词的网站[https://www.dictionary.com](https://www.dictionary.com)，以及它的姊妹网站[https://www.thesaurus.com](https://www.thesaurus.com)。
+
+* ###### 2019-03-22
+使用`osascript -e 'id of app "AppName"'`查看App的Bundle Id。
+
 * ###### 2019-03-21
 关于MacOS中使用`defaults`命令修改的app属性，一般存储在类似`~/Library/Preferences/`,`~/Library/Containers/com.apple.mail/Data/Library/Preferences/`或`~/Library/Preferences/ByHost/`的文件夹中。想要修改的话可以使用`plutil -convert xml1 filename`命令将其转换成XML文件后再编辑。参考[stackexchange上回答](https://apple.stackexchange.com/questions/102452/can-i-undo-changes-made-via-defaults-write)。
 
