@@ -2,6 +2,10 @@
 title: 🙂一些我平时遇到的不理解的词条整理后放在这🙃
 date: 2017-07-27 15:04:16
 ---
+* ### iterater与iteration作为名词时的区别
+iterate表示许多次iteration运行后的结果。所以在一个迭代函数中，每一个iteration就是一次循环，而iterate就是函数运行完后的结果。
+<i class="from fa fa-arrow-circle-right"> 引自 StackExchange [iterate and iteration as nouns](https://english.stackexchange.com/questions/41745/iterate-and-iteration-as-nouns)
+
 * ### CAP定理(CAP Theorem)
 {%note default%}
 　　在理论计算机科学中，CAP定理，又被称作布鲁尔定理（Brewer's theorem），它指出对于一个分布式计算系统来说，不可能同时满足以下三点：
