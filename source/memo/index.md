@@ -4,6 +4,12 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-27
+发现github上markdown文件的预览引入css无效果（无论是`<link rel>`还是`<style>`），应该是考虑到安全因素（像钓鱼之类的）所以对此进行了屏蔽。
+
+* ###### 2019-03-26
+建议使用Conda来安装TF：[Stop Installing Tensorflow using pip for performance sake!](https://towardsdatascience.com/stop-installing-tensorflow-using-pip-for-performance-sake-5854f9d9eb0c)。
+
 * ###### 2019-03-23
 推荐在线查词定义和同义词的网站[https://www.dictionary.com](https://www.dictionary.com)，以及它的姊妹网站[https://www.thesaurus.com](https://www.thesaurus.com)。
 
