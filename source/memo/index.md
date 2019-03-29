@@ -4,6 +4,20 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-29
+推荐Mac安装[QLMarkdown](https://github.com/toland/qlmarkdown)来增加原生`预览（QuickLook）`对markdown文件的支持。使用`brew cask install qlmarkdown`即可安装。另，[该网站](http://www.quicklookplugins.com/)上有许多拓展预览的插件。
+
+* ###### 2019-03-28
+pandas处理excel文件，保存后出现乱码问题，可以使用`XlsxWriter`引擎创建writer来进行保存处理，[参考stackoverflow上回答](https://stackoverflow.com/a/48546542/10735194)
+```
+# 使用XlsxWriter引擎创建一个Pandas Excel writer
+writer = pd.ExcelWriter('test.xlsx', engine='xlsxwriter')
+# 将pandas的dataframe转换到XlsxWriter对象中
+data.to_excel(writer, sheet_name='Sheet1')
+# 保存XlsxWriter对象中的数据
+writer.save()
+```
+
 * ###### 2019-03-27
 发现github上markdown文件的预览引入css无效果（无论是`<link rel>`还是`<style>`），应该是考虑到安全因素（像钓鱼之类的）所以对此进行了屏蔽。
 
