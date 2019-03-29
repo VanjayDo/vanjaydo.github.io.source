@@ -2,6 +2,15 @@
 title: 🙂一些我平时遇到的不理解的词条整理后放在这🙃
 date: 2017-07-27 15:04:16
 ---
+
+* ### X阶逻辑
+像一阶、二阶逻辑，其中的`*阶`一方面是表示量化的程度，另一方面是表示逻辑系统有多强的表达能力。
+　　首先是`命题逻辑`（也有人叫零阶逻辑），在它里面，一个字母代表一个命题，命题逻辑表达命题之间的关系，如“p&q”，“if p then q”等。
+　　`一阶逻辑`引入了两个量词，即任意和存在, universal quantifier(`∀`)和existential quantifie(`∃`), 并且引入了一阶谓词，这使得一阶逻辑可以量化个体。
+　　但一阶逻辑的表达能力有限，它可以表达“∀中国人都喜欢喝茶”或“∃中国人喜欢喝茶”，但是无法表达“有80%的中国人喜欢喝茶”，因为这“80%的中国人”本身是一个个体的集合，或者可以看成是对谓词的量化，即“中国人有80%喜欢喝茶”（可能这个例子这么说有点语义逻辑问题），所以如果要这么表达就需要引入二阶逻辑。二阶逻辑可以量化谓词，表达能力更强。
+　　集合论上来说, 一阶量化个体, 二阶量化包含个体的集合, 三阶量化包含包含个体的集合的集合, 等等，以此类推。
+<i class="from fa fa-arrow-circle-right"> 参考知乎问题 [一阶逻辑和高阶逻辑的区别，能不能具象一点说明？](https://www.zhihu.com/question/22915503)
+
 * ### iterater与iteration作为名词时的区别
 iterate表示许多次iteration运行后的结果。所以在一个迭代函数中，每一个iteration就是一次循环，而iterate就是函数运行完后的结果。
 <i class="from fa fa-arrow-circle-right"> 引自 StackExchange [iterate and iteration as nouns](https://english.stackexchange.com/questions/41745/iterate-and-iteration-as-nouns)
