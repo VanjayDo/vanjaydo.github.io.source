@@ -4,6 +4,21 @@ date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
 ##### 🏳️‍🌈3 月
+* ###### 2019-03-30
+想要将本地的一个项目作为子项目添加到一个主项目中可以使用git的submodule或subtree操作。二者的区别比较微妙，但也很明显，这里不详细讨论，提一点值得注意的是，如果添加的是远程项目而非本地，那么使用submodule在git push上传的时候会只上传引用（使用submodule的时候会在项目根路径下生成`.gitmodules`文件，引用远程项目，上传后你到主项目的远程项目上去看，点击子项目目录会直接跳转到子项目的远程项目url），而subtree则不管什么时候都是直接上传内容。这里以subtree为例实现：
+```
+# 添加本地子项目到主项目中
+git remote add 项目名(任取) 子项目地址
+# 拉去commits
+git fetch
+# 为子项目创建分支
+git checkout -b sub_branch sub/master
+# 切换到master分支
+git checkout master
+# 将子项目作为子目录合并到主项目中
+git read-tree --prefix=合并后子项目存放的目录名 -u sub_branch
+```
+
 * ###### 2019-03-29
 推荐Mac安装[QLMarkdown](https://github.com/toland/qlmarkdown)来增加原生`预览（QuickLook）`对markdown文件的支持。使用`brew cask install qlmarkdown`即可安装。另，[该网站](http://www.quicklookplugins.com/)上有许多拓展预览的插件。
 
