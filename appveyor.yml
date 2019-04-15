@@ -10,13 +10,13 @@ environment:
 install:
   - dir
   - npm config set strict-ssl false
-  - npm install npm@5.3 -g 
+  # - npm install npm@5.3 -g 
   - node --version
   - npm --version
   - npm install
   - npm install hexo-cli -g
   - npm install gulp -g --no-optional
-  - npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp
+  - npm install gulp-minify-css gulp-uglify gulp-htmlmin
 
 build_script:
   - hexo g
