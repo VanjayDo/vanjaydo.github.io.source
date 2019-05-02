@@ -3,11 +3,16 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
+##### 🏳️‍🌈5 月
+* ###### 2019-05-02
+对于minc文件的一些处理程序，以及`param2fxm`以及`fxm2param`程序，可以访问[mcgill的brain image centre官网](http://www.bic.mni.mcgill.ca/~ilana/diffusion/ubuntu_install.html)获取。
 
 ##### 🏳️‍🌈4 月
+* ###### 2019-04-17
+推荐文章[关于python导入模块的几种知识](http://codingpy.com/article/python-import-101/)。
+
 * ###### 2019-04-10
 想使用DockerHub关联github的repo实现自动构建的时候发现无关联自己所在organization的repo，应去github账号 `settings` -> `applications` -> `Authorized OAuth APPs` -> `docker hub builder`，点击进入，开放相应的organization权限给builder即可。
-
 
 ##### 🏳️‍🌈3 月
 * ###### 2019-03-31
@@ -27,6 +32,7 @@ git checkout master
 # 将子项目作为子目录合并到主项目中
 git read-tree --prefix=合并后子项目存放的目录名 -u sub_branch
 ```
+　　想要删除已添加的submodule可以使用`git submodule deinit module_name`，`git rm --cached module_name`，然后commit来进行操作
 
 * ###### 2019-03-29
 推荐Mac安装[QLMarkdown](https://github.com/toland/qlmarkdown)来增加原生`预览（QuickLook）`对markdown文件的支持。使用`brew cask install qlmarkdown`即可安装。另，[该网站](http://www.quicklookplugins.com/)上有许多拓展预览的插件。
