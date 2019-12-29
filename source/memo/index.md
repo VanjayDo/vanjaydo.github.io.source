@@ -3,9 +3,44 @@ title: 备忘录
 date: 2017-07-27 15:04:16
 ---
 #### 🚩2019 年
+
+
+##### 🏳️‍🌈11 月
+* ###### 2019-11-29
+Chrome V73版本中安装第三方插件（如已从chrome官方插件商店下架，但十分好用的下载管理插件Chrono），会被告知`crx_header_invalid`，只需将插件后缀改为`.zip`再进行安装即可。
+
+* ###### 2019-11-26
+matplotlib中中文乱码，如果本地已有支持中文的字体，就不必安装其他字体。如你之前装了`Sarasa`字体，你知道它是支持中文的，那么
+{%note default%}
+只需要使用如下代码print出matplotlib中所有注册的字体名称
+
+```
+import matplotlib
+all_fronts = sorted([f.name for f in matplotlib.font_manager.fontManager.ttflist])
+for i in all_fronts: print(i)
+```
+
+
+<i class="from fa fa-arrow-circle-right"> [matplotlib图例中文乱码? hengchao0248的回答](https://www.zhihu.com/question/25404709/answer/120362096)</i>
+{%endnote%}
+
+##### 🏳️‍🌈10 月
+* ###### 2019-10-29
+{%note default%}
+在数值计算（或者任何其他工程领域）里，知道一个东西的基本算法和写出一个能在实际中工作得很好的程序之间还是有一段不小的距离的。有很多可能看似无关紧要的小细节小 trick，可能会对结果带来很大的不同。当然这样的现象其实也很合理：因为理论上的工作之所以漂亮正是因为抓住了事物的主要矛盾，忽略“无关”的细节进行了简化和抽象，从而对比较“干净”的对象进行操作，在一系列的“assumption”下建立起理论体系。但是当要将理论应用到实践中的时候，又得将这些之前被忽略掉了的细节全部加回去，得到一团乱糟糟，在一系列的“assumption”都不再严格满足的条件下找出会出现哪些问题并通过一些所谓的“engineering trick”来让原来的理论能“大致地”继续有效，这些东西大概就主要是 Engineer 们所需要处理的事情了吧？这样说来 Engineer 其实也相当不容易。这样的话其实 Engineer 和 Scientist 的界线就又模糊了，就是工作在不同的抽象程度下的区别的样子。
+<i class="from fa fa-arrow-circle-right"> Free Mind [Softmax vs. Softmax-Loss: Numerical Stability](http://freemind.pluskid.org/machine-learning/softmax-vs-softmax-loss-numerical-stability/)</i>
+{%endnote%}
+
+* ###### 2019-10-17
+ML中很多“误差”的计算都采用了方差形式（进行了平方），可参见方差-偏差分解过程，包括损失函数也是采用了平方形式，一则平方后得到的结果均为正数，那为什么不用绝对值？👉二则平方可以放大误差，可以对大误差加大惩罚力度，绝对值做不到这点；三则像损失函数，我们往往需要对其求导，而平方后求导就是一次形式，而使用绝对值的话可能要求分段。
+
+
 ##### 🏳️‍🌈9 月
 * ###### 2019-09-10
 [该文](https://coolshell.cn/articles/11265.html)将python的Decorator讲解的很清楚。 
+
+* ###### 2019-09-02
+推荐使用[Trash-cli](https://github.com/andreafrancia/trash-cli)来代替`rm`进行文件的删除。
 
 ##### 🏳️‍🌈5 月
 * ###### 2019-05-18
