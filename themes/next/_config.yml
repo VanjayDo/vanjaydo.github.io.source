@@ -122,7 +122,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: https://cdn.safeandsound.cn/image/avatar.jpg
+avatar: https://avatars1.githubusercontent.com/u/17807970
 
 # Table Of Contents in the Sidebar
 toc:
