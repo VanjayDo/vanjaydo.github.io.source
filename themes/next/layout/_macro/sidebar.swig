@@ -366,11 +366,11 @@ a.change:hover{
     </a>
   </div>
 
-  <!--添加仓鼠-->
+  <!--添加仓鼠
   <div id="cangshu">
     <embed class="cangshu" src="/images/cangshu.swf" allowNetworking="all" onmouseover="$(this).velocity('stop').velocity({opacity: 1})" onmouseout="$(this).velocity('stop').velocity({opacity:0.5})"">
     </embed>
-  </div>
+  </div>-->
 
 
 
