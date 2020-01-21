@@ -2,9 +2,35 @@
 title: 备忘录
 date: 2017-07-27 15:04:16
 ---
+
+#### 🚩2020 年
+##### 🏳️‍🌈01 月
+* ###### 2020-01-20
+在console中运行argparse的对象进行解析时，发现会报错，如
+
+```
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('--arg1',default='test')
+args=parser.parse_args()
+
+Output:👇
+usage: pydevconsole.py [-h] [--arg1 ARG1]
+pydevconsole.py: error: unrecognized arguments: --mode=client --port=60550
+Process finished with exit code 2
+```
+
+但如果解析的时候加上`args=[]`这个参数，就没有问题，即`args=parser.parse_args(args=[])`是可以正常运行进行解析的。读了源码发现其实`args`这个参数默认是`sys.argv[1:]`, 而在python console，`sys.argv`的值为一个list，如下
+
+```
+['/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevconsole.py',
+ '--mode=client',
+ '--port=56901']
+```
+
+可以看到分别是python console脚本的路径，mode以及port。`args`实际上应该是我们parser的argument，但是`--mode`和`--port`都不是我们的argument，所以就直接报错`error: unrecognized arguments`。如果我们传入空list，那么在实际循环的时候是直接跳出的，所以规避了报错问题。
+
 #### 🚩2019 年
-
-
 ##### 🏳️‍🌈11 月
 * ###### 2019-11-29
 Chrome V73版本中安装第三方插件（如已从chrome官方插件商店下架，但十分好用的下载管理插件Chrono），会被告知`crx_header_invalid`，只需将插件后缀改为`.zip`再进行安装即可。
