@@ -5,6 +5,12 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈01 月
+* ###### 2020-01-28
+杀死指定路径程序的所有进程，可`ps -ef|grep "[path]"|awk '{print $2}'|xargs kill -9`，即抓取到PID后直接kill。
+
+* ###### 2020-01-21
+推荐关于pytorch hook机制的一篇文章 ➡️ [半小时学会 PyTorch Hook](http://www.tensorinfinity.com/paper_198.html)
+
 * ###### 2020-01-20
 在console中运行argparse的对象进行解析时，发现会报错，如
 
@@ -20,7 +26,7 @@ pydevconsole.py: error: unrecognized arguments: --mode=client --port=60550
 Process finished with exit code 2
 ```
 
-但如果解析的时候加上`args=[]`这个参数，就没有问题，即`args=parser.parse_args(args=[])`是可以正常运行进行解析的。读了源码发现其实`args`这个参数默认是`sys.argv[1:]`, 而在python console，`sys.argv`的值为一个list，如下
+但如果解析的时候加上`args=[]`这个参数，就没有问题，即`args=parser.parse_args(args=[])`是可以正常运行进行解析的。读了源码发现其实`args`这个参数默认是`sys.argv[1:]`, 而在python console (注意是在console里，而非脚本模式)，`sys.argv`的值为一个list，如下
 
 ```
 ['/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevconsole.py',
