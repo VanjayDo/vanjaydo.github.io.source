@@ -20,6 +20,8 @@ docker-compose up -d
 
 然后访问本地80端口的`launchpad`路径即可进行注册，如果想避免端口占用就修改下compose文件。
 
+可参考[Docker部署ShareLaTeX并简单配置中文环境](https://yxnchen.github.io/technique/Docker%E9%83%A8%E7%BD%B2ShareLaTeX%E5%B9%B6%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E7%8E%AF%E5%A2%83/#%E9%85%8D%E7%BD%AE%E4%B8%AD%E6%96%87%E5%86%99%E4%BD%9C%E7%8E%AF%E5%A2%83)。
+
 # Latex Package缺失
 `免费`带来的问题就是`麻烦`，因为在实际使用过程中会遇到很多没有预装的包，所以需要手动安装。
 

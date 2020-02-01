@@ -5,6 +5,12 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈01 月
+* ###### 2020-01-31
+`ls | sort -t[字符] -nk [num]`根据指定字符进行截断，然后按照第`num`个位置的字符根据数字大小来从小到大排序。
+
+* ###### 2020-01-30
+强推一个博客，它有个关于python画图的板块非常好，覆盖了Seaborn, Plotly和Bokeh三种工具，详见[Gallery of AJ's Blog](http://alanpryorjr.com/gallery/)。
+
 * ###### 2020-01-28
 杀死指定路径程序的所有进程，可`ps -ef|grep "[path]"|awk '{print $2}'|xargs kill -9`，即抓取到PID后直接kill。
 
@@ -13,27 +19,22 @@ date: 2017-07-27 15:04:16
 
 * ###### 2020-01-20
 在console中运行argparse的对象进行解析时，发现会报错，如
-
 ```
 import argparse
 parser=argparse.ArgumentParser()
 parser.add_argument('--arg1',default='test')
 args=parser.parse_args()
-
-Output:👇
+👇Output:
 usage: pydevconsole.py [-h] [--arg1 ARG1]
 pydevconsole.py: error: unrecognized arguments: --mode=client --port=60550
 Process finished with exit code 2
 ```
-
 但如果解析的时候加上`args=[]`这个参数，就没有问题，即`args=parser.parse_args(args=[])`是可以正常运行进行解析的。读了源码发现其实`args`这个参数默认是`sys.argv[1:]`, 而在python console (注意是在console里，而非脚本模式)，`sys.argv`的值为一个list，如下
-
 ```
 ['/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/pydevconsole.py',
  '--mode=client',
  '--port=56901']
 ```
-
 可以看到分别是python console脚本的路径，mode以及port。`args`实际上应该是我们parser的argument，但是`--mode`和`--port`都不是我们的argument，所以就直接报错`error: unrecognized arguments`。如果我们传入空list，那么在实际循环的时候是直接跳出的，所以规避了报错问题。
 
 #### 🚩2019 年
@@ -45,14 +46,11 @@ Chrome V73版本中安装第三方插件（如已从chrome官方插件商店下�
 matplotlib中中文乱码，如果本地已有支持中文的字体，就不必安装其他字体。如你之前装了`Sarasa`字体，你知道它是支持中文的，那么
 {%note default%}
 只需要使用如下代码print出matplotlib中所有注册的字体名称
-
 ```
 import matplotlib
 all_fronts = sorted([f.name for f in matplotlib.font_manager.fontManager.ttflist])
 for i in all_fronts: print(i)
 ```
-
-
 <i class="from fa fa-arrow-circle-right"> [matplotlib图例中文乱码? hengchao0248的回答](https://www.zhihu.com/question/25404709/answer/120362096)</i>
 {%endnote%}
 
@@ -109,7 +107,7 @@ git checkout master
 # 将子项目作为子目录合并到主项目中
 git read-tree --prefix=合并后子项目存放的目录名 -u sub_branch
 ```
-　　想要删除已添加的submodule可以使用`git submodule deinit module_name`，`git rm --cached module_name`，然后commit来进行操作
+想要删除已添加的submodule可以使用`git submodule deinit module_name`，`git rm --cached module_name`，然后commit来进行操作
 
 * ###### 2019-03-29
 推荐Mac安装[QLMarkdown](https://github.com/toland/qlmarkdown)来增加原生`预览（QuickLook）`对markdown文件的支持。使用`brew cask install qlmarkdown`即可安装。另，[该网站](http://www.quicklookplugins.com/)上有许多拓展预览的插件。
