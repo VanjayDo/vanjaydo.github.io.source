@@ -4,6 +4,24 @@ date: 2017-07-27 15:04:16
 ---
 
 #### 🚩2020 年
+##### 🏳️‍🌈02 月
+* ###### 2020-02-06
+推荐一篇[讲解Transformer原理的博客](https://jalammar.github.io/illustrated-transformer/)，讲解浅显易懂而且很全面。
+
+* ###### 2020-02-04
+解决Tensorboard因为多个events文件而显示紊乱的问题👇
+```
+from datetime import datetime
+time_as_name = datetime.now().__format__('%Y-%m-%d-T%H:%M:%S')
+tb = TensorBoard(log_dir = './logs/'+time_as_name)
+```
+
+* ###### 2020-02-03
+推荐[pathmind的AI wiki](https://pathmind.com/wiki)，里面有很多关于AI的科普知识，比如[关于Word2Vector](https://pathmind.com/wiki/word2vec)。没事翻看着也是挺好的。
+
+* ###### 2020-02-02
+如果matplotlib画图出现轴上负号显示为方块的问题，则可以通过执行`matplotlib.rcParams['axes.unicode_minus'] = False`来解决。
+
 ##### 🏳️‍🌈01 月
 * ###### 2020-01-31
 `ls | sort -t[字符] -nk [num]`根据指定字符进行截断，然后按照第`num`个位置的字符根据数字大小来从小到大排序。
