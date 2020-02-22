@@ -5,14 +5,32 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈02 月
+* ###### 2020-02-20
+循环处理要使用map和list表达式，或生成器表达式，pandas DataFrame和Series元素的迭代一定使用apply进行，尤其是可以和前面的结合起来。
+
+* ###### 2020-02-19
+一篇关于web身份认证发展的简介 [彻底理解cookie，session，token](https://mp.weixin.qq.com/s/EunvJFrIXbXiPeZJT4cNmw)以及一篇关于扫码登录的解释 [一文搞懂主流的扫码登录技术原理](https://mp.weixin.qq.com/s/MaEIwiz5Wti6r0pNrI0T0g)。
+
+* ###### 2020-02-18
+关于Python中Boolean类型的list/数组进行`and`和`&`（按位）操作的区别[Stack Overflow上有一个很全面的相关问题](https://stackoverflow.com/questions/22646463/and-boolean-vs-bitwise-why-difference-in-behavior-with-lists-vs-nump)，其实主要问题是为什么`[True, True, True, False, True] and [False, True, False, True, False]`为什么得到的是`[False, True, False, True, False]`，而不是想要的`[False,  True, False, False, False]`，简而言之就是`and`操作前后的两个list都不为空，所以都为真，所以逻辑为真，只不过返回值是第二个list，就比如`[1] and [2]`会返回`[2]`，再如反例`[] and [2]`会返回`[]`。
+
+* ###### 2020-02-17
+推荐讲解Docker核心原理的一篇博客[Docker 核心技术与实现原理](https://draveness.me/docker)，全面易懂。以及覆盖面更广的一个系列的Docker科普性文章[乐章的Docker随笔](https://www.cnblogs.com/zhangxingeng/category/1408310.html)。
+
+* ###### 2020-02-12
+数据量大的时候绘图，可以使用[pandas的绘图函数](https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.DataFrame.plot.html)，快且好用，也有捷径方法，比如直方图直接可以使用pandas Series的`hist()`函数等。使用pandas绘图函数的时候，如果想要定义dpi，由于官方函数不提供方法，可以通过`matplotlib.pyplot.rcParams`来定义，如`plt.rcParams['figure.dpi']=100`，这样可以在当前环境里全局定义。注意活用`rcParams`。
+
+* ###### 2020-02-11
+`CatBoost和XGBoost、LightGBM并称为GBDT的三大主流神器，都是在GBDT算法框架下的一种改进实现。XGBoost被广泛的应用于工业界，LightGBM有效的提升了GBDT的计算效率，而Yandex的CatBoost号称是比XGBoost和LightGBM在算法准确率等方面表现更为优秀的算法。`
+
 * ###### 2020-02-06
-推荐一篇[讲解Transformer原理的博客](https://jalammar.github.io/illustrated-transformer/)，讲解浅显易懂而且很全面。
+推荐两篇讲解Transformer原理的博客，1️⃣ [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)，讲解浅显易懂而且很全面，以及2️⃣ [The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)。
 
 * ###### 2020-02-04
 解决Tensorboard因为多个events文件而显示紊乱的问题👇
 ```
 from datetime import datetime
-time_as_name = datetime.now().__format__('%Y-%m-%d-T%H:%M:%S')
+time_as_name = datetime.now().__format__('%Y-%m-%d_T%H:%M:%S')
 tb = TensorBoard(log_dir = './logs/'+time_as_name)
 ```
 
