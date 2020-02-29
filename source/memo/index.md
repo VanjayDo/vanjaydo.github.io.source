@@ -5,6 +5,19 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈02 月
+* ###### 2020-02-25
+二文看懂Normalization 1️⃣ [详解深度学习中的Normalization，BN/LN/WN](https://zhuanlan.zhihu.com/p/33173246), （以及该文所在的知乎专栏[机器学习札记](https://zhuanlan.zhihu.com/juliuszh)）; 2️⃣ [深度学习中的Normalization模型（附实例&公式）](https://www.jiqizhixin.com/articles/2019-07-09-5)
+
+* ###### 2020-02-24
+标记一个持续更新的[GitHub Gist about Sublime Licenses](https://gist.github.com/angrycoffeemonster/4f05896d233baf6bd9b0894e30b5fa63)，将`127.0.0.1 license.sublimehq.com`加入`/etc/hosts`可以防止license失效。
+
+* ###### 2020-02-23
+一种计算模型参数数量的方法：
+```
+model_parameters = filter(lambda p: p.requires_grad, model.parameters())
+params = sum([np.prod(p.size()) for p in model_parameters])
+```
+
 * ###### 2020-02-20
 循环处理要使用map和list表达式，或生成器表达式，pandas DataFrame和Series元素的迭代一定使用apply进行，尤其是可以和前面的结合起来。
 
@@ -347,7 +360,7 @@ Centos下可以参考, 肯定也是相关的dev库依赖的问题
 注册表`HKEY_CURRENT_USER/Console`下各终端里, DWORD类型的`CodePage`键值可控制打开终端的编码方式, 十进制`936`为GBK编码, `65001`为UTF-8
 
 * ###### 2018-05-19
-git项目中有时想要需要忽略`.gitignore`文件, 但`.gitignore`文件无法排除自身, 我们可以通过修改`.git/info/exclude`文件来忽略`.gitignore`, 相比之下, `.git/info/exclude`是在本地进行排除文件(因为`.git`文件夹是不会上传的嘛).
+git项目中有时想要需要忽略`.gitignore`文件, 但有些时候`.gitignore`已经提交到仓库了，而我们又不想改动它来忽略文件, 那我们可以通过修改`.git/info/exclude`文件来忽略这些文件, 相比之下, `.git/info/exclude`是在本地进行排除文件(因为`.git`文件夹是不会上传的嘛)。当然，跟`.gitignore`一样，它对提交过的文件是无效的。
 
 * ###### 2018-05-10
 vmware下虚拟机中使用摄像头, 需要在菜单栏中`VM` -> `Removable Devices`连接摄像头设备到虚拟机, 如果在虚拟机中能检测到摄像头设备, 但是打开摄像头后无法显示图像, 则应该尝试在`Vm` -> `Settings` -> `USB Controller`将USB兼容性调整一下(原来是2.0的话则换到3.0, 原来是3.0的话则尝试换到2.0), 然后再断开摄像头与虚拟机的连接, 再重新连接, 再开启摄像头试试.
