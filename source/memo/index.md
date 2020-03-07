@@ -4,6 +4,22 @@ date: 2017-07-27 15:04:16
 ---
 
 #### 🚩2020 年
+##### 🏳️‍🌈03 月
+* ###### 2020-03-06
+推荐RSS的订阅源仓库[RSS Hub](https://docs.rsshub.app/en/)，以及一个可以通过正则匹配来使原生不支持RSS的网站变得支持RSS的网站[feed43](http://www.feed43.com/)，与[使用教程](https://juejin.im/post/5c382a326fb9a049f15469eb)。
+
+* ###### 2020-03-04
+[关于压缩BERT的一些方法](https://mp.weixin.qq.com/s/TfNCQAPMenfEE_dyLk0Yjg)。
+
+* ###### 2020-03-03
+[Softmax和Sigmoid的区别](https://www.lolimay.cn/2019/01/14/%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3-Softmax-%E5%92%8C-Sigmoid/)。
+
+* ###### 2020-03-02
+[这里](https://sspai.com/post/59035)有Zotero的一些使用技巧。
+
+* ###### 2020-03-01
+一文尝试解释Transformer是图神经网络的一种[Transformers are Graph Neural Networks](https://graphdeeplearning.github.io/post/transformers-are-gnns/)，以及机器之心的中文翻译版[原来Transformer就是一种图神经网络](https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g)。感觉真的像网友评论说的`Transformer之于GNN就像是LSTM之于RNN。确实是个special case，但是是目前最work的special case`。
+
 ##### 🏳️‍🌈02 月
 * ###### 2020-02-25
 二文看懂Normalization 1️⃣ [详解深度学习中的Normalization，BN/LN/WN](https://zhuanlan.zhihu.com/p/33173246), （以及该文所在的知乎专栏[机器学习札记](https://zhuanlan.zhihu.com/juliuszh)）; 2️⃣ [深度学习中的Normalization模型（附实例&公式）](https://www.jiqizhixin.com/articles/2019-07-09-5)
