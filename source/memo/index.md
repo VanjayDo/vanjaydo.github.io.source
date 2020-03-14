@@ -5,8 +5,49 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈03 月
+* ###### 2020-03-10
+Windows Terminal的客制化教程👉[新生代 Windows 终端：Windows Terminal 的全面自定义](https://sspai.com/post/59380)。
+
+* ###### 2020-03-09
+一个关于[一些机器学习算法的分类](https://static.coggle.it/diagram/WHeBqDIrJRk-kDDY/t/categories-of-algorithms-non-exhaustive)的脑图，可以看看别人的归类与想法。
+
+* ###### 2020-03-08
+[为什么BERT在商业环境中失败了](https://www.intel.ai/bert-commercial-environments/)一文指出虽然BERT一类基于Transformer的模型因为能够在pre-train阶段习得结构语言特征（structural language traits, 如句法syntax），从而在fine-tuning任务上能够运用习得的知识来保证性能，颠覆了NLP领域，但是在动态商业环境中却很难投入使用，不仅因为缺少标记性数据（因为环境一直在变，所以没有固定的label），而且因为这种现实数据中有很多交叉领域，需要运用到类似非监督领域的自适应系统来解决。这些挑战使得BERT在fine-tuning阶段难以进行，与从头开始训练的模型相比提升很少。 一个办法是使用embedding structural information辅助，嵌入结构化信息能够帮助模型从较少的数据中学到更多的东西，因为结构化的信息能够让模型习得更高层的抽象，虽然这观点被NLP社区所认可，但这带来的问题是应该使用何种信息，以及如何嵌入到预训练模型中。
+
+* ###### 2020-03-07
+可以使用如下代码打印当前环境中对象的代码👇
+```
+import inspect
+lines = inspect.getsource(object)
+print(lines)
+```
+
 * ###### 2020-03-06
 推荐RSS的订阅源仓库[RSS Hub](https://docs.rsshub.app/en/)，以及一个可以通过正则匹配来使原生不支持RSS的网站变得支持RSS的网站[feed43](http://www.feed43.com/)，与[使用教程](https://juejin.im/post/5c382a326fb9a049f15469eb)。
+
+* ###### 2020-03-05
+关于numpy高维数组的掩码操作
+```
+a=np.array(np.random.rand(2,3,4))
+a
+Out[67]: 
+array([[[0.46312648, 0.73442041, 0.67390536, 0.88309463],
+        [0.50816612, 0.19007436, 0.47771242, 0.69376611],
+        [0.00904591, 0.1045993 , 0.00112779, 0.0596203 ]],
+       [[0.90162316, 0.87609592, 0.15104683, 0.90845522],
+        [0.97151208, 0.30065615, 0.69052892, 0.56883931],
+        [0.37559114, 0.0420713 , 0.62442181, 0.80313585]]])
+b=np.random.choice(a=[False, True], size=(2,3))
+b
+Out[69]: 
+array([[False, False,  True],
+       [False, False,  True]])
+a[b]
+Out[70]: 
+array([[0.00904591, 0.1045993 , 0.00112779, 0.0596203 ],
+       [0.37559114, 0.0420713 , 0.62442181, 0.80313585]])
+```
+可以发现a在直接应用掩码后，变成了二维，而不是原来的三维了。想要保持三维的结构，要么使用列表表达式`[i[j] for i,j in zip(a,b)]`，因为二维的数组在直接应用掩码后是不会被降维的。
 
 * ###### 2020-03-04
 [关于压缩BERT的一些方法](https://mp.weixin.qq.com/s/TfNCQAPMenfEE_dyLk0Yjg)。
