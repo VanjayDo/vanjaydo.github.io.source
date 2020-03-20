@@ -6,8 +6,10 @@ clone_depth: 1
 environment:
   access_token:
     secure: yI8ocjAIFobBZwgxnm4qkhUkiXla/1WXeM4OZjJpKRI8FUOwANSgGe+vUTrqN0Fg
+  nodejs_version: "9"
 
 install:
+  - ps: Install-Product node $env:nodejs_version
   - dir
   - npm config set strict-ssl false
   # - npm install npm@5.3 -g 
