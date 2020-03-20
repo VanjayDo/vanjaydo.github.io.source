@@ -5,6 +5,12 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈03 月
+* ###### 2020-03-20
+mathjax中在括号中使用类似$a\_c^b$的时候，写作`a_{c}^{b}`是无法渲染的，只能写作`a_c^b`，在括号外则不影响，可能是bug，因为这是正常的latex语法。还有点要注意的是，在markdown中写latex行内公式，如果式子内有下划线`_`而且后面的文字中也有的话，那么可能需要给式子内的`_`前加上`\`进行转义，否则会当做斜体处理，就比如这条备忘录里一开始的行内公式$a\_c^b$写作的是`$a\_c^b$`，而不是`$a_c^b$`，因为后面的`a_{c}^{b}`里面还有`_`。
+
+* ###### 2020-03-19
+jupyter lab可以启用拓展插件，比如`toc`目录表单显示插件就很实用。注意拓展依赖于nodejs，如果是在docker容器里的话，安装nodejs和npm可以执行👉`apt install nodejs -y && wget https://npmjs.org/install.sh && sh install.sh && rm -f install.sh`。
+
 * ###### 2020-03-10
 Windows Terminal的客制化教程👉[新生代 Windows 终端：Windows Terminal 的全面自定义](https://sspai.com/post/59380)。
 
