@@ -5,6 +5,12 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈03 月
+* ###### 2020-03-22
+pandas可以直接将数据转为HTML/LaTex/MarkDown的数据表格式，分别对应了函数`to_html()`,`to_latex`,`to_markdown()`，以及可以在保存的时候直接压缩文件，如`df.to_csv('data.gz', compression='gzip', index=False)`，读取的时候则可以直接读取`df = pd.read_csv('data.gz')`。参见[不容错过的Pandas小技巧](https://mp.weixin.qq.com/s/7i7Cu-ec4CkhMNBzEtjdmA)。
+
+* ###### 2020-03-21
+Hadamard product/Schur product，是矩阵相乘的一种运算，不同于点积，Hadamard积是矩阵的对应元素相乘（故要求俩矩阵维数一致），python中的运算实现就是`*`（作用于俩numpy.array）。
+
 * ###### 2020-03-20
 mathjax中在括号中使用类似$a\_c^b$的时候，写作`a_{c}^{b}`是无法渲染的，只能写作`a_c^b`，在括号外则不影响，可能是bug，因为这是正常的latex语法。还有点要注意的是，在markdown中写latex行内公式，如果式子内有下划线`_`而且后面的文字中也有的话，那么可能需要给式子内的`_`前加上`\`进行转义，否则会当做斜体处理，就比如这条备忘录里一开始的行内公式$a\_c^b$写作的是`$a\_c^b$`，而不是`$a_c^b$`，因为后面的`a_{c}^{b}`里面还有`_`。
 
