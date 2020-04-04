@@ -4,7 +4,17 @@ date: 2017-07-27 15:04:16
 ---
 
 #### 🚩2020 年
+##### 🏳️‍🌈04 月
+* ###### 2020-04-03
+用简单清晰的语言讲述机器学习，见[Machine Learning for Everyone](https://vas3k.com/blog/machine_learning/)。
+
+* ###### 2020-04-01
+推荐文章[Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)。
+
 ##### 🏳️‍🌈03 月
+* ###### 2020-03-30
+[一篇关于latex插入图片布局的文章](https://tug.org/TUGboat/tb34-1/tb106thurnherr.pdf)，可以参考。
+
 * ###### 2020-03-22
 pandas可以直接将数据转为HTML/LaTex/MarkDown的数据表格式，分别对应了函数`to_html()`,`to_latex`,`to_markdown()`，以及可以在保存的时候直接压缩文件，如`df.to_csv('data.gz', compression='gzip', index=False)`，读取的时候则可以直接读取`df = pd.read_csv('data.gz')`。参见[不容错过的Pandas小技巧](https://mp.weixin.qq.com/s/7i7Cu-ec4CkhMNBzEtjdmA)。
 
