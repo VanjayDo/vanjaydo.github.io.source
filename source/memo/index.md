@@ -5,6 +5,12 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈04 月
+* ###### 2020-04-10
+日历可以从`http://ical.mac.com/ical/Canadian32Holidays.ics`订阅加拿大节假日。
+
+* ###### 2020-04-05
+加入阅读列表📚[30天吃掉那只 TensorFlow2.0](https://lyhue1991.github.io/eat_tensorflow2_in_30_days/)。
+
 * ###### 2020-04-03
 用简单清晰的语言讲述机器学习，见[Machine Learning for Everyone](https://vas3k.com/blog/machine_learning/)。
 
