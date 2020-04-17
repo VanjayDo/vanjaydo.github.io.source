@@ -5,6 +5,26 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈04 月
+* ###### 2020-04-17
+使用`h5py`进行大数据存储，后续如果要追加数据的话，则在创建的时候需要指定`maxshape`属性，需要保证其秩与数据的维度一样，如下（只初始化，不添加数据）：
+```
+with h5py.File('test_append', 'a') as hf:
+	hf.create_dataset('1D_array', shape=(0), maxshape=(None)) # 1维数组。第1维初始化长度为0，即无数据。
+	hf.create_dataset('2D_array', shape=(0,5), maxshape=(None, None)) # 2维数组，第2维长度为5。第1维初始化为0，即无数据。
+	hf.create_dataset('3D_array', shape=(0,2,3), maxshape=(None, None, None)) # 3维数组，第2维长度为2，第3维长度为3。第1维初始化为0，即无数据。
+```
+后面追加数据的时候可以如下操作(要保证数据在维度上与初始化时一致)，关键是上面创建的时候指定`maxshape`：
+```
+with h5py.File('test_append', 'a') as hf:
+	hf['1D_array'].resize(hf['1D_array'].shape[0] + oneD_array_data.shape[0], axis=0)
+	        hf['1D_array'][-oneD_array_data.shape[0]:] = oneD_array_data.astype(np.float32)
+	hf['2D_array'].resize(hf['2D_array'].shape[0] + twoD_array_data.shape[0], axis=0)
+	        hf['2D_array'][-twoD_array_data.shape[0]:] = twoD_array_data.astype(np.float32)
+	hf['3D_array'].resize(hf['3D_array'].shape[0] + threeD_array_data.shape[0], axis=0)
+	        hf['3D_array'][-threeD_array_data.shape[0]:] = threeD_array_data.astype(np.float32)
+```
+错误的时候`maxshape`会导致报错`TypeError: Only chunked datasets can be resized`。
+
 * ###### 2020-04-10
 日历可以从`http://ical.mac.com/ical/Canadian32Holidays.ics`订阅加拿大节假日。
 
@@ -84,7 +104,7 @@ array([[0.00904591, 0.1045993 , 0.00112779, 0.0596203 ],
 [Softmax和Sigmoid的区别](https://www.lolimay.cn/2019/01/14/%E5%BF%AB%E9%80%9F%E7%90%86%E8%A7%A3-Softmax-%E5%92%8C-Sigmoid/)。
 
 * ###### 2020-03-02
-[这里](https://sspai.com/post/59035)有Zotero的一些使用技巧。
+[这里](https://sspai.com/post/59035)有Zotero的一些使用技巧。本来打算自己写篇关于Zotero的折腾札记的，发现要写的一些操作在这篇文章里都有，就不重复了。简而言之就是1️⃣. 将附件托管到第三方的WebDAV网盘，因为官方只提供300MB的免费存储，将附件托管到第三方网盘可以节省大量空间，不用花钱买了；2️⃣.通过插件来增强Zotero，主要是[Zotfile](http://zotfile.com/)和[Zutilo](https://github.com/willsALMANJ/Zutilo)两个插件，都是用来操作文件的，Zotfile可以把附件存到任意的位置以及提供文件命名方式的客制化，Zutilo则有查看附件路径等功能，但最重要的它是可以批量修改附件的存储路径（通常在你修改了Zotfile存储附件的路径后发挥作用，因为在修改后Zotfile不会自动更新路径，所以直接在Zotero打开文献的时候会提示无法找到附件），关于如何使用在原文中讲的已经挺清楚了，更细致具体的操作可以参考这篇博文➡️[Relinking ZotFile Attachments](http://darencard.net/blog/2019-09-19-zotero-file-relink/)。
 
 * ###### 2020-03-01
 一文尝试解释Transformer是图神经网络的一种[Transformers are Graph Neural Networks](https://graphdeeplearning.github.io/post/transformers-are-gnns/)，以及机器之心的中文翻译版[原来Transformer就是一种图神经网络](https://mp.weixin.qq.com/s/DABEcNf1hHahlZFMttiT2g)。感觉真的像网友评论说的`Transformer之于GNN就像是LSTM之于RNN。确实是个special case，但是是目前最work的special case`。
