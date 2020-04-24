@@ -5,6 +5,21 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈04 月
+* ###### 2020-04-23
+jupyter中tqdm显示不正常（每次print都不在同一行内），首先应该要确保在notebook一系中使用不同于在terminal中，应`from tqdm.notebook import tqdm`，[见此回答](https://stackoverflow.com/a/42218684/10735194)，如果import正确，那可能是因为之前`Ctrl+C`中断过执行导致的（详见[此处](https://github.com/tqdm/tqdm/issues/580#issuecomment-407680695)）。
+
+* ###### 2020-04-22
+[什么是深度学习？(从函数逼近论的角度来理解)](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html)讲清了一些神经网络的本质问题，很好的一篇文章。
+
+* ###### 2020-04-21
+`深度学习终归属于统计学习，独立同分布是生命线，脱离了它，神经网络就什么都不懂了`。
+
+* ###### 2020-04-19
+使用`h5py`进行大数据存储，如果数据类型是string，在初始化的时候需要指定dtype为`dt = h5py.string_dtype(encoding='ascii')`，如`hf.create_dataset('username', shape=(0), dtype=dt, maxshape=(None))`，当然具体类型可能有别，但是需要注意dtype的指定。
+
+* ###### 2020-04-18
+`df.info(memory_usage='deep')`可查看dataframe的详细内存使用情况。
+
 * ###### 2020-04-17
 使用`h5py`进行大数据存储，后续如果要追加数据的话，则在创建的时候需要指定`maxshape`属性，需要保证其秩与数据的维度一样，如下（只初始化，不添加数据）：
 ```
