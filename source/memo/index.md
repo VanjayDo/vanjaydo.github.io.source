@@ -5,6 +5,9 @@ date: 2017-07-27 15:04:16
 
 #### 🚩2020 年
 ##### 🏳️‍🌈04 月
+* ###### 2020-04-30
+可以通过环境变量`CUDA_VISIBLE_DEVICES`来控制对于Nvidia GPU的使用，如有`0-3`共4张卡，当在shell中运行时可以使用类似`CUDA_VISIBLE_DEVICES=3 python training_script.py`来控制在第四张卡上训练，在ipython中训练时可以通过`os`库来设置，如`os.environ["CUDA_VISIBLE_DEVICES"]="3"`。如果发现id跟`nvidia-smi`得到的不一致，可以同时设置`CUDA_DEVICE_ORDER`➡️`CUDA_DEVICE_ORDER="PCI_BUS_ID"`。
+
 * ###### 2020-04-23
 jupyter中tqdm显示不正常（每次print都不在同一行内），首先应该要确保在notebook一系中使用不同于在terminal中，应`from tqdm.notebook import tqdm`，[见此回答](https://stackoverflow.com/a/42218684/10735194)，如果import正确，那可能是因为之前`Ctrl+C`中断过执行导致的（详见[此处](https://github.com/tqdm/tqdm/issues/580#issuecomment-407680695)）。
 
