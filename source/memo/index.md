@@ -4,6 +4,16 @@ date: 2017-07-27 15:04:16
 ---
 
 #### 🚩2020 年
+##### 🏳️‍🌈05 月
+* ###### 2020-05-06
+`当模型师条件概率分布，损失函数是对数损失函数时，经验风险最小化就等价于极大似然估计；当模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概率表示时，结构风险最小化就等价于最大后验概率。`
+
+* ###### 2020-05-03
+[图像分割炼丹技巧](https://www.jiqizhixin.com/articles/2020-05-01)。
+
+* ###### 2020-05-02
+Label smoothing的本质是降低对于标签的置信度，其所处理的痛点是训练数据集中存在错误的标签（考虑到人工标签的过程中的很多因素，如失误，如在判断标准本身并不明确的时候而人与人之间的criteria又不一样，导致多人参与的标签工作里引入认知上的偏差），以OneHot标签为例，label smoothing可以通过公式`OneHotLabels = OneHotLabels*eps + eps/Num_of_Class`（eps为label smoothing的超参，一般取0.1即可）来平滑标签，使标签变得不是非零即一，以此来降低标签的置信度。如本来为`[0, 1]`的一个标签在经过处理后变成`[0.05, 0.95]`（eps取0.1，此例类别数量为2）。
+
 ##### 🏳️‍🌈04 月
 * ###### 2020-04-30
 可以通过环境变量`CUDA_VISIBLE_DEVICES`来控制对于Nvidia GPU的使用，如有`0-3`共4张卡，当在shell中运行时可以使用类似`CUDA_VISIBLE_DEVICES=3 python training_script.py`来控制在第四张卡上训练，在ipython中训练时可以通过`os`库来设置，如`os.environ["CUDA_VISIBLE_DEVICES"]="3"`。如果发现id跟`nvidia-smi`得到的不一致，可以同时设置`CUDA_DEVICE_ORDER`➡️`CUDA_DEVICE_ORDER="PCI_BUS_ID"`。
