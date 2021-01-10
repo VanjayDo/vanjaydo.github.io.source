@@ -4,6 +4,30 @@ date: 2017-07-27 15:04:16
 ---
 
 #### 🚩2020 年
+
+##### 🏳️‍🌈12 月
+* ###### 2020-12-30
+[PyTorch Loss-Input Confusion (Cheatsheet)](https://github.com/rasbt/stat479-deep-learning-ss19/blob/master/other/pytorch-lossfunc-cheatsheet.md)
+- `torch.nn.functional.binary_cross_entropy` takes logistic sigmoid values as inputs
+- `torch.nn.functional.binary_cross_entropy_with_logits` takes logits as inputs 
+- `torch.nn.functional.cross_entropy` takes logits as inputs (performs `log_softmax` internally)
+- `torch.nn.functional.nll_loss` is like `cross_entropy` but takes log-probabilities (log-softmax) values as inputs
+
+* ###### 2020-12-17
+一图流，LaTex中一些音节的字母如何输出👇
+<img style="display:block; margin-left:auto; margin-right:auto; width:300px;" src="https://cdn.safeandsound.cn/ML_Study_Notes/image/20201217212856.png?imageslim"/>
+
+##### 🏳️‍🌈11 月
+* ###### 2020-11-22
+阅读👉[李宏毅深度强化学习笔记(LeeDeepRL-Notes)](https://datawhalechina.github.io/leedeeprl-notes/#/)。
+
+* ###### 2020-11-14
+MacOS Handoff失效可以尝试先关闭Handoff，然后`rm ~/Library/Preferences/com.apple.coreservices.useractivityd.plist`，然后重启后再打开Handoff即可。
+
+##### 🏳️‍🌈08 月
+* ###### 2020-08-20
+[Adam既然能自己调整学习率，还需不需要使用learning rate decay](https://www.cnblogs.com/wuliytTaotao/p/11101652.html)。
+
 ##### 🏳️‍🌈05 月
 * ###### 2020-05-06
 `当模型师条件概率分布，损失函数是对数损失函数时，经验风险最小化就等价于极大似然估计；当模型是条件概率分布、损失函数是对数损失函数、模型复杂度由模型的先验概率表示时，结构风险最小化就等价于最大后验概率。`
